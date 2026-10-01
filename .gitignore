@@ -1,0 +1,4 @@
+backend/config/local.php
+backend/storage/
+.env
+node_modules/

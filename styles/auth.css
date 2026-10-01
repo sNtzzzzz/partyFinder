@@ -1,0 +1,64 @@
+.auth-form{
+    display:flex;
+    flex-direction:column;
+    gap:14px
+}
+.login span{
+    display:block;
+    max-width:140px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.auth-form label{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-size:12px;
+    color:var(--muted)
+}
+.auth-form input{
+    width:100%;
+    min-height:46px;
+    padding:10px 12px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    background:var(--card);
+    color:var(--text)
+}
+.auth-form small{
+    color:var(--muted);
+    font-size:11px
+}
+.account-content #auth-message{
+    font-size:12px;
+    color:var(--muted);
+    margin:0;
+    overflow-wrap:anywhere
+}
+.account-content h2,.account-content>p{
+    overflow-wrap:anywhere
+}
+.auth-switch{
+    min-height:44px;
+    margin-top:15px;
+    color:#cc9ba3;
+    font-size:12px
+}
+.account-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:14px
+}
+.account-ok{
+    background:var(--text);
+    border-color:var(--text);
+    color:var(--wine);
+    min-width:76px
+}
+.account-ok:hover:not(:disabled){
+    background:var(--accent);
+    border-color:var(--accent);
+    color:var(--text)
+}
