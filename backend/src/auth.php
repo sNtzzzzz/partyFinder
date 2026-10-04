@@ -27,7 +27,9 @@ function startAuthSession(): void
         'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
         'samesite' => 'Lax',
     ]);
-    session_start();
+    if (!session_start()) {
+        respond(['message' => 'Não foi possível iniciar sua sessão. Tente novamente em instantes.'], 503);
+    }
     if (isset($_SESSION['expires']) && $_SESSION['expires'] <= time()) {
         $_SESSION = [];
         session_regenerate_id(true);
@@ -38,16 +40,25 @@ function startAuthSession(): void
 function publicUser(PDO $db): ?array
 {
     if (!isset($_SESSION['user_id'])) return null;
-    $query = $db->prepare('SELECT id, name, email, role FROM users WHERE id = ?');
+    $query = $db->prepare('SELECT id, name, email, role, auth_version FROM users WHERE id = ?');
     $query->execute([$_SESSION['user_id']]);
-    return $query->fetch() ?: null;
+    $user = $query->fetch();
+    if (!$user || (int)$user['auth_version'] !== (int)($_SESSION['auth_version'] ?? 0)) {
+        $_SESSION = [];
+        session_regenerate_id(true);
+        $_SESSION['csrf'] = bin2hex(random_bytes(32));
+        return null;
+    }
+    unset($user['auth_version']);
+    return $user;
 }
 
 function handleAuth(PDO $db, string $action): void
 {
     startAuthSession();
+    $currentUser = publicUser($db);
     if ($action === 'me') {
-        respond(['user' => publicUser($db), 'csrf' => $_SESSION['csrf'], 'expiresAt' => $_SESSION['expires'] ?? null]);
+        respond(['user' => $currentUser, 'csrf' => $_SESSION['csrf'], 'expiresAt' => $_SESSION['expires'] ?? null]);
     }
     $token = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
     if (!hash_equals($_SESSION['csrf'], $token)) {
@@ -69,6 +80,10 @@ function handleAuth(PDO $db, string $action): void
     try { $input = json_decode($raw, true, 32, JSON_THROW_ON_ERROR); }
     catch (JsonException $e) { respond(['message' => 'JSON inválido.'], 400); }
     if (!is_array($input)) respond(['message' => 'Dados inválidos.'], 422);
+    if (in_array($action, ['forgot-password', 'reset-password'], true)) {
+        require_once __DIR__ . '/recovery.php';
+        handleRecovery($db, $action, $input);
+    }
     $email = is_string($input['email'] ?? null) ? strtolower(trim($input['email'])) : '';
     $password = is_string($input['password'] ?? null) ? $input['password'] : '';
     $name = is_string($input['name'] ?? null) ? trim($input['name']) : '';
@@ -106,7 +121,7 @@ function handleAuth(PDO $db, string $action): void
         }
         $userId = (int)$db->lastInsertId();
     } else {
-        $query = $db->prepare('SELECT id, password_hash FROM users WHERE email = ?');
+        $query = $db->prepare('SELECT id, password_hash, auth_version FROM users WHERE email = ?');
         $query->execute([$email]);
         $user = $query->fetch();
         $hash = $user['password_hash'] ?? '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2uheWG/igi.';
@@ -116,6 +131,6 @@ function handleAuth(PDO $db, string $action): void
         $userId = (int)$user['id'];
     }
     session_regenerate_id(true);
-    $_SESSION = ['user_id' => $userId, 'expires' => time() + 7200, 'csrf' => bin2hex(random_bytes(32))];
+    $_SESSION = ['user_id' => $userId, 'auth_version' => (int)($user['auth_version'] ?? 0), 'expires' => time() + 7200, 'csrf' => bin2hex(random_bytes(32))];
     respond(['user' => publicUser($db), 'csrf' => $_SESSION['csrf'], 'expiresAt' => $_SESSION['expires']], $action === 'register' ? 201 : 200);
 }

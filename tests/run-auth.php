@@ -35,6 +35,7 @@ try {
     if (!$ready) throw new RuntimeException('Servidor de teste não respondeu. Consulte ' . $log);
     $argv = [__DIR__ . '/auth.php', $base];
     require __DIR__ . '/auth.php';
+    require __DIR__ . '/recovery.php';
     $exitCode = 0;
 } catch (Throwable $error) {
     fwrite(STDERR, $error->getMessage() . PHP_EOL);

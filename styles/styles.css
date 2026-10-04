@@ -826,38 +826,17 @@ h2{
     color:var(--dim);
     margin-top:4px
 }
-.closing{
-    display:flex;
-    align-items:center;
-    gap:26px;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    margin-top:52px;
-    padding:31px 0
+#footer{
+    position:relative;
+    padding-top:32px
 }
-.brand-mark{
-    font:800 48px var(--heading);
-    letter-spacing:-5px
-}
-.brand-mark>span{
-    color:var(--wine)
-}
-.closing h2{
-    font-size:18px
-}
-.closing p{
-    font-size:11px;
-    color:var(--muted);
-    margin-top:5px
-}
-.closing>a{
-    margin-left:auto;
-    color:#c49ba2;
-    font-size:12px;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    min-height:44px
+#footer::before{
+    content:'';
+    position:absolute;
+    top:32px;
+    left:0;
+    width:100%;
+    border-top:1px solid #363636
 }
 .footer-top{
     display:flex;
@@ -1429,27 +1408,6 @@ dialog::backdrop{
     }
     .artist-card>span{
         font-size:9px
-    }
-    .closing{
-        gap:18px;
-        flex-wrap:wrap;
-        margin-top:30px;
-        padding:25px 0
-    }
-    .brand-mark{
-        font-size:40px
-    }
-    .closing>div{
-        flex:1
-    }
-    .closing h2{
-        font-size:16px
-    }
-    .closing p{
-        font-size:10px
-    }
-    .closing>a{
-        margin-left:57px
     }
     .footer-top{
         flex-wrap:wrap;

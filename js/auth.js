@@ -21,7 +21,7 @@ async function authRequest(action, data) {
   }
   let result;
   try { result = await response.json(); }
-  catch { throw new Error('Para entrar, abra o NightOut em http://127.0.0.1:8000 com o servidor PHP ligado.'); }
+  catch { throw new Error('Não foi possível entrar agora. Tente novamente em instantes.'); }
   if (!response.ok) {
     const error = new Error(result.message || 'Não foi possível concluir. Tente novamente.');
     error.status = response.status;
@@ -46,7 +46,7 @@ function applySession(result) {
     }, Math.max(0, result.expiresAt * 1000 - Date.now()));
   }
   if (changed) {
-    if (!account.user) account.mode = 'login';
+    if (!account.user && !['forgot', 'reset'].includes(account.mode)) account.mode = 'login';
     renderAccount();
     if (wasConnected && !account.user) accountMessage('Sua sessão foi encerrada. Entre novamente para continuar.');
   }
@@ -60,7 +60,7 @@ async function syncAccount(force = false) {
     if (revision !== accountRevision) return;
     applySession(result);
   } catch (error) {
-    if (revision === accountRevision) accountMessage(error.message);
+    // A verificação automática de sessão não exibe avisos no formulário.
   }
 }
 
@@ -86,17 +86,39 @@ async function logoutAccount() {
   }
 }
 
+function installPasswordToggles() {
+  accountContent.querySelectorAll('input[name="password"], input[name="confirmation"]').forEach(input => {
+    input.id = 'auth-' + input.name;
+    const wrapper = document.createElement('span');
+    wrapper.className = 'password-field';
+    input.replaceWith(wrapper);
+    wrapper.append(input);
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'password-toggle';
+    toggle.dataset.passwordToggle = input.id;
+    toggle.setAttribute('aria-controls', input.id);
+    toggle.setAttribute('aria-label', input.name === 'confirmation' ? 'Mostrar confirma\u00e7\u00e3o da senha' : 'Mostrar senha');
+    toggle.setAttribute('aria-pressed', 'false');
+    toggle.textContent = 'Mostrar';
+    wrapper.append(toggle);
+  });
+}
+
 function renderAccount() {
   const button = document.querySelector('[data-account]');
   button.innerHTML = `${icon('user')} <span>${account.user ? escapeAccount(account.user.name) : 'Entrar'}</span>`;
   button.setAttribute('aria-label', account.user ? `Abrir conta de ${account.user.name}` : 'Entrar');
   button.title = account.user ? account.user.name : 'Entrar';
+  if (['forgot', 'reset'].includes(account.mode)) { renderRecoveryForm(); return; }
   if (account.user) {
     accountContent.innerHTML = `<span class="eyebrow">Olá,</span><h2 id="account-title">${escapeAccount(account.user.name)}</h2><p>A noite começa agora.</p><div class="account-actions"><button class="primary" id="account-logout">Sair da conta</button><button class="primary account-ok" id="account-ok">Ok</button></div><p id="auth-message" role="status"></p>`;
     return;
   }
   const register = account.mode === 'register';
-  accountContent.innerHTML = `<span class="eyebrow">SUA PRÓXIMA NOITE</span><h2 id="account-title">${register ? 'Crie sua conta' : 'Entre no NightOut'}</h2><p>${register ? 'Um lugar para suas próximas noites.' : 'Bom ter você por aqui.'}</p><form id="auth-form" class="auth-form">${register ? '<label>Nome<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label>' : ''}<label>E-mail<input name="email" type="email" autocomplete="username" required maxlength="254"></label><label>Senha<input name="password" type="password" autocomplete="${register ? 'new-password' : 'current-password'}" required minlength="8" maxlength="72" aria-describedby="password-help"></label><small id="password-help">Use pelo menos 8 caracteres</small>${register ? '<label>Confirme sua senha<input name="confirmation" type="password" autocomplete="new-password" required minlength="8" maxlength="72"></label>' : ''}<button class="primary" type="submit">${register ? 'Criar conta' : 'Entrar'}</button><p id="auth-message" role="status" aria-live="polite"></p></form><button class="auth-switch" id="account-switch">${register ? 'Já tem uma conta? Entrar' : 'Ainda não tem uma conta? Cadastrar'}</button>`;
+  accountContent.innerHTML = `<span class="eyebrow">SUA PRÓXIMA NOITE</span><h2 id="account-title">${register ? 'Crie sua conta' : 'Entre no NightOut'}</h2>${register ? '<p>Um lugar para suas próximas noites.</p>' : ''}<form id="auth-form" class="auth-form">${register ? '<label>Nome<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label>' : ''}<label>E-mail<input name="email" type="email" autocomplete="username" required maxlength="254"></label><label>Senha<input name="password" type="password" autocomplete="${register ? 'new-password' : 'current-password'}" required minlength="8" maxlength="72" aria-describedby="password-help"></label><small id="password-help">Use pelo menos 8 caracteres</small>${register ? '<label>Confirme sua senha<input name="confirmation" type="password" autocomplete="new-password" required minlength="8" maxlength="72"></label>' : ''}<button class="primary" type="submit">${register ? 'Criar conta' : 'Entrar'}</button><p id="auth-message" role="status" aria-live="polite"></p></form><button class="auth-switch" id="account-switch">${register ? 'Já tem uma conta? Entrar' : 'Ainda não tem uma conta? Cadastrar'}</button>`;
+  if (!register) accountContent.insertAdjacentHTML('beforeend', '<button type="button" class="auth-switch recovery-link" data-recovery-open>Esqueci minha senha</button>');
+  installPasswordToggles();
 }
 
 function accountMessage(message) {
@@ -104,6 +126,15 @@ function accountMessage(message) {
 }
 
 document.addEventListener('click', async event => {
+  const toggle = event.target.closest('[data-password-toggle]');
+  if (toggle) {
+    const input = document.getElementById(toggle.dataset.passwordToggle);
+    const visible = input.type === 'password';
+    input.type = visible ? 'text' : 'password';
+    toggle.textContent = visible ? 'Ocultar' : 'Mostrar';
+    toggle.setAttribute('aria-pressed', String(visible));
+    return;
+  }
   if (event.target.closest('[data-account]')) void syncAccount();
   if (event.target.closest('#account-ok')) {
     document.querySelector('#account-dialog').close();
@@ -154,7 +185,7 @@ document.addEventListener('submit', async event => {
   delete data.confirmation;
   account.busy = true;
   ++accountRevision;
-  form.querySelector('button').disabled = true;
+  form.querySelector('button[type="submit"]').disabled = true;
   accountMessage('Aguarde…');
   try {
     account.csrf = (await authRequest('me')).csrf;
@@ -167,12 +198,19 @@ document.addEventListener('submit', async event => {
   } catch (error) {
     if (error.status === 403) await syncAccount(true);
     accountMessage(error.message);
-    form.querySelector('button').disabled = false;
+    form.querySelector('button[type="submit"]').disabled = false;
   } finally { finishAccountOperation(); }
 });
 
 document.querySelector('#account-dialog').addEventListener('close', () => {
-  accountContent.querySelectorAll('input[type="password"]').forEach(input => input.value = '');
+  accountContent.querySelectorAll('input[name="password"], input[name="confirmation"]').forEach(input => {
+    input.value = '';
+    input.type = 'password';
+  });
+  accountContent.querySelectorAll('[data-password-toggle]').forEach(toggle => {
+    toggle.textContent = 'Mostrar';
+    toggle.setAttribute('aria-pressed', 'false');
+  });
 });
 renderAccount();
 accountChannel?.addEventListener('message', () => { void syncAccount(); });

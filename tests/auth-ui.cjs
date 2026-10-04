@@ -8,7 +8,7 @@ function setup() {
   const element = selector => {
     if (!nodes.has(selector)) nodes.set(selector, {
       innerHTML: '', textContent: '', disabled: false,
-      setAttribute() {}, focus() {}, close() {},
+      setAttribute() {}, focus() {}, close() {}, insertAdjacentHTML() {},
       querySelector: child => element(`${selector} ${child}`), querySelectorAll: () => [],
       addEventListener: (name, cb) => { listeners[`${selector}:${name}`] = cb; }
     });

@@ -230,3 +230,15 @@ Ter nossa própria API não atualiza informações sozinho: inicialmente a manut
 - [ ] Avaliar custos de hospedagem e imagens antes de contratar serviços.
 
 Ficam para depois: pagamentos, emissão de ingressos, reservas reais, movimento ao vivo e integrações externas. Google Places é opcional e não é requisito para desenvolver o catálogo próprio.
+
+## Atualização — recuperação de senha (04/10/2026)
+
+- [x] Mostrar/ocultar senha nos formulários.
+- [x] Esqueci minha senha com caixa de e-mails local privada.
+- [x] Link de 30 minutos, uso único e hash do token no banco.
+- [x] Revogação das sessões anteriores após redefinição de senha.
+- [x] Testes isolados de recuperação, expiração, reuso e limite de tentativas.
+- [ ] Confirmação de e-mail e envio real para produção.
+- [ ] Conferência visual do fluxo completo no navegador.
+
+Instruções operacionais atualizadas em backend/README.md.

@@ -7,7 +7,7 @@ if (str_starts_with($path, '/api/')) {
     return;
 }
 $root = dirname(__DIR__, 2);
-$allowed = ['/' => 'index.html', '/index.html' => 'index.html'];
+$allowed = ['/' => 'index.html', '/index.html' => 'index.html', '/assets/favicon.svg' => 'assets/favicon.svg'];
 foreach (['js' => 'js', 'styles' => 'css'] as $directory => $extension) {
     foreach (glob($root . '/' . $directory . '/*.' . $extension) as $file) {
         $allowed['/' . $directory . '/' . basename($file)] = $directory . '/' . basename($file);
@@ -18,7 +18,7 @@ if (!in_array($_SERVER['REQUEST_METHOD'], ['GET', 'HEAD'], true)) {
     header('Allow: GET, HEAD'); http_response_code(405); exit;
 }
 $file = $root . '/' . $allowed[$path];
-$types = ['html' => 'text/html', 'css' => 'text/css', 'js' => 'text/javascript'];
+$types = ['html' => 'text/html', 'css' => 'text/css', 'js' => 'text/javascript', 'svg' => 'image/svg+xml'];
 header('Content-Type: ' . $types[pathinfo($file, PATHINFO_EXTENSION)] . '; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 if ($_SERVER['REQUEST_METHOD'] !== 'HEAD') readfile($file);

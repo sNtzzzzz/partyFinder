@@ -40,6 +40,7 @@
     overflow-wrap:anywhere
 }
 .auth-switch{
+    padding:0;
     min-height:44px;
     margin-top:15px;
     color:#cc9ba3;
@@ -61,4 +62,42 @@
     background:var(--accent);
     border-color:var(--accent);
     color:var(--text)
+}
+
+.password-field{
+    position:relative;
+    display:block
+}
+.password-field input{
+    padding-right:90px
+}
+.password-toggle{
+    position:absolute;
+    right:6px;
+    top:6px;
+    min-height:34px;
+    min-width:76px;
+    padding:0 12px;
+    border-radius:7px;
+    color:var(--muted);
+    font-size:12px
+}
+.password-toggle:hover{
+    background:var(--hover);
+    color:var(--text)
+}
+
+.recovery-link{
+    display:block;
+    margin-top:0
+}
+
+.recovery-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 24px;
+    margin-top:15px
+}
+.recovery-actions .auth-switch{
+    margin-top:0
 }

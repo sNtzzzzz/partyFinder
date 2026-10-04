@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+// Avisos internos ficam no log, nunca misturados ao JSON da API.
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 header('X-Content-Type-Options: nosniff');
@@ -9,6 +13,7 @@ header('X-Content-Type-Options: nosniff');
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 require dirname(__DIR__) . '/src/auth.php';
 $routes = [
+    '/api/v1/auth/forgot-password' => 'POST', '/api/v1/auth/reset-password' => 'POST',
     '/' => 'GET', '/api/v1/health' => 'GET', '/api/v1/auth/me' => 'GET',
     '/api/v1/auth/register' => 'POST', '/api/v1/auth/login' => 'POST', '/api/v1/auth/logout' => 'POST',
 ];
