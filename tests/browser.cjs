@@ -83,6 +83,11 @@ function mailLink(email, kind) {
       assert.equal(await second.locator('#settings-form').count(),0,'verification has no settings form');
       await page.waitForFunction(()=>!document.querySelector('.verification-notice'));
       await second.screenshot({path:path.join(output,label+'-verified.png')});
+      await second.goto(base + '/conta.html#verify-email=invalid');
+      await second.waitForFunction(()=>document.querySelector('#account-title')?.textContent.includes('Não foi possível verificar'));
+      await second.locator('#account-ok').click();
+      await second.locator('[data-account-view="profile"]').waitFor();
+      assert.equal(await second.locator('#account-dialog').evaluate(el=>el.open), false, 'account link stays in dedicated page');
       await second.goto(mailLink(email,'verification'));
       await second.waitForFunction(()=>document.querySelector('#account-title')?.textContent.includes('Não foi possível verificar'));
       await second.close();
@@ -124,7 +129,8 @@ function mailLink(email, kind) {
       await page.locator('#recovery-form button[type="submit"]').click();
       await waitText('#auth-message','Se este e-mail');
       const resetLink=mailLink(renamedEmail,'recovery');
-      await page.goto(resetLink);
+      await page.goto(resetLink.replace('/#reset-password=', '/conta.html#reset-password='));
+      assert.equal(await page.locator('#account-dialog').evaluate(el=>el.open), false, 'recovery on account page does not open empty dialog');
       await page.locator('#recovery-form input[name="password"]').fill(recovered);
       await page.locator('#recovery-form input[name="confirmation"]').fill(recovered);
       const bounds=await page.locator('.recovery-actions').evaluate(el=>{
@@ -140,7 +146,7 @@ function mailLink(email, kind) {
       await page.locator('#recovery-form button[type="submit"]').click();
       await waitText('#auth-message','Senha atualizada');
       await login(renamedEmail,recovered);
-      await page.locator('#account-ok').waitFor();
+      await page.locator('[data-account-view="delete"]').waitFor();
       const tab=await context.newPage();
       await tab.goto(base);
       await tab.waitForFunction(()=>document.querySelector('[data-account]')?.textContent.includes('Teste <NightOut>'));

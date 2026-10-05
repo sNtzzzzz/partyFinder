@@ -475,6 +475,26 @@ h2{
     overflow:hidden;
     text-align:left
 }
+.place-art{background:radial-gradient(ellipse at 80% 10%,#54263055,transparent 70%),#171717}
+.place-art.has-place-photo .place-symbol{position:absolute;inset:0}
+.place-art.has-place-photo img{position:relative;z-index:0;object-fit:cover}
+.place-art.has-place-photo:after{z-index:0;pointer-events:none}
+.catalog-pagination{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:28px}
+.catalog-pagination p{font-size:12px;color:var(--muted)}
+.place-symbol{display:grid;place-items:center;height:100%;color:#ad777f}
+.place-symbol svg{width:52px;height:52px;stroke-width:1}
+.place-art .badge,.place-art .image-category{z-index:1}
+.place-address{font-size:12px;line-height:1.6;color:var(--muted);min-height:58px;margin:14px 0}
+.place-mini{display:grid;place-items:center;width:50px;height:70px;background:#24191c;border-radius:8px;flex-shrink:0}
+.hours-table{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:12px}
+.hours-table th,.hours-table td{padding:9px 0;border-bottom:1px solid var(--border);text-align:left}
+.hours-table th{font-weight:500;padding-right:14px}
+.hours-table td{color:var(--muted)}
+.place-sources{padding-left:18px;font-size:12px;line-height:2;margin-bottom:14px}
+.place-sources a,.place-detail a:not(.primary){color:#c69aa1}
+.place-detail .map-placeholder{margin-bottom:22px}
+.place-detail{padding-top:48px}
+.catalog-note{color:var(--muted);font-size:14px;line-height:1.6}
 .card-image:after{
     content:'';
     position:absolute;

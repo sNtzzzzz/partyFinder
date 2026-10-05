@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "NightOut: iniciar site local",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/backend/start.ps1"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "NightOut: caixa de confirmação",
+      "type": "process",
+      "command": "C:/xampp/php/php.exe",
+      "args": ["backend/mailbox.php", "--verification"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "NightOut: testar API",
+      "type": "process",
+      "command": "C:/xampp/php/php.exe",
+      "args": ["tests/run-auth.php"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "test"
+    }
+  ]
+}

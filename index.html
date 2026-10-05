@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/auth.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <script defer src="js/data.js"></script>
+    <script defer src="js/places.js"></script>
     <script defer src="js/components.js"></script>
     <script defer src="js/location.js"></script>
     <script defer src="js/app.js"></script>
@@ -22,30 +23,30 @@
     <script defer src="js/account-settings.js"></script>
 </head>
 <body>
-    <a class="skip" href="#explorar">Pular para eventos</a>
+    <a class="skip" href="#explorar">Pular para estabelecimentos</a>
     <header id="header"></header>
     <main>
       <section class="hero container">
         <div class="hero-copy"><div class="eyebrow">A CIDADE NÃO PARA. NEM A GENTE.</div><h1>Descubra onde a<br>noite <em>acontece.</em></h1><p>Festas, música e encontros que valem sair de casa.<br>Seu próximo rolê começa aqui.</p>
-          <form id="search-form" class="search-bar" role="search" autocomplete="off"><span data-icon="search"></span><input id="search" type="search" autocomplete="off" aria-label="Busque uma festa, casa, artista ou região" placeholder="Festa, casa, artista ou região"><button class="primary" type="submit">Explorar <span data-icon="arrow"></span></button></form>
+          <form id="search-form" class="search-bar" role="search" autocomplete="off"><span data-icon="search"></span><input id="search" type="search" autocomplete="off" aria-label="Busque uma bar, adega, casa ou região" placeholder="Bar, adega, casa ou região"><button class="primary" type="submit">Explorar <span data-icon="arrow"></span></button></form>
           <div id="quick-filters" class="quick-filters" aria-label="Filtros rápidos"></div>
         </div>
-        <div class="hero-art"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=85" alt="Público e iluminação de um show noturno"><span class="photo-top">SÃO PAULO / AFTER DARK</span><span class="photo-caption">LÁ FORA, A NOITE JÁ COMEÇOU.</span></div>
+        <div class="hero-art"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=85" alt="Público e iluminação de um show noturno"><span class="photo-top">ABC PAULISTA / AFTER DARK</span><span class="photo-caption">LÁ FORA, A NOITE JÁ COMEÇOU.</span></div>
       </section>
       <div class="container">
-        <section id="explorar" class="section events-section"><div id="events-heading"></div><div class="toolbar"><div id="categories" class="categories" aria-label="Tipos de evento"></div><button id="filter-toggle" class="filter-toggle" aria-expanded="false" aria-controls="filter-panel"><span data-icon="sliders"></span> Filtros <span id="filter-count"></span></button></div>
+        <section id="explorar" class="section events-section"><div id="events-heading"></div><div class="toolbar"><div id="categories" class="categories" aria-label="Tipos de estabelecimento"></div><button id="filter-toggle" class="filter-toggle" aria-expanded="false" aria-controls="filter-panel"><span data-icon="sliders"></span> Filtros <span id="filter-count"></span></button></div>
           <form id="filter-panel" class="filter-panel" hidden>
-            <label>Data<select name="date"><option value="all">Todas as datas</option><option value="today">Hoje</option><option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option></select></label>
+            <label>Funcionamento habitual<select name="date"><option value="all">Qualquer dia</option><option value="today">Hoje</option><option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option></select></label>
             <label>Distância<select name="distance"><option value="all">Qualquer distância</option><option value="1">Até 1 km</option><option value="3">Até 3 km</option><option value="5">Até 5 km</option></select></label>
-            <label>Preço<select name="price"><option value="all">Qualquer preço</option><option value="0">Gratuito</option><option value="50">Até R$ 50</option><option value="100">Até R$ 100</option></select></label>
-            <label>Lotação<select name="occupancy"><option value="all">Qualquer movimento</option><option value="1">Tranquilo</option><option value="2">Movimento normal</option><option value="3">Cheio</option><option value="4">Lotado</option></select></label>
-            <label>Artista<select name="artist" id="artist-filter"><option value="all">Todos os artistas</option></select></label>
-            <label class="check"><input type="checkbox" name="open"> Aberto agora</label><label class="check"><input type="checkbox" name="tickets"> Com ingresso disponível</label><button type="reset">Limpar filtros</button>
-          </form><p id="results-message" class="sr-only" aria-live="polite"></p><div id="event-grid" class="event-grid"></div>
+             <label hidden>Preço<select disabled name="price"><option value="all">Qualquer preço</option><option value="0">Gratuito</option><option value="50">Até R$ 50</option><option value="100">Até R$ 100</option></select></label>
+             <label hidden>Lotação<select disabled name="occupancy"><option value="all">Qualquer movimento</option><option value="1">Tranquilo</option><option value="2">Movimento normal</option><option value="3">Cheio</option><option value="4">Lotado</option></select></label>
+             <label hidden>Artista<select disabled name="artist" id="artist-filter"><option value="all">Todos os artistas</option></select></label>
+            <label class="check"><input type="checkbox" name="open"> Aberto agora</label><label class="check" hidden><input disabled type="checkbox" name="tickets"> Com ingresso disponível</label><button type="reset">Limpar filtros</button>
+          </form><p id="results-message" class="sr-only" aria-live="polite"></p><div id="event-grid" class="event-grid"></div><div class="catalog-pagination"><p id="visible-results" aria-live="polite"></p><button class="primary" id="show-more" hidden aria-controls="event-grid">Exibir mais</button></div>
         </section>
-        <section id="perto" class="section"><div id="nearby-heading"></div><div id="nearby-grid" class="nearby-grid"></div><p class="location-note">Distâncias ilustrativas a partir de Pinheiros, São Paulo.</p></section>
+        <section id="perto" class="section"><div id="nearby-heading"></div><div id="nearby-grid" class="nearby-grid"></div><p class="location-note">Catálogo pesquisado no raio de 5 km da Fundação Santo André. Distâncias em linha reta.</p></section>
         <section id="proximos" class="section"><div id="upcoming-heading"></div><div id="upcoming-list"></div></section>
-        <section id="artistas" class="section"><div id="artists-heading"></div><div id="artist-grid" class="artist-grid"></div></section>
+        <section id="artistas" class="section" hidden><div id="artists-heading"></div><div id="artist-grid" class="artist-grid"></div></section>
       </div>
     </main>
     <footer id="footer" class="container"></footer>

@@ -1,0 +1,264 @@
+{
+  "consulta": "2026-10-05",
+  "verificacoes": [
+    {
+      "nome": "Beco Figueiras",
+      "url": "https://restaurantguru.com.br/Beco-Figueiras-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Beco Figueiras, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Brazucas Bar",
+      "url": "https://restaurantguru.com.br/Brazucas-Bar-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Rota Music Bar",
+      "url": "https://restaurantguru.com.br/Rota-Music-Bar-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Boteco Rabo De Saia Sbc",
+      "url": "https://restaurantguru.com.br/Boteco-Rabo-De-Saia-Sbc-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Frampe Bar",
+      "url": "https://restaurantguru.com.br/Frampe-Bar-Sao-Bernardo-do-Campo",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Frampe Bar, São Bernardo do Campo - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Alfarre Pizza Bar",
+      "url": "https://restaurantguru.com.br/Alfarre-Pizza-Bar-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Alfarre, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "CasaVéia Bebidas e Espetos",
+      "url": "https://restaurantguru.com.br/CasaVeia-Bebidas-e-Espetos-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Casavéia Bebidas E Espetos, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": [
+        "https://www.instagram.com/casaveiaespetos"
+      ]
+    },
+    {
+      "nome": "Floresta Pub",
+      "url": "https://restaurantguru.com.br/Floresta-Pub-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Virtus Beer Bar e Restaurante",
+      "url": "https://restaurantguru.com.br/Virtus-Beer-Bar-e-Restaurante-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "VIRTUS LANCHONETE E CIA, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Dino - Bar e Restaurante",
+      "url": "https://restaurantguru.com.br/Dino-Bar-e-Restaurante-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Morada | Rango e Birita",
+      "url": "https://restaurantguru.com.br/Morada-Rango-e-Birita-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Folks Pub Sertanejo - São Bernardo do Campo",
+      "url": "https://restaurantguru.com.br/Folks-Pub-Sertanejo-Sao-Bernardo-do-Campo-Sao-Bernardo-do-Campo",
+      "encontrado": true,
+      "fechado": true,
+      "title": "Folks Pub Sertanejo - São Bernardo do Campo, São Bernardo do Campo - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Flag The Bar",
+      "url": "https://restaurantguru.com.br/Flag-The-Bar-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "A Gruta Rock Bar",
+      "url": "https://restaurantguru.com.br/A-Gruta-Rock-Bar-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "A Gruta Rock Bar, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": [
+        "https://www.instagram.com/agrutarockbar/"
+      ]
+    },
+    {
+      "nome": "Botequim Carioca",
+      "url": "https://restaurantguru.com.br/Botequim-Carioca-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Botequim Carioca, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": [
+        "https://www.instagram.com/botequim_carioca_santo_andre/"
+      ]
+    },
+    {
+      "nome": "TO THE SEA",
+      "url": "https://restaurantguru.com.br/TO-THE-SEA-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "TO THE SEA, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": [
+        "https://www.instagram.com/tothesea_br/"
+      ]
+    },
+    {
+      "nome": "CASINHA BAR Melhor Caipirinha Do Brrasil",
+      "url": "https://restaurantguru.com.br/CASINHA-BAR-Melhor-Caipirinha-Do-Brrasil-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "CASINHA BAR Melhor Caipirinha Do Brrasil, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": [
+        "https://www.instagram.com/barcasinha/"
+      ]
+    },
+    {
+      "nome": "Bar do Rubão",
+      "url": "https://restaurantguru.com.br/Bar-do-Rubao-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Bar do Rubão, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Toka Snooker Karaokê Bar",
+      "url": "https://restaurantguru.com.br/Toka-Snooker-Karaoke-Bar-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "After Bar - Barzinho em SBC",
+      "url": "https://restaurantguru.com.br/After-Bar-Barzinho-em-SBC-Sao-Bernardo-do-Campo",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Mr. Hoppy, São Bernardo do Campo - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Choperia do Lugui São Bernardo do Campo",
+      "url": "https://restaurantguru.com.br/Choperia-do-Lugui-Sao-Bernardo-do-Campo-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Skina Bar 330",
+      "url": "https://restaurantguru.com.br/Skina-Bar-330-Santo-Andre",
+      "encontrado": true,
+      "fechado": true,
+      "title": "Skina Bar 330, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Taberna adega bar",
+      "url": "https://restaurantguru.com.br/Taberna-adega-bar-Sao-Bernardo-do-Campo",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Taberna adega bar, São Bernardo do Campo - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Arena Beer - Bar & Restaurante",
+      "url": "https://restaurantguru.com.br/Arena-Beer-Bar-Restaurante-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "Bararanha",
+      "url": "https://restaurantguru.com.br/Bararanha-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Bararanha Embriagada, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Bar do Carlinhos",
+      "url": "https://restaurantguru.com.br/Bar-do-Carlinhos-Santo-Andre",
+      "encontrado": true,
+      "fechado": false,
+      "title": "Bar do Carlinhos, Santo André - Menu do restaurante, preços e opiniões",
+      "instagram": []
+    },
+    {
+      "nome": "Boteco da Villa",
+      "url": "https://restaurantguru.com.br/Boteco-da-Villa-Sao-Bernardo-do-Campo",
+      "encontrado": false,
+      "fechado": null,
+      "title": "Da Villa Restaurante, São Paulo - Menu do restaurante, preços e opiniões",
+      "instagram": [],
+      "nota": "URL redirecionou a estabelecimento em outra cidade. Correspondência inconclusiva; não importar nem atribuir fechamento à casa candidata."
+    },
+    {
+      "nome": "Gardens Lounge Bar",
+      "url": "https://restaurantguru.com.br/Gardens-Lounge-Bar-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    },
+    {
+      "nome": "TUPINIKIM Pizza Bar & Lounge",
+      "url": "https://restaurantguru.com.br/TUPINIKIM-Pizza-Bar-Lounge-Santo-Andre",
+      "encontrado": false,
+      "fechado": false,
+      "title": "Página não encontrada",
+      "instagram": []
+    }
+  ],
+  "exclusoes": [
+    {
+      "nome": "Supra Dom Pedro",
+      "motivo": "Fechamento permanente informado pelo usuário e corroborado em ficha pública",
+      "fonte": "https://es.restaurantguru.com/Subway-Dom-Pedro-II-Santo-Andre-2"
+    },
+    {
+      "nome": "Adega Tonel do Rudge",
+      "motivo": "Loja de compra de vinho, fora do foco de rolê definido pelo usuário"
+    },
+    {
+      "nome": "Manduca Bar",
+      "motivo": "Ficha indica fechamento permanente",
+      "fonte": "https://restaurantguru.com.br/Manduca-Bar-Santo-Andre"
+    }
+  ]
+}

@@ -91,7 +91,7 @@ function renderLocation() {
     unavailable: ['Não foi possível obter sua localização', 'Verifique a localização do dispositivo e tente novamente. Você ainda pode pesquisar por nome.'],
     insecure: ['Localização indisponível nesta conexão', 'Abra o site em HTTPS ou pelo Live Server em localhost para permitir o acesso à localização.'],
     unsupported: ['Localização não disponível', 'Este navegador não oferece acesso à localização. Você pode continuar usando a busca.'],
-    granted: ['Localização permitida', 'Ainda não há lugares com localização cadastrada para exibir aqui. Por enquanto, explore os exemplos pela busca.']
+    granted: ['Localização permitida', 'Nenhum local do catálogo foi encontrado a até 5 km da sua posição. Explore os estabelecimentos pela busca.']
   };
   const [title, description] = messages[status];
   const nearby = granted ? events.filter(e => {
@@ -103,7 +103,7 @@ function renderLocation() {
     ? nearby.map(NearbyCard).join('')
     : `<div class="location-state" role="status">${icon(granted ? 'pin' : 'pinOff')}<div><h3>${title}</h3><p>${description}</p></div>${retry ? `<button class="primary" data-location-request ${status === 'loading' ? 'disabled' : ''}>${status === 'loading' ? 'Aguardando permissão…' : ['timeout', 'unavailable'].includes(status) ? 'Tentar novamente' : 'Permitir acesso'}</button>` : ''}</div>`;
   document.querySelector('.location-note').textContent = granted
-    ? 'Localização disponível nesta sessão. Os lugares exibidos na busca ainda são demonstrativos.'
+    ? 'Distâncias aproximadas em linha reta a partir da sua localização nesta sessão.'
     : 'Sua localização é opcional. Continue explorando pela busca.';
   const nav = document.querySelector('header nav a[href="#perto"]');
   nav.innerHTML = `${icon(granted ? 'pin' : 'pinOff')} Perto de mim`;

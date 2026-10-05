@@ -75,7 +75,7 @@ function openRecoveryLink() {
   }
   renderAccount();
   const dialog = document.querySelector('#account-dialog');
-  if (!dialog.open) openDialog(dialog);
+  if (!dialog.open && !isAccountPage) openDialog(dialog);
   accountContent.querySelector('input').focus();
   if (!recoveryToken) accountMessage('Link inválido. Solicite uma nova recuperação.');
 }

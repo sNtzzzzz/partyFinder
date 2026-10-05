@@ -59,9 +59,9 @@
     min-width:76px
 }
 .account-ok:hover:not(:disabled){
-    background:var(--accent);
-    border-color:var(--accent);
-    color:var(--text)
+    background:#d6d6d6;
+    border-color:#d6d6d6;
+    color:var(--wine)
 }
 
 .password-field{

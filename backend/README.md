@@ -5,7 +5,7 @@ API PHP conectada ao banco `nightout`, com cadastro, login e logout. A migration
 ## Executar
 
 1. Inicie MySQL no XAMPP e mantenha o banco `nightout` criado.
-   Na primeira instalação, execute `C:\xampp\php\php.exe backend/database/migrate.php` na raiz do projeto. Essa migration já foi aplicada neste ambiente.
+   Na primeira instalação, execute `C:\xampp\php\php.exe backend/database/migrate.php` na pasta `partyFinder`. A aplicação das migrations precisa ser conferida em cada computador. Para transferir usuários de outro PC, consulte [o guia de ambiente local](../docs/ambiente-local.md).
 2. No terminal PowerShell do projeto, execute:
 
 ```powershell
@@ -79,7 +79,7 @@ O token tem 32 bytes aleatórios e somente seu hash SHA-256 fica no banco. O lin
 
 Ao trocar a senha, `auth_version` aumenta. Todas as sessões anteriores são rejeitadas na próxima consulta autenticada, inclusive em outros navegadores; não há login automático. O formulário mantém a mesma mensagem de solicitação para e-mails cadastrados e não cadastrados, sem expor existência de conta no corpo da resposta. Há limite separado de cinco tentativas por IP/operação em 15 minutos.
 
-Os testes de recuperação fazem parte de `php tests/run-auth.php` e usam banco e caixa de e-mails separados. Confirmação de e-mail ainda não foi implementada. A experiência visual precisa de conferência em navegador real.
+Os testes de recuperação fazem parte de `php tests/run-auth.php` e usam banco e caixa de e-mails separados. Confirmação de e-mail também está implementada, conforme a seção de configurações abaixo. O runner com `--browser` verifica os fluxos no Edge.
 
 ## Configurações de conta
 

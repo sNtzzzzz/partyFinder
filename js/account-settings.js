@@ -115,8 +115,8 @@ async function openVerificationLink() {
   const dialog = document.querySelector('#account-dialog');
   if (!dialog.open && !isAccountPage) openDialog(dialog);
   try {
+    applySession(await authRequest('me'));
     if (!/^[a-f0-9]{64}$/.test(token)) throw new Error('Link inválido. Solicite outra confirmação.');
-    account.csrf = (await authRequest('me')).csrf;
     const result = await authRequest('verify-email', { token });
     ++accountRevision;
     account.mode = 'verified';

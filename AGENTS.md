@@ -1,0 +1,12 @@
+# Instruções do NightOut
+
+- Leia `CONTEXTO.md` ao iniciar trabalho neste projeto. Consulte `backend/README.md` para comandos e `docs/relatorio-autenticacao.md` para detalhes da autenticação.
+- Ao concluir uma tarefa relevante ou preparar troca de computador, atualize `CONTEXTO.md` com mudanças, verificações realmente executadas e pendências. Diferencie resultados anteriores de verificações desta máquina.
+- Interface em HTML/CSS/JavaScript sem framework; API em PHP com PDO e MariaDB do XAMPP. O servidor local usa `backend/start.ps1` e a origem `http://127.0.0.1:8000`.
+- Preserve usuários existentes. Não apague bancos ou registros para configurar o ambiente. Os testes PHP usam bancos temporários identificados pelo runner.
+- Não versionar credenciais, backups de usuários ou arquivos de sessão. `backend/config/local.php` e `backend/storage/` são privados e ignorados pelo Git.
+- O catálogo em `js/data.js` contém uma seleção de locais reais com fontes e datas de consulta; a pesquisa ampla em docs contém candidatos ainda não confirmados. Não inventar agenda, fotos, preços ou movimento. Priorizar site oficial, usar Google quando seus dados estiverem acessíveis e registrar conflitos. Horários de pico históricos não são lotação em tempo real.
+- Execute verificações adequadas às alterações. Para autenticação PHP, use `tests/run-auth.php`, nunca `tests/auth.php` diretamente.
+- Nesta fase, manter catálogo e fotos locais com atualização manual; o usuário adiou Google Places por custo. Curadoria de perfil está em docs/curadoria-role-5km.md/.json e nas colunas de docs/locais-5km.csv; candidatos prioritários em docs/locais-role-prioritarios.csv. Não tratar prioridade editorial como prova de público universitário, preço acessível ou operação atual. Adegas precisam de evidência de consumo/permanência; casa noturna não significa automaticamente balada para esse público.
+- Catálogo de rolês: excluir lojas voltadas apenas a comprar vinho/bebidas, como Tonel do Rudge. A adega indicada pelo usuário é Av. Príncipe de Gales, 466 (Mais Adega Point Bar). Supra Dom Pedro foi retirado por fechamento permanente; não reativar apenas porque seu site antigo mostra horários. Referências ficam na documentação/dados, sem seção na interface. Fotos devem ser reais da própria casa, preferencialmente redes sociais; manter sem foto quando indisponível. Lista inicial com duas linhas e Exibir mais acrescentando duas linhas conforme as colunas da tela.
+

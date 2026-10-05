@@ -119,7 +119,7 @@ function renderAccount() {
   if (['forgot', 'reset'].includes(account.mode)) { renderRecoveryForm(); return; }
   if (['settings', 'profile', 'password', 'email', 'delete', 'export', 'sessions', 'verify', 'verified'].includes(account.mode)) { renderAccountSettings(); return; }
   if (account.user) {
-    accountContent.innerHTML = `<span class="eyebrow">Olá,</span><h2 id="account-title">${escapeAccount(account.user.name)}</h2><p>A noite começa agora.</p>${account.user.emailVerified === false ? '<div class="verification-notice"><span>Seu e-mail ainda precisa de confirmação.</span><button type="button" class="auth-switch" data-resend-verification>Enviar confirmação</button></div>' : ''}<div class="account-actions"><button class="primary" id="account-logout">Sair da conta</button><button class="primary account-ok" id="account-ok">Ok</button></div><a class="auth-switch" href="/conta.html">Configurações da conta</a><p id="auth-message" role="status"></p>`;
+    accountContent.innerHTML = `<span class="eyebrow">Olá,</span><h2 id="account-title">${escapeAccount(account.user.name)}</h2><p>A noite começa agora.</p>${account.user.emailVerified === false ? '<div class="verification-notice"><span>Seu e-mail ainda precisa de confirmação.</span><button type="button" class="auth-switch" data-resend-verification>Enviar confirmação</button></div>' : ''}<div class="account-actions"><button class="primary account-ok" id="account-ok">Ok</button></div><p id="auth-message" role="status"></p>`;
     return;
   }
   const register = account.mode === 'register';
@@ -166,7 +166,12 @@ document.addEventListener('click', async event => {
   }
   if (event.target.closest('[data-account]')) void syncAccount();
   if (event.target.closest('#account-ok')) {
-    document.querySelector('#account-dialog').close();
+    if (typeof isAccountPage !== 'undefined' && isAccountPage) {
+      account.mode = account.user ? 'settings' : 'login';
+      renderAccount();
+    } else {
+      document.querySelector('#account-dialog').close();
+    }
   }
   if (event.target.closest('#account-switch') && !account.busy) {
     account.mode = account.mode === 'login' ? 'register' : 'login';

@@ -1,5 +1,7 @@
 # Revisão da autenticação — NightOut
 
+Documento histórico de 01/10/2026. Os achados abaixo descrevem aquela versão; para a revisão atual, consulte [a revisão de contas de 05/10/2026](revisao-contas-2026-10-05.md) e [o relatório consolidado](relatorio-autenticacao.md).
+
 Revisão do código em 01/10/2026, comparando a implementação com o README-v2. Escopo de hoje: acesso, cadastro e sessão. Nenhuma funcionalidade foi alterada nesta revisão.
 
 > Atualização após a revisão: os quatro pontos prioritários abaixo foram corrigidos. A interface revalida sessão, recupera logout, sincroniza avisos entre abas e ignora respostas antigas. O prazo PHP foi alinhado e testes agora usam banco/servidor/sessões isolados. Passaram 31 verificações da API e 12 testes JavaScript (seis de autenticação e seis de localização). Os achados abaixo descrevem o estado anterior; recuperação de senha e a conferência em navegador real continuam pendentes.
