@@ -35,9 +35,9 @@ Somente `public/` é servido. Erros de conexão retornam uma mensagem genérica;
 - `POST /api/v1/auth/login`: e-mail e senha.
 - `POST /api/v1/auth/logout`: encerra a sessão no servidor e remove o cookie.
 
-Os POSTs recebem JSON e o cabeçalho `X-CSRF-Token`. Senhas usam `password_hash`/`password_verify`; consultas são parametrizadas. E-mail é único. A senha deve ter de 8 a 72 bytes; caracteres acentuados podem ocupar mais de um byte. A sessão dura no máximo duas horas e é identificada por cookie `HttpOnly`, `SameSite=Lax`, com `Secure` quando houver HTTPS. O identificador muda ao autenticar. Arquivos de sessão ficam em `backend/storage/sessions`, fora da área pública e do Git.
+Os POSTs recebem JSON e o cabeçalho `X-CSRF-Token`. Senhas usam `password_hash`/`password_verify`; consultas são parametrizadas. E-mail é único. A senha deve ter pelo menos 8 caracteres e no máximo 72 bytes; caracteres acentuados podem ocupar mais de um byte. A sessão dura no máximo duas horas e é identificada por cookie `HttpOnly`, `SameSite=Lax`, com `Secure` quando houver HTTPS. O identificador muda ao autenticar. Arquivos de sessão ficam em `backend/storage/sessions`, fora da área pública e do Git.
 
-O limite inicial é de 15 tentativas por IP e operação em 15 minutos, compartilhado entre sessões. Esse limite simples precisará ser revisto para produção e redes compartilhadas. Não há criação pública de administradores, painel administrativo ou confirmação de e-mail nesta etapa. Recuperação de senha está disponível com entrega local de teste.
+O limite inicial é de 15 tentativas por IP e operação em 15 minutos, compartilhado entre sessões. Esse limite simples precisará ser revisto para produção e redes compartilhadas. Não há criação pública de administradores, painel administrativo nesta etapa. Recuperação de senha está disponível com entrega local de teste.
 
 A sessão tem prazo absoluto máximo de duas horas, informado ao frontend; o tempo de coleta dos arquivos PHP está alinhado a esse prazo. Fechar o navegador pode encerrar o cookie antes disso. A interface revalida ao abrir a conta, retomar a aba e receber avisos de outra aba. Um temporizador remove a identidade exibida ao alcançar o prazo. Login/logout enviam apenas um sinal via BroadcastChannel e storage; credenciais e dados pessoais não são compartilhados por esses canais. Em falha de rede, a interface informa o erro e o servidor continua sendo a autoridade sobre a sessão.
 
@@ -54,9 +54,9 @@ node --test --test-isolation=none tests/auth-ui.cjs tests/location.cjs
 
 O runner PHP cria um banco `nightout_test_<identificador aleatório>`, aplica migrations, inicia servidor em porta temporária e valida sua identidade antes de testar. Ao terminar, encerra o servidor e remove somente esse banco temporário. Sessões de teste usam cookie e diretório separados. O banco `nightout` e seus contadores não são usados. A conta de banco local precisa poder criar/remover bancos para executar esse runner. Logs e sessões temporárias ficam em `backend/storage/`, ignorado pelo Git.
 
-Não execute `tests/auth.php` diretamente; ele rejeita execução sem ambiente de teste identificado. Não configure `NIGHTOUT_TEST_RUN` no servidor manual. A suíte verifica também expiração forçada da sessão de teste, rejeição do token antigo e novo login/logout após expiração. Os testes JavaScript simulam rede, temporizador e eventos entre abas; ainda é necessária uma conferência em navegador real.
+Não execute `tests/auth.php` diretamente; ele rejeita execução sem ambiente de teste identificado. Não configure `NIGHTOUT_TEST_RUN` no servidor manual. A suíte verifica também expiração forçada da sessão de teste, rejeição do token antigo e novo login/logout após expiração. Os testes JavaScript simulam rede, temporizador e eventos entre abas; a suíte adicional abaixo cobre Edge real em desktop e celular emulado.
 
-Próximas etapas: revisar a experiência no navegador e escolher entre recuperação de senha ou início do catálogo de estabelecimentos.
+O estado consolidado está em [relatório de autenticação](../docs/relatorio-autenticacao.md).
 
 ## Recuperação de senha local
 
@@ -80,3 +80,22 @@ O token tem 32 bytes aleatórios e somente seu hash SHA-256 fica no banco. O lin
 Ao trocar a senha, `auth_version` aumenta. Todas as sessões anteriores são rejeitadas na próxima consulta autenticada, inclusive em outros navegadores; não há login automático. O formulário mantém a mesma mensagem de solicitação para e-mails cadastrados e não cadastrados, sem expor existência de conta no corpo da resposta. Há limite separado de cinco tentativas por IP/operação em 15 minutos.
 
 Os testes de recuperação fazem parte de `php tests/run-auth.php` e usam banco e caixa de e-mails separados. Confirmação de e-mail ainda não foi implementada. A experiência visual precisa de conferência em navegador real.
+
+## Configurações de conta
+
+A migration 003 adiciona verificação de e-mail e metadados de atualização. As contas existentes são preservadas; podem entrar antes de confirmar o endereço.
+
+Novos POSTs em /api/v1/auth/: verify-email, resend-verification, update-profile, change-email, change-password, logout-all, export-data e delete-account. Recebem JSON e X-CSRF-Token. Ações sensíveis exigem currentPassword; exclusão também exige confirmation igual a EXCLUIR. A interface fornece esses formulários em Configurações da conta.
+
+E-mails de confirmação e recuperação podem ser lidos com o mesmo comando mailbox.php. Configure NIGHTOUT_APP_URL para mudar a origem dos links; nunca é extraída do cabeçalho Host. NIGHTOUT_ENV=production bloqueia o transporte local: envio real ainda precisa ser implementado/configurado.
+
+Para testar o navegador, instale a dependência de teste local (pasta ignorada pelo Git), com Microsoft Edge instalado:
+
+```powershell
+npm install --prefix backend/storage/browser-tools playwright
+C:\xampp\php\php.exe tests/run-auth.php --browser
+```
+
+Esse comando roda também a suíte de API. Screenshots e downloads de contas fictícias ficam em backend/storage/browser-<identificador>. Consulte [o relatório](../docs/relatorio-autenticacao.md) para cobertura e pendências operacionais.
+
+A caixa local mostra apenas links ativos no banco, com data e tipo. Links usados, expirados ou substituídos ficam ocultos. Use `C:\xampp\php\php.exe backend/mailbox.php --verification` para confirmações e `--recovery` para recuperação.

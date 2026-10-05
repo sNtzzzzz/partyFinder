@@ -58,7 +58,7 @@ document.addEventListener('click',e=>{
   const event=e.target.closest('[data-event]');
   if(event){document.querySelector('#event-detail').innerHTML=EventDetail(events.find(item=>item.id===event.dataset.event));openDialog(document.querySelector('#event-dialog'));}
   if(e.target.closest('.dialog-close')) e.target.closest('dialog').close();
-  if(e.target.closest('[data-account]')) openDialog(document.querySelector('#account-dialog'));
+
   if(e.target.closest('#back-explore')) document.querySelector('#account-dialog').close();
   if(e.target.closest('#clear-all')) clearAll();
   const artist=e.target.closest('[data-artist]');

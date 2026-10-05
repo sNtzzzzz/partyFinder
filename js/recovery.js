@@ -55,7 +55,7 @@ document.addEventListener('submit', async event => {
     accountMessage(result.message);
   } catch (error) {
     if (error.status === 403) await syncAccount(true);
-    accountMessage(error.message);
+    showAuthError(error);
   } finally {
     submit.disabled = false;
     finishAccountOperation();

@@ -15,8 +15,9 @@ $firstClient = $client;
 $client = curl_init();
 curl_setopt($client, CURLOPT_COOKIEFILE, '');
 $csrf = request('/api/v1/auth/me')[1]['csrf'];
+$mailCount = count(glob(recoveryOutbox() . '/*.json'));
 $unknown = request('/api/v1/auth/forgot-password', 'POST', ['email'=>'unknown@nightout.invalid'], $csrf);
-check($unknown[0] === 200 && count(glob(recoveryOutbox() . '/*.json')) === 0, 'unknown email has generic response and no mail');
+check($unknown[0] === 200 && count(glob(recoveryOutbox() . '/*.json')) === $mailCount, 'unknown email has generic response and no mail');
 $known = request('/api/v1/auth/forgot-password', 'POST', ['email'=>$email], $csrf);
 check($known[0] === 200 && $known[1] === $unknown[1], 'known and unknown email have identical response');
 function currentRecoveryToken(PDO $db, string $email): string

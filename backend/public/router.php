@@ -6,8 +6,10 @@ if (str_starts_with($path, '/api/')) {
     require __DIR__ . '/index.php';
     return;
 }
+header('Referrer-Policy: no-referrer');
+header('Cache-Control: no-store');
 $root = dirname(__DIR__, 2);
-$allowed = ['/' => 'index.html', '/index.html' => 'index.html', '/assets/favicon.svg' => 'assets/favicon.svg'];
+$allowed = ['/conta.html' => 'conta.html', '/' => 'index.html', '/index.html' => 'index.html', '/assets/favicon.svg' => 'assets/favicon.svg'];
 foreach (['js' => 'js', 'styles' => 'css'] as $directory => $extension) {
     foreach (glob($root . '/' . $directory . '/*.' . $extension) as $file) {
         $allowed['/' . $directory . '/' . basename($file)] = $directory . '/' . basename($file);

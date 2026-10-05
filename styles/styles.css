@@ -1289,6 +1289,7 @@ dialog::backdrop{
     .section-label{
         font-size:8px;
         max-width:75px;
+        overflow-wrap:anywhere;
         text-align:right
     }
     .toolbar{

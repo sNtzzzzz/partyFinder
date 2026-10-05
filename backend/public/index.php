@@ -14,6 +14,10 @@ $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 require dirname(__DIR__) . '/src/auth.php';
 $routes = [
     '/api/v1/auth/forgot-password' => 'POST', '/api/v1/auth/reset-password' => 'POST',
+    '/api/v1/auth/verify-email' => 'POST', '/api/v1/auth/resend-verification' => 'POST',
+    '/api/v1/auth/update-profile' => 'POST', '/api/v1/auth/change-email' => 'POST',
+    '/api/v1/auth/change-password' => 'POST', '/api/v1/auth/logout-all' => 'POST',
+    '/api/v1/auth/export-data' => 'POST', '/api/v1/auth/delete-account' => 'POST',
     '/' => 'GET', '/api/v1/health' => 'GET', '/api/v1/auth/me' => 'GET',
     '/api/v1/auth/register' => 'POST', '/api/v1/auth/login' => 'POST', '/api/v1/auth/logout' => 'POST',
 ];
@@ -44,11 +48,15 @@ try {
         'testRun' => getenv('NIGHTOUT_TEST_RUN') ?: null,
         'message' => 'API funcionando e banco conectado.',
     ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+} catch (AuthError $error) {
+    if (isset($database) && $database->inTransaction()) $database->rollBack();
+    respond(['message' => $error->getMessage()] + $error->details, $error->status);
 } catch (Throwable $error) {
-    error_log('NightOut database check failed: ' . $error->getMessage());
+    if (isset($database) && $database->inTransaction()) $database->rollBack();
+    error_log('NightOut request failed: ' . $error->getMessage());
     http_response_code(503);
     echo json_encode([
         'status' => 'error',
-        'message' => 'Banco indisponível. Confira o MySQL no XAMPP e a configuração local.',
+        'message' => 'Serviço temporariamente indisponível. Tente novamente em instantes.',
     ], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 }

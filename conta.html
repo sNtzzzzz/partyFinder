@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha conta — NightOut</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/auth.css">
+    <script defer src="/js/components.js"></script>
+    <script defer src="/js/account-navigation.js"></script>
+    <script defer src="/js/auth.js"></script>
+    <script defer src="/js/recovery.js"></script>
+    <script defer src="/js/account-settings.js"></script>
+</head>
+<body data-settings-page>
+    <header id="header"></header>
+    <main class="settings-page container">
+        <a class="settings-home" href="/">← Voltar para explorar</a>
+        <div class="settings-layout">
+            <aside><span class="eyebrow">DO SEU JEITO</span><h1>Sua conta.</h1><p>Seu perfil, sua segurança.<br>Tudo em um só lugar.</p></aside>
+            <section class="settings-card" aria-labelledby="account-title"><div class="account-content"></div></section>
+        </div>
+    </main>
+    <dialog id="account-dialog" aria-label="Conta"></dialog>
+</body>
+</html>

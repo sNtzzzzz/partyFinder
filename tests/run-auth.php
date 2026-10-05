@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 if (PHP_SAPI !== 'cli') exit;
+$withBrowser = in_array('--browser', $argv, true);
 $run = bin2hex(random_bytes(8));
 putenv('NIGHTOUT_TEST_RUN=' . $run);
 require dirname(__DIR__) . '/backend/src/database.php';
@@ -20,6 +21,7 @@ try {
     fclose($socket);
     $log = $root . '/backend/storage/auth-test-' . $run . '.log';
     if (!is_dir(dirname($log))) mkdir(dirname($log), 0700, true);
+    putenv('NIGHTOUT_APP_URL=http://' . $address);
     $process = proc_open([PHP_BINARY, '-S', $address, '-t', $root . '/backend/public', $root . '/backend/public/router.php'],
         [0 => ['pipe', 'r'], 1 => ['file', $log, 'a'], 2 => ['file', $log, 'a']], $pipes, $root);
     if (!is_resource($process)) throw new RuntimeException('Não foi possível iniciar o servidor de teste.');
@@ -36,6 +38,15 @@ try {
     $argv = [__DIR__ . '/auth.php', $base];
     require __DIR__ . '/auth.php';
     require __DIR__ . '/recovery.php';
+    require __DIR__ . '/account.php';
+    if ($withBrowser) {
+        $db->exec('DELETE FROM auth_limits');
+        $browserTest = proc_open(['node', $root . '/tests/browser.cjs', $base, $run],
+            [0 => ['pipe', 'r'], 1 => STDOUT, 2 => STDERR], $browserPipes, $root);
+        if (!is_resource($browserTest)) throw new RuntimeException('Browser test could not start.');
+        fclose($browserPipes[0]);
+        if (proc_close($browserTest) !== 0) throw new RuntimeException('Browser test failed.');
+    }
     $exitCode = 0;
 } catch (Throwable $error) {
     fwrite(STDERR, $error->getMessage() . PHP_EOL);

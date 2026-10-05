@@ -242,3 +242,13 @@ Ficam para depois: pagamentos, emissão de ingressos, reservas reais, movimento 
 - [ ] Conferência visual do fluxo completo no navegador.
 
 Instruções operacionais atualizadas em backend/README.md.
+
+## Gestão de conta — atualização de 04/10/2026
+
+Implementados confirmação/reenvio de e-mail, edição de nome, mudança de e-mail confirmada, alteração de senha, saída de todos os dispositivos, exportação JSON e exclusão da própria conta. Consulte [o relatório de autenticação](docs/relatorio-autenticacao.md) para o estado consolidado e limitações de publicação.
+
+- [x] Confirmação de e-mail local.
+- [x] Configurações de conta e proteção das operações sensíveis.
+- [x] Testes completos de API e navegador em desktop e celular emulado.
+- [ ] Entrega real de e-mails e configuração de produção.
+- [ ] Backup/restauração e política de retenção antes da publicação.

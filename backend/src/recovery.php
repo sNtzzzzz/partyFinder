@@ -1,27 +1,10 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/mail.php';
 
-function recoveryOutbox(): string
-{
-    $run = getenv('NIGHTOUT_TEST_RUN');
-    if ($run && !preg_match('/^[a-f0-9]{16}$/D', $run)) throw new RuntimeException('Invalid test run.');
-    return dirname(__DIR__) . '/storage/' . ($run ? 'outbox-test-' . $run : 'outbox');
-}
+function recoveryOutbox(): string { return mailOutbox(); }
 
-function recoveryLimit(PDO $db, string $action): void
-{
-    $bucket = hash('sha256', $action . '|' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown'));
-    $now = time();
-    $db->prepare('DELETE FROM auth_limits WHERE expires_at <= ?')->execute([$now]);
-    $db->prepare('INSERT INTO auth_limits (bucket, attempts, expires_at) VALUES (?, 1, ?)
-        ON DUPLICATE KEY UPDATE attempts=attempts+1')->execute([$bucket, $now + 900]);
-    $query = $db->prepare('SELECT attempts FROM auth_limits WHERE bucket=?');
-    $query->execute([$bucket]);
-    if ((int)$query->fetchColumn() > 5) {
-        header('Retry-After: 900');
-        respond(['message' => 'Muitas tentativas. Aguarde 15 minutos e tente novamente.'], 429);
-    }
-}
+function recoveryLimit(PDO $db, string $action): void { authLimit($db, $action, 5); }
 
 function handleRecovery(PDO $db, string $action, array $input): void
 {
@@ -37,10 +20,8 @@ function handleRecovery(PDO $db, string $action, array $input): void
         if ($id !== false) {
             $token = bin2hex(random_bytes(32));
             // Origem fixa do ambiente local, nunca derivada do cabeçalho Host.
-            $url = 'http://127.0.0.1:8000/#reset-password=' . $token;
-            $directory = recoveryOutbox();
-            if (!is_dir($directory) && !mkdir($directory, 0700, true)) throw new RuntimeException('Outbox unavailable.');
-            $file = $directory . '/' . gmdate('Ymd-His') . '-' . bin2hex(random_bytes(6)) . '.json';
+            $url = appUrl() . '/#reset-password=' . $token;
+            $file = null;
             $db->beginTransaction();
             try {
                 // Um novo pedido substitui o link anterior.
@@ -48,16 +29,12 @@ function handleRecovery(PDO $db, string $action, array $input): void
                 $db->prepare('INSERT INTO password_reset_tokens (user_id, token_hash, expires_at) VALUES (?, ?, ?)
                     ON DUPLICATE KEY UPDATE token_hash=VALUES(token_hash), expires_at=VALUES(expires_at)')
                     ->execute([$id, hash('sha256', $token), time() + 1800]);
-                $mail = ['to' => $email, 'subject' => 'Redefina sua senha do NightOut',
-                    'message' => 'Use o link em até 30 minutos. Se não pediu a troca, ignore esta mensagem.',
-                    'url' => $url, 'createdAt' => gmdate(DATE_ATOM)];
-                if (file_put_contents($file, json_encode($mail, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR), LOCK_EX) === false) {
-                    throw new RuntimeException('Outbox write failed.');
-                }
+                $file = storeMail((int)$id, $email, 'Redefina sua senha do NightOut',
+                    'Use o link em ate 30 minutos. Se nao pediu a troca, ignore esta mensagem.', $url, 'recovery');
                 $db->commit();
             } catch (Throwable $error) {
                 if ($db->inTransaction()) $db->rollBack();
-                if (is_file($file)) unlink($file);
+                if ($file !== null && is_file($file)) unlink($file);
                 throw $error;
             }
         }
@@ -91,6 +68,7 @@ function handleRecovery(PDO $db, string $action, array $input): void
         $db->prepare('UPDATE users SET password_hash=?, auth_version=auth_version+1 WHERE id=?')
             ->execute([$passwordHash, $id]);
         $db->prepare('DELETE FROM password_reset_tokens WHERE user_id=?')->execute([$id]);
+        $db->prepare("DELETE FROM email_verification_tokens WHERE user_id=? AND purpose='change'")->execute([$id]);
         $db->commit();
     } catch (Throwable $error) {
         if ($db->inTransaction()) $db->rollBack();

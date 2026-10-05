@@ -3,8 +3,9 @@ const account = { user: null, csrf: null, mode: 'login', busy: false };
 let accountRevision = 0;
 let sessionTimer;
 let syncPending = false;
+let messageTimer;
 const accountChannel = typeof BroadcastChannel === 'function' ? new BroadcastChannel('nightout-auth') : null;
-const accountContent = document.querySelector('#account-dialog .account-content');
+const accountContent = typeof isAccountPage !== 'undefined' && isAccountPage ? document.querySelector('.settings-card .account-content') : document.querySelector('#account-dialog .account-content');
 const escapeAccount = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 
 async function authRequest(action, data) {
@@ -25,6 +26,7 @@ async function authRequest(action, data) {
   if (!response.ok) {
     const error = new Error(result.message || 'Não foi possível concluir. Tente novamente.');
     error.status = response.status;
+    error.retryAfter = result.retryAfter;
     throw error;
   }
   return result;
@@ -46,7 +48,7 @@ function applySession(result) {
     }, Math.max(0, result.expiresAt * 1000 - Date.now()));
   }
   if (changed) {
-    if (!account.user && !['forgot', 'reset'].includes(account.mode)) account.mode = 'login';
+    if (!account.user && !['forgot', 'reset', 'verify', 'verified'].includes(account.mode)) account.mode = 'login';
     renderAccount();
     if (wasConnected && !account.user) accountMessage('Sua sessão foi encerrada. Entre novamente para continuar.');
   }
@@ -87,7 +89,8 @@ async function logoutAccount() {
 }
 
 function installPasswordToggles() {
-  accountContent.querySelectorAll('input[name="password"], input[name="confirmation"]').forEach(input => {
+  accountContent.querySelectorAll('input[type="password"]').forEach(input => {
+    input.dataset.secret = 'true';
     input.id = 'auth-' + input.name;
     const wrapper = document.createElement('span');
     wrapper.className = 'password-field';
@@ -106,13 +109,17 @@ function installPasswordToggles() {
 }
 
 function renderAccount() {
+  clearTimeout(messageTimer);
+  if (typeof refreshAccountMenu === 'function') refreshAccountMenu();
+  if (typeof isAccountPage !== 'undefined' && isAccountPage && account.user && ['login', 'register'].includes(account.mode)) account.mode = 'settings';
   const button = document.querySelector('[data-account]');
   button.innerHTML = `${icon('user')} <span>${account.user ? escapeAccount(account.user.name) : 'Entrar'}</span>`;
   button.setAttribute('aria-label', account.user ? `Abrir conta de ${account.user.name}` : 'Entrar');
   button.title = account.user ? account.user.name : 'Entrar';
   if (['forgot', 'reset'].includes(account.mode)) { renderRecoveryForm(); return; }
+  if (['settings', 'profile', 'password', 'email', 'delete', 'export', 'sessions', 'verify', 'verified'].includes(account.mode)) { renderAccountSettings(); return; }
   if (account.user) {
-    accountContent.innerHTML = `<span class="eyebrow">Olá,</span><h2 id="account-title">${escapeAccount(account.user.name)}</h2><p>A noite começa agora.</p><div class="account-actions"><button class="primary" id="account-logout">Sair da conta</button><button class="primary account-ok" id="account-ok">Ok</button></div><p id="auth-message" role="status"></p>`;
+    accountContent.innerHTML = `<span class="eyebrow">Olá,</span><h2 id="account-title">${escapeAccount(account.user.name)}</h2><p>A noite começa agora.</p>${account.user.emailVerified === false ? '<div class="verification-notice"><span>Seu e-mail ainda precisa de confirmação.</span><button type="button" class="auth-switch" data-resend-verification>Enviar confirmação</button></div>' : ''}<div class="account-actions"><button class="primary" id="account-logout">Sair da conta</button><button class="primary account-ok" id="account-ok">Ok</button></div><a class="auth-switch" href="/conta.html">Configurações da conta</a><p id="auth-message" role="status"></p>`;
     return;
   }
   const register = account.mode === 'register';
@@ -122,7 +129,29 @@ function renderAccount() {
 }
 
 function accountMessage(message) {
-  document.querySelector('#auth-message').textContent = message;
+  clearTimeout(messageTimer);
+  const target = document.querySelector('#auth-message');
+  if (target) target.textContent = message;
+}
+
+function showAuthError(error) {
+  if (!Number.isFinite(error.retryAfter) || error.retryAfter <= 0) { accountMessage(error.message); return; }
+  const until = Date.now() + error.retryAfter * 1000;
+  const target = document.querySelector('#auth-message');
+  clearTimeout(messageTimer);
+  function tick() {
+    if (!target || target !== document.querySelector('#auth-message')) return;
+    const remaining = Math.max(0, Math.ceil((until - Date.now()) / 1000));
+    target.textContent = remaining ? 'Muitas tentativas. Tente novamente em ' + Math.floor(remaining / 60) + ':' + String(remaining % 60).padStart(2, '0') + '.' : 'Você já pode tentar novamente.';
+    if (remaining) messageTimer = setTimeout(tick, 1000);
+  }
+  tick();
+}
+
+function checkPasswordInput(password) {
+  if (Array.from(password).length < 8) { accountMessage('Use pelo menos 8 caracteres'); return false; }
+  if (new TextEncoder().encode(password).length > 72) { accountMessage('A senha ficou muito longa. Use uma senha mais curta.'); return false; }
+  return true;
 }
 
 document.addEventListener('click', async event => {
@@ -157,7 +186,7 @@ document.addEventListener('click', async event => {
       accountMessage('Você saiu da conta.');
     } catch (error) {
       await syncAccount(true);
-      accountMessage(error.message);
+      showAuthError(error);
       const logoutButton = document.querySelector('#account-logout');
       if (logoutButton) logoutButton.disabled = false;
     } finally { finishAccountOperation(); }
@@ -194,16 +223,17 @@ document.addEventListener('submit', async event => {
     form.reset();
     applySession(result);
     announceAccountChange();
-    document.querySelector('#account-ok').focus();
+    document.querySelector('#account-ok')?.focus();
   } catch (error) {
-    if (error.status === 403) await syncAccount(true);
-    accountMessage(error.message);
+    if ([401, 403].includes(error.status) && account.mode !== 'login') await syncAccount(true);
+    showAuthError(error);
     form.querySelector('button[type="submit"]').disabled = false;
   } finally { finishAccountOperation(); }
 });
 
 document.querySelector('#account-dialog').addEventListener('close', () => {
-  accountContent.querySelectorAll('input[name="password"], input[name="confirmation"]').forEach(input => {
+  clearTimeout(messageTimer);
+  accountContent.querySelectorAll('[data-secret]').forEach(input => {
     input.value = '';
     input.type = 'password';
   });
