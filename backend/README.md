@@ -9,14 +9,14 @@ API PHP conectada ao banco `nightout`, com cadastro, login e logout. A migration
 2. No terminal PowerShell do projeto, execute:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\backend\start.ps1
+C:\xampp\php\php.exe -S 0.0.0.0:8000 -t .\backend\public .\backend\public\router.php
 ```
 
-3. Abra http://127.0.0.1:8000/ para usar o site e clique em **Entrar → Ainda não tenho conta. Cadastrar**. A verificação da conexão continua em http://127.0.0.1:8000/api/v1/health.
+3. Consulte o IPv4 atual com `ipconfig` e abra `http://IPv4-atual:8000/` nos dispositivos da mesma rede. No próprio computador, também pode abrir http://127.0.0.1:8000/ para usar o site e clique em **Entrar → Ainda não tenho conta. Cadastrar**. A verificação da conexão continua em http://127.0.0.1:8000/api/v1/health.
 
 A resposta esperada contém `"status": "ok"` e `"database": "connected"`. Mantenha o terminal aberto; `Ctrl+C` encerra a API.
 
-Este servidor usa o PHP instalado pelo XAMPP e seu MySQL/MariaDB. Não precisa mover o projeto para `htdocs` nem alterar o Apache. O servidor PHP é exclusivo para desenvolvimento local. O router serve a interface e a API na mesma origem, sem CORS. Somente o HTML e os arquivos JS/CSS públicos são permitidos; banco, configuração, testes e Git não são expostos. Use sempre o mesmo endereço (`127.0.0.1`) durante o teste.
+Este servidor usa o PHP instalado pelo XAMPP e seu MySQL/MariaDB. Não precisa mover o projeto para `htdocs` nem alterar o Apache. O servidor PHP é exclusivo para desenvolvimento local. O router serve a interface e a API na mesma origem, sem CORS. Somente o HTML e os arquivos JS/CSS públicos são permitidos; banco, configuração, testes e Git não são expostos. Use a mesma origem durante cada fluxo de conta, pois cookies são separados por host. O script `backend/start.ps1` usa apenas `127.0.0.1` e serve como alternativa para acesso restrito ao próprio computador. HTTP pelo IP da rede não permite geolocalização; para celular, HTTPS confiável permanece pendente.
 
 Se o servidor já estava aberto antes da atualização do router, encerre com `Ctrl+C` e execute novamente o comando.
 
@@ -26,7 +26,7 @@ Os padrões locais estão em `config/database.example.php`: host `127.0.0.1`, po
 
 Se a sua instalação for diferente, copie o arquivo para `config/local.php` e ajuste. O arquivo local é ignorado pelo Git. Não coloque credenciais no JavaScript da interface.
 
-Somente `public/` é servido. Erros de conexão retornam uma mensagem genérica; detalhes ficam no terminal do PHP.
+O document root é `public/`; o router também serve os arquivos públicos permitidos da interface e fotos locais em `assets/venues/`. Erros de conexão retornam uma mensagem genérica; detalhes ficam no terminal do PHP.
 
 ## Autenticação implementada
 
@@ -60,7 +60,7 @@ O estado consolidado está em [relatório de autenticação](../docs/relatorio-a
 
 ## Recuperação de senha local
 
-A opção **Esqueci minha senha** está no modal de login. A migration `002_password_reset.sql` já foi aplicada neste ambiente: adiciona `auth_version` a usuários e cria `password_reset_tokens`, preservando contas existentes.
+A opção **Esqueci minha senha** está no modal de login. A migration `002_password_reset.sql` precisa estar aplicada no banco usado neste computador; ela adiciona `auth_version` a usuários e cria `password_reset_tokens`, preservando contas existentes.
 
 1. Abra http://127.0.0.1:8000/ e clique em Entrar → Esqueci minha senha.
 2. Informe um e-mail já cadastrado.
@@ -73,7 +73,7 @@ C:\xampp\php\php.exe backend/mailbox.php
 4. Copie o link exibido e abra no navegador com o servidor ligado.
 5. Defina e confirme a nova senha. Depois entre novamente.
 
-Nenhuma mensagem é enviada pela internet. Os últimos dez e-mails de teste podem ser lidos pelo comando; todos ficam em arquivos JSON em `backend/storage/outbox/`, fora do Git e inacessíveis pelo servidor HTTP. Eles contêm links de recuperação e devem ser tratados como dados privados locais. O link usa a origem fixa de desenvolvimento `http://127.0.0.1:8000`. Em produção precisaremos substituir a entrega em arquivos por envio real e configurar o domínio HTTPS.
+Nenhuma mensagem é enviada pela internet. Os últimos dez e-mails de teste podem ser lidos pelo comando; todos ficam em arquivos JSON em `backend/storage/outbox/`, fora do Git e inacessíveis pelo servidor HTTP. Eles contêm links de recuperação e devem ser tratados como dados privados locais. Os links usam `NIGHTOUT_APP_URL`, com padrão de desenvolvimento `http://127.0.0.1:8000`. Para abri-los em outro dispositivo, configure explicitamente a origem com o IPv4 atual antes de iniciar o servidor e solicitar novos links. Em produção precisaremos substituir a entrega em arquivos por envio real e configurar o domínio HTTPS.
 
 O token tem 32 bytes aleatórios e somente seu hash SHA-256 fica no banco. O link vale 30 minutos, é de uso único e substituído por um novo pedido. A atualização da senha e o consumo do token ocorrem na mesma transação. O token do link usa fragmento e é removido da barra de endereço pelo frontend; não é gravado no histórico como query nem enviado nas requisições de carregamento do HTML.
 

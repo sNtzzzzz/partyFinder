@@ -1,93 +1,84 @@
 # Contexto do NightOut
 
-Atualizado em 05/10/2026 após leitura do código neste computador.
+Atualizado em 05/10/2026 na reorganização documental. Resumo do código e dos registros disponíveis; disponibilidade do servidor e estado do banco precisam ser conferidos em cada sessão.
 
 ## Objetivo e arquitetura
 
-Plataforma para descobrir eventos e estabelecimentos em São Paulo e no ABC, com futuro catálogo próprio e cadastro administrativo. A interface usa HTML, CSS e JavaScript; a API atual usa PHP/PDO e MariaDB do XAMPP. Sem framework ou etapa de build.
+Plataforma para descobrir estabelecimentos e rolês em São Paulo e no ABC. Interface HTML/CSS/JavaScript sem framework ou build; API de contas em PHP/PDO e MariaDB do XAMPP. Catálogo real local já implementado; painel administrativo e API de catálogo ainda não existem.
 
-- `index.html`, `js/app.js`, `js/components.js` e `styles/styles.css`: exploração, cards, filtros e detalhes.
-- `js/data.js`: catálogo de 32 locais para rolê, 29 com grade habitual, 19 com gráficos semanais de movimento, 1 com horário de atendimento separado dos eventos e 2 pendentes; 6 com fotos reais. `js/places.js` renderiza estabelecimentos e calcula funcionamento habitual no fuso de São Paulo. Não há API de catálogo, reservas, pagamentos ou Google Places.
-- `js/location.js`: geolocalização em memória e cálculo de distância usando as coordenadas pesquisadas dos lugares.
-- `conta.html`, `js/auth.js`, `js/recovery.js`, `js/account-settings.js`, `js/account-navigation.js` e `styles/auth.css`: autenticação, menu e página dedicada de configurações.
-- `backend/public/router.php`: serve interface e API na mesma origem, permitindo somente arquivos públicos explícitos.
-- `backend/public/index.php` e `backend/src/`: rotas e regras de autenticação/conta.
+- `index.html`, `js/app.js`, `js/components.js`, `styles/styles.css`: exploração, filtros, cards e detalhes.
+- `js/data.js`, `js/places.js`: catálogo local de 32 locais, com 29 grades habituais, 19 gráficos semanais históricos, 1 atendimento separado de eventos, 2 horários pendentes e 6 casas com fotos reais, conforme último registro da ampliação.
+- `js/location.js`: geolocalização em memória e cálculo de distância. Distância do marco FSA é distinta da distância ao usuário.
+- `conta.html`, `js/auth.js`, `js/recovery.js`, `js/account-settings.js`, `js/account-navigation.js`, `styles/auth.css`: autenticação e configurações da conta.
+- `backend/public/router.php`: interface e API na mesma origem, com recursos públicos permitidos explicitamente.
+- `backend/public/index.php`, `backend/src/`: rotas e regras de conta. Três migrations em `backend/database/migrations/`.
 
-## Estado implementado
+## Estado atual e decisões
 
-Preferência do usuário em 05/10/2026 para próximos pedidos de ligar o servidor: sempre enviar o comando que permite acesso simultâneo na rede local por notebook, celular, PC e tablet, executado na pasta partyFinder: `C:\xampp\php\php.exe -S 0.0.0.0:8000 -t .\backend\public .\backend\public\router.php`. MySQL do XAMPP precisa estar ligado. Consultar o IPv4 atual antes de fornecer o link http://IP:8000, pois muda entre casa/faculdade/computadores. Nesta máquina/rede funcionou em 192.168.15.6:8000; o Opera inicialmente bloqueou por VPN ligada, resolvido ao desligá-la. HTTP pelo IP da rede não permite geolocalização; localhost/127.0.0.1 no próprio notebook são exceções, e HTTPS confiável para celular permanece pendente. Script backend/start.ps1 permanece com bind 127.0.0.1; nenhuma mudança de servidor executada ao registrar esta preferência.
+- Catálogo e fotos locais, com atualização manual; Google Places adiado por custo. Não há reservas, pagamentos ou agenda confirmada de eventos.
+- Lista em carrossel horizontal de uma linha, com setas por faixa, toque e teclado. Busca/filtros reiniciam posição; refresh de horários a preserva. Sem contador global visível.
+- Funcionamento habitual no fuso `America/Sao_Paulo`, atualizado a cada minuto: ABERTO, FECHADO ou `-` quando desconhecido.
+- Movimento é estimativa histórica, nunca lotação ao vivo. Quatro barras com rótulos Vazio, Pouca gente, Normal, Movimentado e Lotado; ausência de dados mostra `Movimento: -`. Modal com seletor dos sete dias; `liveOccupancy` permanece sem dados.
+- Fotos reais de seis casas em WebP, miniaturas lazy nos cards e imagem maior nos detalhes. Originais privados em `backend/storage/`. Fontes e datas ficam nos dados/documentos, sem seção de referências na interface.
+- Autenticação: cadastro, login/logout, sessão de até duas horas, CSRF, limites, recuperação, confirmação de e-mail, edição de nome/e-mail/senha, revogação de sessões, exportação JSON e exclusão da própria conta. Confirmação de e-mail ainda não obrigatória para login. E-mails entregues somente em arquivos privados locais.
+- Menu autenticado leva a `/conta.html`; boas-vindas com botão Ok. Confirmação mostra modal de sucesso após validação.
 
-Ampliação após revisão da lista em 05/10/2026: 10 adicionados (Bar do Cissão, Rota Music Bar, Botequim do Orestes, Errejota Bangalô Bar, 52’s Rock Bar, Mocergo, Jim Jones Pub, Lajje Beer, Flag The Bar, Leandrini Rock Bar). Google consultado para 13 candidatos: nomes/endereço/grades dos 10 conferidos, gráficos inacessíveis na visualização limitada recebida (não presumir ausência no Google). Novos sem fotos próprias confirmadas, sem movimento inventado. Catálogo agora 32, com 29 grades habituais/19 gráficos/1 atendimento separado/2 pendentes. Leandrini tem divergência interna no site e com Google; aplicada grade detalhada do Maps, aviso no modal e conflito documentado. Tatu Bola da Kennedy 1250 não incluir: BaresSP marca fechamento e notícia de 30/05/2026 descreve nova operação Habib’s/Ragazzo no endereço. Espaço Aberto aguarda reabertura: Google marca Temporariamente fechado. Muquiranas pendente: Maps retorna Casa Areal no mesmo endereço, site antigo mantém Muquiranas. Adega 99 incluída na lista como pendente conforme usuário; não publicada nem inventados número/horários. Lista central docs/locais-5km.csv e curadoria JSON agora 539 (533 originais preservados + 5 complementares publicados + Adega 99). Todos os 32 do site estão na lista; 54 prioritários ainda fora e 507 registros no total fora (nem todos adequados para publicação). Primeiras 11 colunas e 533 linhas originais preservadas; colunas novas separam dados atuais do catálogo da pesquisa original. Fila docs/locais-role-prioritarios.csv sincronizada e contém só os 54. Relatórios atuais: docs/curadoria-role-5km.md e docs/ampliacao-catalogo-2026-10-05.md/.json; docs históricos sinalizados. Catálogo/fotos locais e revisão manual mantidos; banco não alterado.
+## Curadoria e pendências do catálogo
 
-Validação desta ampliação: 19 testes Node existentes passaram (13 de localização/catálogo e 6 de interface de conta), além do validador de curadoria (539 registros únicos, 32 publicados e 54 prioritários). Smoke no Edge em 1280/768/390px passou: 32 cards em uma faixa horizontal, setas, busca dos novos lugares, horários/endereço nos detalhes, exclusões e ausência de erros JavaScript/overflow da página. Banco e autenticação do backend não foram alterados nesta ampliação.
+Lista central `docs/locais-5km.csv` e curadoria JSON: último registro de 539 candidatos, 32 publicados e 54 prioritários ainda fora. Prioridade editorial não comprova público universitário, preço ou operação atual. Adegas precisam de evidência de consumo/permanência.
 
-Texto dos indicadores dos cards simplificado: Vazio (0 barras), Pouca gente (1), Normal (2), Movimentado (3), Lotado (4). Sem dados mantém Movimento: -. Tooltip e gráfico continuam explicitando estimativa habitual do Google, não presença ao vivo ou capacidade física.
+- Excluir Tonel do Rudge e Supra Dom Pedro; não reativar este último pelo site antigo.
+- Mais Adega Point Bar: Av. Príncipe de Gales, 466.
+- Virtus e After Bar: horários pendentes. Ocean Drive: atendimento separado das festas.
+- Leandrini: divergência de horários documentada; aplicada grade detalhada do Maps com aviso.
+- Tatu Bola Kennedy 1250 excluído por evidências de fechamento/substituição; Espaço Aberto aguarda reabertura; Muquiranas conflita com Casa Areal; Adega 99 permanece candidata sem publicação.
 
-Cards agora mostram quatro barras discretas de movimento habitual no dia/hora atual de São Paulo, baseadas em popularTimes do Google e recalculadas pelo refresh existente de um minuto. Escala relativa: 0 sem preenchimento, 1–25 uma barra, 26–50 duas, 51–75 três, 76–100 quatro; dados ausentes usam quatro barras neutras e Movimento: -. Madrugada consulta barras após a virada do gráfico do dia anterior. Removida a frase Movimento em tempo real: sem informação dos detalhes. Barras são explicitamente históricas, não leitura de presença atual; nenhuma consulta automática ou informação ao vivo foi implementada, pois o catálogo permanece local/manual.
+Referências atuais: `docs/curadoria-role-5km.md/.json`, `docs/locais-role-prioritarios.csv`, `docs/ampliacao-catalogo-2026-10-05.md/.json`, `docs/revisao-horarios-2026-10-05.md/.json`. Preservar dados originais da pesquisa e registrar conflitos.
 
-Revisão completa dos 22 publicados em 05/10/2026: Google Maps consultado diretamente pelo Edge; 19 fichas expuseram gráficos semanais com barras e rótulos numéricos. Capturados 7 dias, domingo a sábado, com grupo ativo de segunda conferido nas capturas. Quando havia barra de movimento atual/esperado, somente o esperado foi transcrito; liveOccupancy permanece null. Site agora mostra gráfico discreto no modal, dia atual de São Paulo selecionado e seletor dos 7 dias; fonte/data internas, sem seção pública de referências. Dados continuam locais/manuais. Adicionada grade do Supra Bernô sex/sáb 22–05. Ocean Drive: atendimento seg–sáb 10–18 em appointmentHours, separado das festas; badge permanece -. Bar Figueiras mantém horário oficial apesar de Google divergente; A Gruta mantém segunda 19h30 e domingo condicionado a eventos (null), conforme site oficial. Virtus: ficha do Google no endereço 327 conflita com grade antiga e seção Outros horários não expôs grade; horários antigos retirados do cálculo. After Bar: não localizada ficha correspondente na busca, sem substituir por vizinhos. Resultado atual: 19 grades habituais e 19 gráficos, 1 atendimento/visitas, 2 pendentes (Virtus/After); falha de acesso não prova ausência de informação no Google. Relatório/evidências: docs/revisao-horarios-2026-10-05.md/.json. Capturas HTML/scripts privados em backend/storage. Google Search pediu verificação de tráfego incomum, não contornada. Passaram 18 testes Node, sintaxe dos 3 scripts JS e Edge em 1280/768/390px (22 detalhes, 19 gráficos/7 dias, padrão de hoje, valores, sem overflow/erros JS); screenshot móvel conferida. Banco/autenticação PHP não alterados. Parágrafos abaixo registram etapas anteriores, não substituem esta revisão.
+## Executar e ambiente
 
-Mais Adega Point Bar: grade semanal cadastrada em 05/10/2026 com base na captura do Google enviada pelo usuário (dom 13–21, seg 14–22, ter 14–23, qua 14–00, qui 13–00, sex/sáb 12–02). Catálogo agora tem 19 dos 22 locais com grade semanal. Captura também mostra gráfico de pico, mas não identifica dia/valores; popularTimes permanece null, pendente de dados legíveis. Fonte registrada como captura fornecida, sem alegar consulta direta à ficha. Sintaxe e testes Node verificados.
+Na pasta `partyFinder`, com MySQL do XAMPP ligado, acesso pela rede:
 
-Badges dos cards usam verde escuro pouco saturado para ABERTO e vinho suave para FECHADO, com texto claro e bordas discretas; status desconhecido (-) mantém fundo neutro. Sintaxe JavaScript e testes Node verificados nesta alteração.
+```powershell
+C:\xampp\php\php.exe -S 0.0.0.0:8000 -t .\backend\public .\backend\public\router.php
+```
 
-Rótulos de funcionamento simplificados a pedido do usuário: ABERTO, FECHADO e - quando não há informação suficiente de horário. Alteração em js/places.js, usada nos cards e detalhes; cálculo de funcionamento mantido.
+Usar `http://IPv4-atual:8000/` nos dispositivos da mesma rede; consultar o IPv4 a cada pedido. Nesta reorganização, `ipconfig` mostrou Ethernet `192.168.15.89`; esse endereço pode mudar. No próprio computador: `http://127.0.0.1:8000/`. Manter terminal aberto; Ctrl+C encerra. `backend/start.ps1` continua restrito a loopback.
 
-Navegação do catálogo em 05/10/2026 alterada a pedido do usuário: Encontre seu lugar agora é carrossel horizontal de uma linha, quatro cards por faixa no desktop, dois no tablet e um com prévia do seguinte no celular. Setas laterais avançam/recuam uma faixa; toque e teclado (setas/Home/End no contêiner) suportados, movimento reduzido respeitado. Setas desabilitadas nos extremos e ocultas quando não há overflow; retirada paginação vertical Exibir mais e contador visível. Busca/filtros reiniciam scroll, refresh de horários preserva posição. Catálogo ainda local com 22 registros carregados em JavaScript; futura busca por cidade/região e lotes no backend ainda não implementada. Passaram 16 testes Node e Edge em 1280/768/390px (uma linha, setas, teclado, limites, posição, busca vazia/específica, modal e página sem overflow horizontal); screenshot móvel conferida. Preferência substitui regra histórica de duas linhas mencionada abaixo.
+HTTP pelo IP da rede não permite geolocalização; loopback no próprio computador é exceção. HTTPS confiável para celular permanece pendente. Links de e-mail usam `NIGHTOUT_APP_URL`, cujo padrão é loopback; para testes de links em outro dispositivo, configurar a origem explicitamente.
 
-Corrigido o espaço extra abaixo do aviso da Agenda em 05/10/2026: #proximos agora tem margin-bottom:0; #footer tem padding-top:0 e sua linha ::before fica em top:0. A margem genérica de seção (14px) e o afastamento do rodapé (32px) somavam 46px assimétricos abaixo da faixa do aviso. Mantida a faixa de 70px com alinhamento vertical central.
+Banco padrão: `nightout`, host `127.0.0.1`, porta 3306, usuário `root`, senha vazia como padrão de desenvolvimento. Configuração privada em `backend/config/local.php`; sessões e mensagens em `backend/storage/`, ignorados pelo Git.
 
-Em 05/10/2026, o aviso “Consulte a programação nos canais oficiais de cada casa” da Agenda de eventos recebeu alinhamento vertical central em uma faixa mínima de 70px, com padding simétrico e margem zerada. Ajuste restrito a #upcoming-list>.catalog-note em styles/styles.css.
-
-Curadoria de perfil para rolê/resenha em 05/10/2026: pesquisados os 533 registros com 906 consultas HTTP às fontes originais e fichas secundárias, mais buscas complementares/site oficial/portais de eventos. docs/locais-5km.csv preserva todos os dados originais e recebeu classificação, prioridade, perfil, motivo, público universitário não comprovado, operação não confirmada diretamente, próxima ação, data e fontes/resultados das consultas. Resultado: 17 já publicados, 67 prioritários ainda fora, 160 potenciais, 71 pendentes (38 consumo, 26 perfil, 4 conflitos, 3 operação/agenda), 163 de baixa prioridade, 29 fora do foco e 26 com indicação de fechamento. docs/locais-role-prioritarios.csv contém os 67; relatório e evidências em docs/curadoria-role-5km.md e .json. Adegas exigem consumo/permanência, não apenas venda de bebidas; infantis/fornecedores fora; casas noturnas não aprovadas automaticamente. Prioridade é inferência editorial do perfil, não prova de audiência universitária, preço acessível ou abertura hoje. Catálogo do site mantém 22 registros, sem novos imports nesta etapa. Preferência do usuário: manter dados/fotos locais e atualizações manuais no início do desenvolvimento; adiar API paga do Google. Validados totais e cobertura única dos 533 registros, preservação das 11 colunas originais, correspondência dos 17 publicados e consistência do CSV prioritário/JSON. Nenhuma mudança de interface ou banco nesta tarefa.
-
-Otimização de fotos em 05/10/2026: seis originais somavam 7205483 bytes; versões WebP de detalhes somam 427984 bytes e miniaturas 191134 bytes. Cards usam imageCard (até 600px), loading="lazy" e decoding="async"; detalhes usam image (até 1200px), somente quando abertos. Originais preservados em backend/storage/original-venue-photos, pasta privada ignorada pelo Git; somente versões otimizadas ficam em assets/venues. Google Places ainda não integrado.
-
-
-Ampliação/correção do catálogo em 05/10/2026: 22 lugares, 18 com horários (sites oficiais e fichas públicas secundárias; não afirmar leitura direta do Google Maps). Removidos Supra Dom Pedro, após indicação do usuário e ficha corroborando fechamento, e Adega Tonel por ser loja de vinho fora do foco. Candidatos com ficha de encerramento ou sem correspondência confiável não importados. Incluída Mais Adega Point Bar, Av. Príncipe de Gales 466, endereço fornecido pelo usuário e nome corroborado no cadastro; horário e ponto exato pendentes, sem inventar coordenadas. Fotos locais de 6 casas em assets/venues: Ocean Drive de post público Instagram; São Bento, Figueiras, Vedê, Charllu e Djack de galerias oficiais quando redes não forneceram foto válida. Demais sem foto. Referências/data retiradas da interface, preservadas em metadados/documentação. Lista inicial tem duas linhas, Exibir mais adiciona duas linhas conforme 4/2/1 colunas; filtros/busca reiniciam limite. Router permite apenas imagens jpg/webp dessa pasta, preservando whitelist dos demais recursos. Verificados 16 testes Node, sintaxe PHP do router e Edge desktop/tablet/celular (2 linhas, expansão, reinício por filtros/busca, ausência dos excluídos, fotos HTTP 200, modal sem referências e sem erros JS/rolagem horizontal). Relatório atualizado em docs/catalogo-real.md; curadoria bruta em docs/curadoria-locais.json. Detalhes dos parágrafos seguintes registram etapas anteriores, não o estado atual do catálogo.
-
-Aplicação inicial do catálogo real em 05/10/2026: seis locais (Supra Direito, Supra Dom Pedro, Supra Bernô, Adega Tonel, Ocean Drive e Boteco São Bento) substituíram os oito eventos fictícios em `js/data.js`. Cards mostram locais, endereço e funcionamento; detalhes exibem grade semanal, fontes/data e link Google Maps. Removidas da apresentação agenda/artistas fictícios, preços e lotação sem fonte, fotos de locais fictícios. Hero continua com fotografia ilustrativa genérica. Horários oficiais disponíveis para Direito, Dom Pedro e Tonel; demais desconhecidos ou dependentes de eventos. Google Maps não expôs fichas/gráficos ao mecanismo de consulta: nenhum pico de movimento foi inventado, campos popularTimes/liveOccupancy permanecem null. Distância do marco FSA é identificada separadamente da distância à posição do usuário. Status é calculado a partir do horário habitual, com fuso America/Sao_Paulo e madrugada, atualizado a cada minuto. Os 533 candidatos NÃO foram importados automaticamente como ativos; pendências permanecem no levantamento. Relatório: `docs/catalogo-real.md`. Verificados 15 testes Node e smoke Edge desktop/celular (busca, modal, mapa, localização/distância, sem erros JS/rolagem horizontal); autenticação PHP não alterada ou retestada nesta tarefa.
-
-Pesquisa de locais em 05/10/2026: `docs/levantamento-locais-5km.md`, `docs/lista-locais-5km.md`, `docs/locais-5km.csv` e `docs/levantamento-locais-5km.json`. Marco FSA (-23.66145, -46.55402), raio de 5 km em linha reta. Consultadas 115 páginas de diretório nas quatro cidades próximas: 994 registros, 530 no raio; mais 3 complementares = 533 candidatos, não estabelecimentos ativos confirmados nem censo completo. Supra Direito (Rua Java 299) e Bernô (Rua Marli 26) a aproximadamente 3,18 km; coordenadas quase iguais exigem confirmar relação das operações. Horário semanal do Bernô não localizado; preservar horários de eventos separadamente. Submundo 808 adiado por ser itinerante. Fontes, conflitos e pendências nos documentos; catálogo e banco ainda demonstrativos para locais/eventos. Scripts auxiliares privados em backend/storage; JSON/CSV/documentos são os artefatos da pesquisa. O diretório inverte latitude/longitude; normalização e valores brutos registrados.
-
-Inventário do catálogo demonstrativo concluído em 05/10/2026: `docs/inventario-dados-demonstrativos.md` reúne os 8 eventos, 7 nomes de locais, 5 artistas, campos ausentes, imagens, textos fixos e dados necessários para pesquisa. Nenhum dado real foi pesquisado/inserido ainda. Próxima etapa: selecionar locais e buscar fontes oficiais; separar funcionamento semanal da casa da agenda de eventos. Backend atual continua restrito a contas.
-
-Modal de boas-vindas autenticado simplificado a pedido do usuário: ações mostram apenas Ok; logout e configurações continuam no menu do header. Hover de Ok escurece o fundo claro, sem trocar para vermelho. Aviso de confirmação de e-mail permanece quando aplicável.
-
-Revisão de contas em 05/10/2026 concluída: corrigidas recuperação por link na página dedicada, ação do botão Ok nessa página e leitura da sessão antes de rejeitar token de confirmação malformado. Suíte PHP completa e Edge em desktop/celular emulado aprovados, sem erros JavaScript; 12 testes JavaScript também passaram. Detalhes em `docs/revisao-contas-2026-10-05.md`. Estrutura de pastas preservada; criado `.vscode/tasks.json` e workspace `../Nightout.code-workspace` para abrir `partyFinder` e executar tarefas locais. O workspace está fora do repositório Git e não acompanha push/pull; tarefas e documentos acompanham quando versionados.
-
-Em 05/10/2026, removido o texto “DO SEU JEITO” da lateral de `conta.html`, a pedido do usuário.
-
-Cadastro, login/logout, sessões com prazo de duas horas, CSRF, limites de tentativas, recuperação de senha, confirmação de e-mail, edição de nome, mudança de e-mail, alteração de senha, revogação de sessões, exportação JSON e exclusão da própria conta. Senhas são verificadas por hash no servidor. E-mails são arquivos privados locais, sem envio externo.
-
-O menu autenticado leva a `/conta.html`. A confirmação de e-mail mostra um modal de sucesso. A confirmação ainda não é obrigatória para login. Há três migrations para usuários, limites, recuperação e verificação de e-mail.
-
-Alguns trechos de `README-v2.md` e `backend/README.md` preservam pendências antigas ou dizem que migrations já foram aplicadas “neste ambiente”. Isso não comprova instalação nem banco neste PC. Para estado funcional, conferir código e o relatório consolidado de autenticação.
-
-## Ambiente deste PC
-
-Em 05/10/2026, após instalação pelo usuário, PHP 8.2.12 está disponível em `C:\xampp\php\php.exe` e MySQL/MariaDB está ligado na porta 3306. Criamos `nightout` vazio com autorização do usuário e aplicamos as três migrations; nenhum backup de casa foi importado. Servidor iniciado em `http://127.0.0.1:8000`, com health conectado e página inicial respondendo HTTP 200. Node está disponível. O repositório Git fica em `partyFinder`, não na pasta pai `Nightout`.
-
-O banco padrão é `nightout`, host `127.0.0.1`, porta `3306`, usuário `root`, senha vazia. Configuração diferente deve ficar em `backend/config/local.php`. O clone contém migrations, mas não usuários do banco de casa. É necessário importar um backup SQL para trazer essas contas.
+O histórico registra PHP 8.2.12 e três migrations aplicadas em um ambiente anterior de 05/10/2026, sem importar backup de casa. Isso não confirma instalações, usuários, migrations ou serviços deste computador agora. Não assumir banco vazio nem recriá-lo. Conferir conexão em `/api/v1/health` e seguir `docs/ambiente-local.md` para transferência preservando contas.
 
 ## Verificações
 
-Após otimizar as fotos em 05/10/2026, os 16 testes Node passaram e o Edge validou desktop (1280px), tablet (768px) e celular (390px): miniaturas WebP com carregamento lazy, foto maior nos detalhes, imagens HTTP 200, busca, filtros e expansão de duas linhas sem erros JavaScript ou rolagem horizontal. Conferida visualmente a versão otimizada da foto do Vedê. Google Places permanece pendente.
+Resultados anteriores registrados, não reexecutados nesta reorganização:
 
-O relatório de 04/10/2026 registra testes PHP e Edge aprovados no ambiente anterior. Neste PC, em 05/10/2026, `node --test --test-isolation=none tests/auth-ui.cjs tests/location.cjs` passou nos 12 testes, sem falhas. Após as correções da revisão, `C:\xampp\php\php.exe tests/run-auth.php --browser` passou na suíte de API e nos fluxos completos do Edge em desktop e celular emulado, usando banco temporário isolado.
+- Última ampliação: 19 testes Node (13 catálogo/localização e 6 conta), validador de curadoria (539 únicos, 32 publicados, 54 prioritários) e Edge em 1280/768/390px aprovados, conforme registro anterior.
+- Revisão de contas de 05/10/2026: `C:\xampp\php\php.exe tests/run-auth.php --browser` aprovado com banco temporário e Edge desktop/celular emulado; detalhes em `docs/revisao-contas-2026-10-05.md`.
+- Relatório de autenticação de 04/10/2026 pertence ao ambiente anterior: `docs/relatorio-autenticacao.md`.
+
+Nesta tarefa: leitura e comparação dos documentos com `.gitignore`, script de servidor, router e estrutura de testes/migrations; consulta do IPv4 por `ipconfig`; revisão do diff e `git diff --check`. Nenhuma suíte PHP/Node, navegador ou consulta ao banco executada. Alterações somente documentais.
+
+Comandos de teste na raiz (MySQL ligado para PHP):
+
+```powershell
+node --test --test-isolation=none tests/auth-ui.cjs tests/location.cjs
+C:\xampp\php\php.exe tests/run-auth.php
+```
+
+Nunca executar `tests/auth.php` diretamente. Runner PHP usa banco temporário identificado, preservando contas reais. Com `--browser`, também valida Edge; setup em `backend/README.md`.
 
 ## Próximos passos
 
-1. Cadastrar conta local de teste pela interface. O banco vazio já está preparado e a API foi verificada.
-2. Quando tiver acesso ao PC de casa, exportar o banco e planejar importação sem sobrescrever dados locais inadvertidamente. Seguir `docs/ambiente-local.md`.
-3. Confirmar com o usuário a próxima evolução de produto; o planejamento propõe catálogo real e painel administrativo.
-4. Antes de publicar: envio real de e-mails, HTTPS, credenciais de produção, backups e política de privacidade.
+1. Definir com o usuário a próxima evolução: ampliar/revisar catálogo, melhorar experiência ou implementar administração e API de catálogo.
+2. Revisar manualmente os 54 prioritários e conflitos de operação/horários, sem publicar candidatos automaticamente nem inventar dados/fotos.
+3. Se necessário transferir contas entre PCs, conferir os bancos e planejar backup/importação preservando os dados existentes, seguindo `docs/ambiente-local.md`.
+4. Antes de publicar: envio real de e-mails, HTTPS, origem e credenciais de produção, revisão dos limites, backups/restauração e política de privacidade.
 
-## Troca de computador
+## Troca de computador e histórico
 
-Em 05/10/2026, o usuário mostrou erro de confirmação com a mensagem frontend “Link inválido. Solicite outra confirmação.” Essa mensagem indica que o fragmento recebido não tinha o formato de 64 caracteres hexadecimais, antes de consultar a API. A inspeção local encontrou um link de confirmação ativo, com formato válido; provável cópia incompleta ou com caracteres extras, ainda sem confirmação da causa pelo usuário. Orientação: copiar a URL inteira, sem quebras de linha, ou extrair a linha do comando mailbox para a área de transferência.
+Atualizar este resumo com mudanças, verificações realmente executadas e pendências. Revisar o diff e versionar código/documentos quando solicitado. Bancos não sincronizam pelo Git; não versionar credenciais, backups ou sessões. Workspace `../Nightout.code-workspace` fica fora do repositório; `.vscode/tasks.json` fica dentro.
 
-Atualizar este arquivo, revisar alterações e fazer commit/push do código e documentos. No outro PC, fazer pull e pedir ao Codex para ler este contexto. Bancos locais são independentes e não sincronizam pelo Git.
-
-
-Verificação das barras dos cards nesta alteração: 13 testes de catálogo/localização passaram; sintaxe de js/places.js e git diff --check aprovados. Edge em 1280/390px confirmou 22 indicadores com 4 barras cada, remoção dos textos antigos nos cards e modal, sem overflow horizontal.
+Histórico completo anterior preservado em [docs/historico-contexto-2026-10-05.md](docs/historico-contexto-2026-10-05.md). Para novas tarefas, priorizar este resumo e os relatórios específicos; o histórico contém decisões e totais substituídos por revisões posteriores.
