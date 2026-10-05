@@ -42,7 +42,12 @@
              <label hidden>Lotação<select disabled name="occupancy"><option value="all">Qualquer movimento</option><option value="1">Tranquilo</option><option value="2">Movimento normal</option><option value="3">Cheio</option><option value="4">Lotado</option></select></label>
              <label hidden>Artista<select disabled name="artist" id="artist-filter"><option value="all">Todos os artistas</option></select></label>
             <label class="check"><input type="checkbox" name="open"> Aberto agora</label><label class="check" hidden><input disabled type="checkbox" name="tickets"> Com ingresso disponível</label><button type="reset">Limpar filtros</button>
-          </form><p id="results-message" class="sr-only" aria-live="polite"></p><div id="event-grid" class="event-grid"></div><div class="catalog-pagination"><p id="visible-results" aria-live="polite"></p><button class="primary" id="show-more" hidden aria-controls="event-grid">Exibir mais</button></div>
+          </form><p id="results-message" class="sr-only" aria-live="polite"></p>
+          <div class="catalog-carousel">
+            <button class="catalog-arrow catalog-prev" id="catalog-prev" aria-label="Ver lugares anteriores" aria-controls="event-grid" hidden><span data-icon="arrow"></span></button>
+            <div id="event-grid" class="event-grid" tabindex="0" role="region" aria-labelledby="events-title"></div>
+            <button class="catalog-arrow catalog-next" id="catalog-next" aria-label="Ver próximos lugares" aria-controls="event-grid" hidden><span data-icon="arrow"></span></button>
+          </div>
         </section>
         <section id="perto" class="section"><div id="nearby-heading"></div><div id="nearby-grid" class="nearby-grid"></div><p class="location-note">Catálogo pesquisado no raio de 5 km da Fundação Santo André. Distâncias em linha reta.</p></section>
         <section id="proximos" class="section"><div id="upcoming-heading"></div><div id="upcoming-list"></div></section>

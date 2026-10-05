@@ -1,5 +1,8 @@
 # Registros públicos no raio de 5 km da Fundação Santo André
 
+**Atualização posterior desta mesma data:** lista central agora tem 539 registros e site tem 32 locais; 54 prioritários restantes. Consulte [curadoria atual](curadoria-role-5km.md) e [última ampliação](ampliacao-catalogo-2026-10-05.md). O levantamento/relatório abaixo registra a etapa anterior e seus respectivos totais.
+
+
 Consulta: 05/10/2026. Lista de candidatos, não comprova operação atual. Categorias são as publicadas pelo diretório e podem estar erradas. Distâncias aproximadas em linha reta. Dias sem horário publicado são desconhecidos. Veja metodologia e pendências em [levantamento-locais-5km.md](levantamento-locais-5km.md).
 
 ## bares (280 registros)

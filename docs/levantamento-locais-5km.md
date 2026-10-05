@@ -1,5 +1,8 @@
 # Levantamento de estabelecimentos — Fundação Santo André, raio de 5 km
 
+**Atualização posterior desta mesma data:** lista central agora tem 539 registros e site tem 32 locais; 54 prioritários restantes. Consulte [curadoria atual](curadoria-role-5km.md) e [última ampliação](ampliacao-catalogo-2026-10-05.md). O levantamento/relatório abaixo registra a etapa anterior e seus respectivos totais.
+
+
 Consulta realizada em 05/10/2026. Submundo 808 fica fora desta etapa: é uma produção/evento itinerante, não um estabelecimento fixo.
 
 ## Arquivos para consultar

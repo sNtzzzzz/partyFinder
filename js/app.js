@@ -9,11 +9,23 @@ document.querySelector('#artist-grid').innerHTML = artists.map(ArtistCard).join(
 document.querySelector('#artist-filter').insertAdjacentHTML('beforeend',artists.map(a=>`<option>${a.name}</option>`).join(''));
 document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));
 document.querySelectorAll('main .section').forEach(section=>section.setAttribute('aria-labelledby',section.querySelector('h2').id));
-const state = {quick:'',category:'Todos',query:'',visibleRows:2,filterKey:''};
-function catalogColumns() {
-  const grid = document.querySelector('#event-grid');
-  const columns = window.getComputedStyle?.(grid).gridTemplateColumns;
-  return columns && columns !== 'none' ? columns.trim().split(/\s+/).length : 4;
+const state = {quick:'',category:'Todos',query:'',filterKey:''};
+const catalogGrid = document.querySelector('#event-grid');
+function updateCatalogNavigation() {
+  const max = Math.max(0, (catalogGrid.scrollWidth || 0) - (catalogGrid.clientWidth || 0));
+  const position = catalogGrid.scrollLeft || 0;
+  const previous = document.querySelector('#catalog-prev');
+  const next = document.querySelector('#catalog-next');
+  previous.hidden = next.hidden = max <= 2;
+  previous.disabled = position <= 2;
+  next.disabled = position >= max - 2;
+}
+function moveCatalog(direction) {
+  const first = catalogGrid.querySelector?.('.event-card');
+  const gap = parseFloat(window.getComputedStyle?.(catalogGrid).columnGap) || 20;
+  const step = first ? first.getBoundingClientRect().width + gap : catalogGrid.clientWidth;
+  const count = Math.max(1, Math.floor((catalogGrid.clientWidth + gap) / step));
+  catalogGrid.scrollBy({left:direction * count * step, behavior:window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
 }
 const quickFilters = [['today','Hoje'],['tomorrow','Amanhã'],['weekend','Este fim de semana'],['near','Perto de mim'],['open','Aberto agora']];
 const panel = document.querySelector('#filter-panel');
@@ -40,26 +52,27 @@ function render() {
   const filters={date:'all',distance:'all',price:'all',occupancy:'all',artist:'all',...Object.fromEntries(new FormData(panel))};
   const result=filterEvents(filters);
   const filterKey=JSON.stringify([state.quick,state.category,state.query,filters]);
-  if(state.filterKey!==filterKey){state.visibleRows=2;state.filterKey=filterKey;}
+  const previousPosition = state.filterKey === filterKey ? catalogGrid.scrollLeft || 0 : 0;
+  state.filterKey=filterKey;
   if(state.quick==='near') result.sort((a,b)=>distanceToEvent(a)-distanceToEvent(b));
-  const visible=result.slice(0,state.visibleRows*catalogColumns());
-  document.querySelector('#event-grid').innerHTML=result.length?visible.map(EventCard).join(''):`<div class="empty-state">${icon('search')}<h3>Nenhum rolê por aqui. Ainda.</h3><p>Tente outro nome, região ou uma combinação diferente de filtros.</p><button class="primary" id="clear-all">Limpar busca e filtros</button></div>`;
-  document.querySelector('#show-more').hidden=visible.length>=result.length;
-  document.querySelector('#visible-results').textContent=result.length?`${visible.length} de ${result.length} lugares`:'';
+  catalogGrid.innerHTML=result.length?result.map(EventCard).join(''):`<div class="empty-state">${icon('search')}<h3>Nenhum rolê por aqui. Ainda.</h3><p>Tente outro nome, região ou uma combinação diferente de filtros.</p><button class="primary" id="clear-all">Limpar busca e filtros</button></div>`;
+  catalogGrid.scrollLeft=previousPosition;
+  updateCatalogNavigation();
   document.querySelector('#results-message').textContent=`${result.length} estabelecimentos encontrados`;
   const count=Object.values(filters).filter(v=>v!=='all').length;
   document.querySelector('#filter-count').textContent=count?`(${count})`:'';
 }
-function clearAll() { panel.reset(); state.quick=''; state.category='Todos'; state.query=''; state.visibleRows=2; state.filterKey=''; document.querySelector('#search').value=''; render(); }
+function clearAll() { panel.reset(); state.quick=''; state.category='Todos'; state.query=''; state.filterKey=''; document.querySelector('#search').value=''; render(); }
 document.querySelector('#search-form').addEventListener('submit',e=>{e.preventDefault();state.query=document.querySelector('#search').value.trim();state.quick='';render();document.querySelector('#explorar').scrollIntoView({behavior:'smooth'});});
 document.querySelector('#search').addEventListener('input',e=>{state.query=e.target.value.trim();if(state.query) state.quick='';render();});
 document.querySelector('#filter-toggle').addEventListener('click',e=>{panel.hidden=!panel.hidden;e.currentTarget.setAttribute('aria-expanded',String(!panel.hidden));});
 panel.addEventListener('change',e=>{if(e.target.name==='date') state.quick='';render();});
 panel.addEventListener('submit',e=>e.preventDefault());
-panel.addEventListener('reset',()=>{state.visibleRows=2;setTimeout(render,0);});
+panel.addEventListener('reset',()=>{state.filterKey='';setTimeout(render,0);});
 function openDialog(dialog) {dialog.showModal();document.body.classList.add('dialog-open');}
 document.addEventListener('click',e=>{
-  if(e.target.closest('#show-more')){state.visibleRows+=2;render();}
+  if(e.target.closest('#catalog-prev')) moveCatalog(-1);
+  if(e.target.closest('#catalog-next')) moveCatalog(1);
   if(e.target.closest('[data-location-request]')) requestLocation();
   const quick=e.target.closest('[data-quick]');
   if(quick && quick.dataset.quick === 'near' && locationAccess.status !== 'granted') { document.querySelector('#perto').scrollIntoView({behavior:'smooth'}); return; }
@@ -76,6 +89,12 @@ document.addEventListener('click',e=>{
   if(artist){clearAll();panel.elements.artist.value=artist.dataset.artist;panel.hidden=false;document.querySelector('#filter-toggle').setAttribute('aria-expanded','true');render();document.querySelector('#explorar').scrollIntoView({behavior:'smooth'});}
   if(e.target.closest('[data-book]')) document.querySelector('#booking-message').textContent='Você está em uma demonstração. A reserva e a compra de ingressos ainda não estão disponíveis; nenhum valor será cobrado.';
 });
+document.addEventListener('change',e=>{
+  if (!e.target.matches?.('[data-peak-select]')) return;
+  e.target.closest('.peak-times').querySelectorAll('[data-peak-day]').forEach(day=>{
+    day.hidden=day.dataset.peakDay!==e.target.value;
+  });
+});
 document.querySelectorAll('dialog').forEach(dialog=>{dialog.addEventListener('close',()=>document.body.classList.remove('dialog-open'));dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom) dialog.close();}});});
 document.querySelectorAll('header nav a').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('header nav a').forEach(a=>a.classList.remove('active'));link.classList.add('active');}));
 render();
@@ -84,5 +103,12 @@ setInterval(() => { render(); if (locationAccess.status === "granted") renderLoc
 locationAccess.onChange = renderLocation;
 renderLocation();
 initializeLocation();
-window.addEventListener?.('resize', render);
+catalogGrid.addEventListener('scroll',updateCatalogNavigation,{passive:true});
+catalogGrid.addEventListener('keydown',e=>{
+  if(e.target!==catalogGrid || !['ArrowLeft','ArrowRight','Home','End'].includes(e.key)) return;
+  e.preventDefault();
+  if(e.key==='ArrowLeft' || e.key==='ArrowRight') moveCatalog(e.key==='ArrowLeft' ? -1 : 1);
+  else catalogGrid.scrollTo({left:e.key==='Home' ? 0 : catalogGrid.scrollWidth,behavior:'auto'});
+});
+window.addEventListener?.('resize', updateCatalogNavigation);
 document.addEventListener('error',e=>{if(e.target.matches?.('[data-place-photo]')){e.target.hidden=true;e.target.closest('.card-image')?.classList.remove('has-place-photo');}},true);

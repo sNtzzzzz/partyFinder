@@ -1,0 +1,881 @@
+{
+  "checkedAt": "2026-10-05",
+  "added": [
+    {
+      "id": "bar-do-cissao",
+      "name": "Bar do Cissão",
+      "address": "Vila Príncipe de Gales, Santo André - SP, 09615-085",
+      "coordinates": {
+        "latitude": -23.663213,
+        "longitude": -46.5552267
+      },
+      "referenceDistanceKm": 0.231,
+      "googleHours": [
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "18:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
+      "profile": "Bar para conversa e bebidas",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "rota-music-bar",
+      "name": "Rota Music Bar",
+      "address": "R. Piagentini, 34 - Rudge Ramos, São Bernardo do Campo - SP, 09626-130",
+      "coordinates": {
+        "latitude": -23.656136099999998,
+        "longitude": -46.570954099999994
+      },
+      "referenceDistanceKm": 1.823,
+      "googleHours": [
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "03:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "03:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "03:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "03:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130",
+      "profile": "Bar com música e petiscos",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "botequim-do-orestes",
+      "name": "Botequim Do Orestes",
+      "address": "R. Caminho do Pilar, 1930 - Vila Gilda, Santo André - SP, 09190-000",
+      "coordinates": {
+        "latitude": -23.6773906,
+        "longitude": -46.5441643
+      },
+      "referenceDistanceKm": 2.037,
+      "googleHours": [
+        [
+          [
+            "11:00",
+            "15:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "11:00",
+            "00:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "11:00",
+            "15:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "11:00",
+            "00:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Botequim%20Do%20Orestes%20R.%20Caminho%20do%20Pilar%2C%201930%20-%20Vila%20Gilda%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-000",
+      "profile": "Bar com música ao vivo",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "errejota-bangalo-bar",
+      "name": "Errejota Bangalô Bar",
+      "address": "Alameda São Caetano, 366 - Jardim, Santo André - SP, 09070-210",
+      "coordinates": {
+        "latitude": -23.645692,
+        "longitude": -46.5422292
+      },
+      "referenceDistanceKm": 2.124,
+      "googleHours": [
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "17:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "14:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "17:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Errejota%20Bangal%C3%B4%20Bar%20Alameda%20S%C3%A3o%20Caetano%2C%20366%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009070-210",
+      "profile": "Bar com música ao vivo",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "52-s-rock-bar",
+      "name": "52’s Rock Bar",
+      "address": "R. Olegário Herculano, 192 - Vila Dayse, São Bernardo do Campo - SP, 09732-570",
+      "coordinates": {
+        "latitude": -23.6823889,
+        "longitude": -46.5579995
+      },
+      "referenceDistanceKm": 2.363,
+      "googleHours": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570",
+      "profile": "Rock ao vivo e drinks",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "mocergo",
+      "name": "Mocergo",
+      "address": "R. Siqueira Campos, 1039 - Vila Assunção, Santo André - SP, 09020-240",
+      "coordinates": {
+        "latitude": -23.6635697,
+        "longitude": -46.5283778
+      },
+      "referenceDistanceKm": 2.622,
+      "googleHours": [
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "19:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "19:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Mocergo%20R.%20Siqueira%20Campos%2C%201039%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-240",
+      "profile": "Bar alternativo para conversa e drinks",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "jim-jones-pub",
+      "name": "Jim Jones Pub",
+      "address": "R. Santo André, 157 - Vila Assunção, Santo André - SP, 09020-230",
+      "coordinates": {
+        "latitude": -23.663435399999997,
+        "longitude": -46.528063
+      },
+      "referenceDistanceKm": 2.653,
+      "googleHours": [
+        [
+          [
+            "15:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:30"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "01:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "15:00",
+            "00:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:30"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        [
+          [
+            "16:00",
+            "01:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
+      "profile": "Pub para amigos e drinks",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "lajje-beer",
+      "name": "Lajje Beer",
+      "address": "R. Continental, 59 - Jardim do Mar, São Bernardo do Campo - SP, 09750-060",
+      "coordinates": {
+        "latitude": -23.6855178,
+        "longitude": -46.555526
+      },
+      "referenceDistanceKm": 2.681,
+      "googleHours": [
+        [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "00:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "00:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Lajje%20Beer%20R.%20Continental%2C%2059%20-%20Sobreloja%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-060",
+      "profile": "Bar/karaokê",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "flag-the-bar",
+      "name": "Flag The Bar",
+      "address": "Av. Kennedy, 304 - Vila Marli, São Bernardo do Campo - SP, 09726-251",
+      "coordinates": {
+        "latitude": -23.686526699999998,
+        "longitude": -46.559231
+      },
+      "referenceDistanceKm": 2.838,
+      "googleHours": [
+        [
+          [
+            "12:00",
+            "02:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "15:00",
+            "03:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "03:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "12:00",
+            "02:00"
+          ]
+        ],
+        [],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "17:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "15:00",
+            "03:00"
+          ]
+        ],
+        [
+          [
+            "12:00",
+            "03:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251",
+      "profile": "Happy hour e música ao vivo",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários habituais. Podem variar em feriados e eventos especiais."
+    },
+    {
+      "id": "leandrini-rock-bar",
+      "name": "Leandrini Rock Bar",
+      "address": "Rua Oswaldo Cruz, 1411 - Santa Paula, São Caetano do Sul - SP, 09540-280",
+      "coordinates": {
+        "latitude": -23.629298900000002,
+        "longitude": -46.5675424
+      },
+      "referenceDistanceKm": 3.831,
+      "googleHours": [
+        [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "13:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "appliedHours": [
+        [
+          [
+            "12:00",
+            "21:00"
+          ]
+        ],
+        [],
+        [],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "00:00"
+          ]
+        ],
+        [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        [
+          [
+            "13:00",
+            "02:00"
+          ]
+        ]
+      ],
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=LEANDRINI%20ROCK%20BAR%20Rua%20Oswaldo%20Cruz%2C%201411%20-%20Santa%20Paula%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009540-280",
+      "profile": "Bar com música ao vivo",
+      "peakResult": "Não acessível nesta consulta: Google entregou visualização limitada. Não afirmar inexistência do gráfico.",
+      "note": "Horários divergem entre os canais da casa. Confirme a abertura e a programação antes de ir."
+    }
+  ],
+  "notAdded": [
+    {
+      "name": "Tatu Bola Bar",
+      "reason": "Encerrado: BaresSP marca fechamento e notícia de 30/05/2026 documenta nova loja Habib’s/Ragazzo no mesmo endereço.",
+      "sources": [
+        "https://www.baressp.com.br/bares/tatu-bola-sao-bernardo-do-campo",
+        "https://tvsaobernardo.com/avenida-kennedy-ganha-segunda-loja-hibrida-do-habibs-e-ragazzo-em-sao-bernardo/"
+      ]
+    },
+    {
+      "name": "Muquiranas Bar",
+      "reason": "Google retorna Casa Areal no mesmo endereço e vincula o Facebook antigo do Muquiranas; site do Muquiranas ainda mostra nome antigo. Identidade atual conflitante.",
+      "sources": [
+        "https://www.google.com/maps/search/?api=1&query=Muquiranas+Bar+Rua+das+Figueiras+130+Santo+Andre",
+        "https://muquiranasbar.com.br/"
+      ]
+    },
+    {
+      "name": "Espaço Aberto Music Bar",
+      "reason": "Google marca Temporariamente fechado. Aguardar confirmação de reabertura.",
+      "sources": [
+        "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o%20Aberto%20Music%20Bar%20Av.%20Pereira%20Barreto%2C%20869%20-%20Para%C3%ADso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-610"
+      ]
+    }
+  ],
+  "hourConflicts": [
+    {
+      "name": "Leandrini Rock Bar",
+      "reason": "Site inicial diz qua–dom 17–02; página reservas diz qua–dom 18–02; ficha Google distingue horários de cada dia. Aplicada a grade detalhada do Google, com aviso de divergência.",
+      "sources": [
+        "https://leandrinirockbar.com/",
+        "https://leandrinirockbar.com/reservas"
+      ]
+    }
+  ],
+  "policy": "Sem novas fotos não confirmadas, horários de pico inventados ou inferência de público universitário/preço. Dados continuam locais."
+}

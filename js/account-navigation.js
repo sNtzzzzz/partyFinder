@@ -19,7 +19,7 @@ function closeAccountMenu(restoreFocus = false) {
 }
 function refreshAccountMenu() {
   if (!account.user) { closeAccountMenu(); accountDropdown.innerHTML = ''; return; }
-  accountDropdown.innerHTML = '<strong>' + escapeAccount(account.user.name) + '</strong><a href="/conta.html">Configurações da conta</a><button type="button" data-menu-logout>Sair da conta</button><p data-menu-message role="status"></p>';
+  accountDropdown.innerHTML = '<strong>' + escapeAccount(account.user.name) + '</strong><a href="/conta.html">Configurações da conta</a><button type="button" data-menu-logout class="logoutButtonIndex">Sair da conta</button><p data-menu-message role="status"></p>';
 }
 document.addEventListener('click', async event => {
   if (event.target.closest('[data-account]')) {

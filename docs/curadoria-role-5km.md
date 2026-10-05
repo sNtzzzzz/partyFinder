@@ -1,81 +1,38 @@
-# Curadoria de rolês — FSA, raio de 5 km
+# Lista e curadoria de locais — FSA e complementares
 
-Pesquisa e classificação em **05/10/2026**. Todos os **533 candidatos** receberam uma decisão, motivo, fontes e próxima ação em [locais-5km.csv](locais-5km.csv). Os registros originais, endereços, coordenadas e horários foram preservados; a curadoria acrescenta colunas e não altera o catálogo do site.
+Atualizada em **05/10/2026** após revisão dos horários, gráficos e inclusão de novos lugares. Lista central: [locais-5km.csv](locais-5km.csv). Agora reúne **539 registros**: os **533 candidatos originais** da pesquisa em raio de 5 km, mais **5 cadastros complementares já publicados** e **Adega 99 pendente**. Os complementares sem coordenadas confirmadas não devem ser contados como geograficamente validados no raio. As primeiras 11 colunas e os primeiros 533 registros preservam a pesquisa original; as novas colunas mostram endereço/horários/pico/ID/fontes e pendências atuais do catálogo.
 
-## Resultado
+## Resultado atual
 
 | Classificação | Quantidade |
 |---|---:|
-| Já publicado | 17 |
-| Priorizar — perfil corroborado | 67 |
+| Já publicado | 32 |
+| Fora do foco atual | 29 |
+| Baixa prioridade — sem evidência de rolê | 163 |
 | Potencial — confirmar perfil/operação | 160 |
+| Priorizar — perfil corroborado | 54 |
 | Pendente — consumo no local | 38 |
 | Pendente — perfil não esclarecido | 26 |
-| Pendente — fontes conflitantes | 4 |
-| Pendente — confirmar operação/agenda | 3 |
-| Baixa prioridade — sem evidência de rolê | 163 |
-| Fora do foco atual | 29 |
-| Não incluir — indicação de fechamento | 26 |
-| **Total** | **533** |
+| Pendente — fontes conflitantes | 5 |
+| Não incluir — indicação de fechamento | 27 |
+| Pendente — confirmar operação/agenda | 5 |
+| **Total** | **539** |
 
-Há **67 candidatos prioritários ainda fora do site**, listados em [locais-role-prioritarios.csv](locais-role-prioritarios.csv). O site mantém **22 locais**, dos quais **17** pertencem ao levantamento e os demais vieram de pesquisas complementares. Prioritário significa perfil corroborado e bom candidato para validar/cadastrar; não significa aprovação automática nem funcionamento confirmado hoje.
+O site tem **32 locais**: **27** da lista original e **5** complementares. Há **54 prioritários ainda fora**, em [locais-role-prioritarios.csv](locais-role-prioritarios.csv). Os demais 453 registros precisam de confirmação ou ficaram fora do foco/indicaram fechamento; não são todos uma fila aprovada para publicação. **507 registros da lista não estão no site** (54 prioritários + 453 nas demais classificações).
 
-## Critérios
+## Última ampliação
 
-- Priorizar locais com ficha correspondente ao endereço e descrição de consumo/socialização: bebidas e petiscos, música ao vivo, karaokê ou jogos.
-- Manter bares com informações genéricas como potenciais, sem inventar características.
-- Para adegas, venda de bebidas, copão ou tabacaria não basta: verificar permanência, mesas e consumo no local.
-- Buffets infantis, fornecedores de água, serviços de evento e equipamentos ficam fora do foco. Restaurantes, distribuidores e espaços de locação sem evidência específica recebem baixa prioridade; não são descartados definitivamente só pela categoria.
-- Casa noturna não significa automaticamente balada universitária: esclarecer proposta, acesso e programação. Serviços explicitamente adultos ficam fora dessa seleção.
-- Não publicar locais com indicação de encerramento. Fontes conflitantes ficam pendentes; CNPJ ativo, baixado ou inapto isoladamente não prova operação física.
-- Não inferir renda, idade, preço acessível ou predominância universitária a partir do bairro, nome ou nota. A adequação para resenha é uma inferência editorial baseada no perfil descrito.
+Adicionados 10: Bar do Cissão, Rota Music Bar, Botequim Do Orestes, Errejota Bangalô Bar, 52’s Rock Bar, Mocergo, Jim Jones Pub, Lajje Beer, Flag The Bar, Leandrini Rock Bar. Grades semanais lidas diretamente no Google Maps, nomes/endereço conferidos com a lista e perfil corroborado pela curadoria anterior. O Google entregou visualização limitada para esta nova rodada: gráficos dos novos locais não ficaram acessíveis, por isso popularTimes permanece null nesses registros. Isso não prova que o Google não tem o gráfico.
 
-## Como foi pesquisado
+- Tatu Bola da Av. Kennedy 1250: não publicar; BaresSP sinaliza encerramento e notícia de maio de 2026 documenta nova operação Habib’s/Ragazzo no mesmo endereço.
+- Espaço Aberto Music Bar: fora da fila imediata, aguardando reabertura; Google sinaliza fechamento temporário.
+- Muquiranas: não publicado; Google retorna Casa Areal no mesmo endereço e site próprio ainda usa Muquiranas. Confirmar identidade antes de cadastrar.
+- Adega 99: registrada como pendente, na Av. Príncipe de Gales, sem número/horários/coordenadas inventados. Usuário está conferindo a casa; Maps pode ainda mostrar uma loja ligada a carros.
+- Supra Dom Pedro e Tonel do Rudge continuam excluídos do site.
+- Virtus e After Bar continuam publicados com informações de funcionamento pendentes, conforme [revisão de horários](revisao-horarios-2026-10-05.md). Ocean Drive mantém atendimento/visitas separado dos eventos.
 
-Foram feitas **906 consultas HTTP** às fontes originais dos 533 candidatos e a fichas secundárias de bares/adegas/casas noturnas, além de buscas complementares para nomes/endereço conflitantes e canais próprios. **532 candidatos** tiveram ao menos uma ficha identificada; **163** tiveram ficha secundária adicional correlacionada. Resultado sem ficha, HTTP 404, timeout ou redirecionamento para outra empresa não significa que o estabelecimento fechou.
+## Critérios e método
 
-A correlação exige nome/localidade/endereço compatíveis; telefone empresarial e ponto geográfico próximos foram usados como corroboração quando a rua estava incompleta. Resultados sem correspondência não fundamentam recomendações. Menções de outros restaurantes no rodapé foram excluídas da análise de perfil. Foram usadas fichas públicas e, quando encontrados, sites próprios/portais de eventos; esta pesquisa não é uma leitura direta de todas as fichas do Google Maps nem uma confirmação presencial.
+Perfil de rolê/resenha depende de evidência de consumo no local, petiscos/bebidas, música, karaokê ou jogos. Adega apenas para compra de bebidas/vinhos não basta. Buffets infantis, fornecedores e atividades fora do perfil não entram. Não inferir público universitário, preço acessível ou operação física atual apenas pelo nome, bairro, nota ou CNPJ. Horários do Google são publicados, não prova de abertura excepcional hoje; prioridade editorial não é recomendação de qualidade.
 
-Fontes e decisões por registro em [curadoria-role-5km.json](curadoria-role-5km.json). O JSON original do levantamento permanece intacto. O arquivo privado backend/storage/survey-venues contém material de apoio e não é servido pelo site.
-
-## Primeiros candidatos a validar
-
-| Local | Perfil | Município | Distância original (km) | Fonte do perfil |
-|---|---|---|---:|---|
-| Bar Do Cissão | Bar para conversa e bebidas | Santo André | 0.231 | [Consultar](https://restaurantguru.com.br/Bar-Do-Cissao-Santo-Andre) |
-| Espaço Bere. | Bar para conversa e bebidas | São Bernardo do Campo | 0.81 | [Consultar](https://restaurantguru.com.br/Espaco-Bere-Sao-Bernardo-do-Campo) |
-| Bar do Jânio | Bar para conversa e bebidas | Santo André | 1.588 | [Consultar](https://restaurantguru.com.br/Bar-do-Janio-Santo-Andre) |
-| Bar da Dalva | Bar para conversa e bebidas | Santo André | 1.595 | [Consultar](https://restaurantguru.com.br/Bar-da-Dalva-Santo-Andre) |
-| Bar e Lanchonete do Dú | Bar para resenha e jogos | São Caetano do Sul | 1.645 | [Consultar](https://restaurantguru.com.br/Bar-e-Lanchonete-do-Du-Sao-Caetano-do-Sul) |
-| Rota Music Bar | Bar com música e petiscos | São Bernardo do Campo | 1.823 | [Consultar](https://restaurantguru.com.br/Rota-do-Acai-Sao-Bernardo-do-Campo) |
-| Bar e Restaurante Potiguar | Bar para conversa e bebidas | São Bernardo do Campo | 1.83 | [Consultar](https://restaurantguru.com.br/Bar-e-Restaurante-Potiguar-Sao-Bernardo-do-Campo-2) |
-| Bar do Jão | Bar para conversa e bebidas | Santo André | 1.866 | [Consultar](https://restaurantguru.com.br/Bar-do-Jao-Santo-Andre) |
-| Tatu Bola Bar | Bar com música e happy hour | São Bernardo do Campo | 1.873 | [Consultar](https://www.tripadvisor.com.br/Restaurant_Review-g303626-d13341451-Reviews-Tatu_Bola_Bar_Sao_Bernardo-Sao_Bernardo_Do_Campo_State_of_Sao_Paulo.html) |
-| Virandos Bar | Bar para conversa e bebidas | Santo André | 1.95 | [Consultar](https://restaurantguru.com.br/Virandos-Bar-Santo-Andre) |
-| BAR RECANTO DA GALERA | Bar para conversa e bebidas | Santo André | 1.952 | [Consultar](https://restaurantguru.com.br/BAR-RECANTO-DA-GALERA-Santo-Andre) |
-| Recanto Dois Irmãos | Bar para conversa e bebidas | Santo André | 1.985 | [Consultar](https://restaurantguru.com.br/Recanto-Dois-Irmaos-Santo-Andre) |
-| Muquiranas Bar | Bar para conversa e bebidas | Santo André | 1.99 | [Consultar](https://restaurantguru.com.br/Muquiranas-Bar-Santo-Andre) |
-| Botequim Do Orestes | Bar com música ao vivo | Santo André | 2.037 | [Consultar](https://restaurantguru.com.br/Botequim-do-Orestes-Santo-Andre) |
-| Errejota Bangalô Bar | Bar com música ao vivo | Santo André | 2.124 | [Consultar](https://restaurantguru.com.br/Errejota-Bangalo-Bar-Santo-Andre) |
-| Brasa Chopp e Parrilla | Bar com música ao vivo | São Bernardo do Campo | 2.316 | [Consultar](https://restaurantguru.com.br/Brasa-Chopp-e-Parrilla-Sao-Bernardo-do-Campo) |
-| Espaço Aberto Music Bar | Bar/karaokê | Santo André | 2.346 | [Consultar](https://restaurantguru.com.br/Espaco-Aberto-Music-Bar-Santo-Andre) |
-| 52'' s Rock Bar | Rock ao vivo e drinks | São Bernardo do Campo | 2.363 | [Consultar](https://www.findglocal.com/BR/S%C3%A3o-Bernardo-do-Campo/1779091045685097/52%27s-Rock-Bar) |
-| Boteco Kazu - Bar e Espetaria. | Bar para conversa e bebidas | São Bernardo do Campo | 2.475 | [Consultar](https://restaurantguru.com.br/Boteco-Kazu-Bar-e-Espetaria-Sao-Bernardo-do-Campo) |
-| Bar do Pascoal | Bar para conversa e bebidas | Santo André | 2.517 | [Consultar](https://restaurantguru.com.br/Wells-Bar-Santo-Andre) |
-| Boteco Adoniran | Bar/karaokê | São Bernardo do Campo | 2.591 | [Consultar](https://restaurantguru.com.br/Boteco-Adoniran-Sao-Bernardo-do-Campo) |
-| Mocergo | Bar alternativo para conversa e drinks | Santo André | 2.622 | [Consultar](https://restaurantguru.com.br/Mocergo-Santo-Andre) |
-| Jim Jones Pub | Pub para amigos e drinks | Santo André | 2.653 | [Consultar](https://www3.santoandre.sp.gov.br/turismosantoandre/bares-e-cervejarias/) |
-| Lajje Beer | Bar/karaokê | São Bernardo do Campo | 2.681 | [Consultar](https://restaurantguru.com.br/Lajje-Beer-Sao-Bernardo-do-Campo) |
-| O Beco Torto | Bar/karaokê | Santo André | 2.773 | [Consultar](https://restaurantguru.com.br/O-Beco-Torto-Santo-Andre) |
-| Tropical | Bar para conversa e bebidas | Santo André | 2.829 | [Consultar](https://restaurantguru.com.br/Tropical-Santo-Andre) |
-| Flag The Bar | Happy hour e música ao vivo | São Bernardo do Campo | 2.838 | [Consultar](https://flagthebar.com.br/) |
-| Bar da Tilápia | Bar com música ao vivo | Santo André | 2.888 | [Consultar](https://restaurantguru.com.br/Bar-da-Tilapia-Santo-Andre) |
-| Carioca Bar | Bar com música ao vivo | São Caetano do Sul | 2.919 | [Consultar](https://restaurantguru.com.br/Carioca-Bar-Sao-Caetano-do-Sul) |
-| Bar Do Estevão | Bar para conversa e bebidas | São Caetano do Sul | 3.047 | [Consultar](https://restaurantguru.com.br/Bar-Do-Estevao-Sao-Caetano-do-Sul) |
-| Bar da Codorna | Bar para conversa e bebidas | São Caetano do Sul | 3.13 | [Consultar](https://restaurantguru.com.br/Bar-da-codorna-Sao-Caetano-do-Sul) |
-| Bar Do Pancho | Bar com música ao vivo | Santo André | 3.134 | [Consultar](https://restaurantguru.com.br/Bar-Do-Pancho-Santo-Andre) |
-| Taberna Vieira | Bar para conversa e bebidas | São Bernardo do Campo | 3.172 | [Consultar](https://restaurantguru.com.br/Taberna-Vieira-Sao-Bernardo-do-Campo) |
-| Boteco 5 Esquinas | Bar com música ao vivo | Santo André | 3.188 | [Consultar](https://restaurantguru.com.br/Boteco-5-Esquinas-Santo-Andre) |
-| Retrô Pub | Bar para resenha e jogos | São Bernardo do Campo | 3.326 | [Consultar](https://restaurantguru.com.br/Retro-Pub-Sao-Bernardo-do-Campo) |
-
-A seleção completa não se limita aos 35 exemplos desta tabela. Para cadastrar, confirmar funcionamento e endereço, conferir horário e foto própria, e manter campos desconhecidos como não confirmados. Eventos antigos comprovam o perfil histórico, mas não a agenda de 2026. Nenhum novo local foi importado automaticamente nesta etapa.
+Pesquisa original: 906 consultas HTTP das fichas dos 533 candidatos, 532 identificados e 163 com ficha secundária correlacionada, mais pesquisas complementares. Esses números descrevem a etapa original; esta ampliação consultou mais 13 candidatos no Google Maps e fontes próprias/notícias. Falha de acesso ou resultado ausente não prova fechamento. Fontes da última revisão: [ampliacao-catalogo-2026-10-05.json](ampliacao-catalogo-2026-10-05.json); decisões consolidadas: [curadoria-role-5km.json](curadoria-role-5km.json). O JSON bruto original em levantamento-locais-5km.json conserva os 533 originais. Dados/fotos do site seguem locais, atualizados manualmente; gráficos de movimento são históricos, sem leitura ao vivo.

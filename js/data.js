@@ -55,7 +55,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "A página da unidade publica estes horários; a página geral da rede apresenta horários diferentes. Confirme antes de sair.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://suprabar.com.br/direito-sbc/",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Supra%20Direito%20SBC%20R.%20Java%2C%20299%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-650",
     "sources": [
@@ -66,10 +66,161 @@ const venues = [
       {
         "label": "Fonte das coordenadas",
         "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/supra-bar-direito-sbc/62ceb8191968413d5511eb36"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Supra%20Direito%20SBC%20R.%20Java%2C%20299%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-650"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Supra%20Direito%20SBC%20R.%20Java%2C%20299%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-650",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": []
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 10 },
+            { "hour": 10, "relativePopularity": 12 },
+            { "hour": 11, "relativePopularity": 13 },
+            { "hour": 12, "relativePopularity": 13 },
+            { "hour": 13, "relativePopularity": 13 },
+            { "hour": 14, "relativePopularity": 14 },
+            { "hour": 15, "relativePopularity": 14 },
+            { "hour": 16, "relativePopularity": 14 },
+            { "hour": 17, "relativePopularity": 14 },
+            { "hour": 18, "relativePopularity": 15 },
+            { "hour": 19, "relativePopularity": 15 },
+            { "hour": 20, "relativePopularity": 18 },
+            { "hour": 21, "relativePopularity": 19 },
+            { "hour": 22, "relativePopularity": 19 },
+            { "hour": 23, "relativePopularity": 13 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 8 },
+            { "hour": 10, "relativePopularity": 11 },
+            { "hour": 11, "relativePopularity": 13 },
+            { "hour": 12, "relativePopularity": 14 },
+            { "hour": 13, "relativePopularity": 16 },
+            { "hour": 14, "relativePopularity": 15 },
+            { "hour": 15, "relativePopularity": 16 },
+            { "hour": 16, "relativePopularity": 15 },
+            { "hour": 17, "relativePopularity": 16 },
+            { "hour": 18, "relativePopularity": 20 },
+            { "hour": 19, "relativePopularity": 22 },
+            { "hour": 20, "relativePopularity": 27 },
+            { "hour": 21, "relativePopularity": 29 },
+            { "hour": 22, "relativePopularity": 28 },
+            { "hour": 23, "relativePopularity": 18 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 11 },
+            { "hour": 10, "relativePopularity": 13 },
+            { "hour": 11, "relativePopularity": 15 },
+            { "hour": 12, "relativePopularity": 18 },
+            { "hour": 13, "relativePopularity": 19 },
+            { "hour": 14, "relativePopularity": 21 },
+            { "hour": 15, "relativePopularity": 19 },
+            { "hour": 16, "relativePopularity": 19 },
+            { "hour": 17, "relativePopularity": 19 },
+            { "hour": 18, "relativePopularity": 22 },
+            { "hour": 19, "relativePopularity": 25 },
+            { "hour": 20, "relativePopularity": 27 },
+            { "hour": 21, "relativePopularity": 27 },
+            { "hour": 22, "relativePopularity": 23 },
+            { "hour": 23, "relativePopularity": 14 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 8 },
+            { "hour": 10, "relativePopularity": 11 },
+            { "hour": 11, "relativePopularity": 14 },
+            { "hour": 12, "relativePopularity": 16 },
+            { "hour": 13, "relativePopularity": 18 },
+            { "hour": 14, "relativePopularity": 18 },
+            { "hour": 15, "relativePopularity": 18 },
+            { "hour": 16, "relativePopularity": 20 },
+            { "hour": 17, "relativePopularity": 21 },
+            { "hour": 18, "relativePopularity": 25 },
+            { "hour": 19, "relativePopularity": 29 },
+            { "hour": 20, "relativePopularity": 35 },
+            { "hour": 21, "relativePopularity": 40 },
+            { "hour": 22, "relativePopularity": 41 },
+            { "hour": 23, "relativePopularity": 33 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 8 },
+            { "hour": 10, "relativePopularity": 10 },
+            { "hour": 11, "relativePopularity": 11 },
+            { "hour": 12, "relativePopularity": 13 },
+            { "hour": 13, "relativePopularity": 14 },
+            { "hour": 14, "relativePopularity": 14 },
+            { "hour": 15, "relativePopularity": 14 },
+            { "hour": 16, "relativePopularity": 17 },
+            { "hour": 17, "relativePopularity": 22 },
+            { "hour": 18, "relativePopularity": 28 },
+            { "hour": 19, "relativePopularity": 39 },
+            { "hour": 20, "relativePopularity": 58 },
+            { "hour": 21, "relativePopularity": 82 },
+            { "hour": 22, "relativePopularity": 100 },
+            { "hour": 23, "relativePopularity": 90 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 10 },
+            { "hour": 17, "relativePopularity": 14 },
+            { "hour": 18, "relativePopularity": 20 },
+            { "hour": 19, "relativePopularity": 27 },
+            { "hour": 20, "relativePopularity": 38 },
+            { "hour": 21, "relativePopularity": 47 },
+            { "hour": 22, "relativePopularity": 53 },
+            { "hour": 23, "relativePopularity": 47 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -86,8 +237,51 @@ const venues = [
     "address": "Av. Príncipe de Gales, 466 - Vila Príncipe de Gales, Santo André - SP, 09060-650",
     "coordinates": null,
     "referenceDistanceKm": null,
-    "weeklyHours": null,
-    "scheduleNote": "Horário ainda não localizado. Consulte a casa antes de sair.",
+    "weeklyHours": [
+      [
+        [
+          "13:00",
+          "21:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "22:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "23:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "13:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "12:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "12:00",
+          "02:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre",
@@ -95,10 +289,188 @@ const venues = [
       {
         "label": "Nome e endereço cadastral; endereço corroborado pelo usuário",
         "url": "https://casadosdados.com.br/solucao/cnpj/61-428-933-bruno-da-silva-goncalves-61428933000179"
+      },
+      {
+        "label": "Horários do Google: captura enviada pelo usuário em 05/10/2026; gráfico de pico visível, sem dia e valores identificáveis",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 42 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 57 },
+            { "hour": 16, "relativePopularity": 64 },
+            { "hour": 17, "relativePopularity": 71 },
+            { "hour": 18, "relativePopularity": 50 },
+            { "hour": 19, "relativePopularity": 50 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 28 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 50 },
+            { "hour": 18, "relativePopularity": 64 },
+            { "hour": 19, "relativePopularity": 64 },
+            { "hour": 20, "relativePopularity": 71 },
+            { "hour": 21, "relativePopularity": 78 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 78 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 50 },
+            { "hour": 18, "relativePopularity": 42 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 71 },
+            { "hour": 22, "relativePopularity": 71 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 71 },
+            { "hour": 15, "relativePopularity": 64 },
+            { "hour": 16, "relativePopularity": 71 },
+            { "hour": 17, "relativePopularity": 50 },
+            { "hour": 18, "relativePopularity": 42 },
+            { "hour": 19, "relativePopularity": 50 },
+            { "hour": 20, "relativePopularity": 64 },
+            { "hour": 21, "relativePopularity": 64 },
+            { "hour": 22, "relativePopularity": 50 },
+            { "hour": 23, "relativePopularity": 35 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 64 },
+            { "hour": 14, "relativePopularity": 35 },
+            { "hour": 15, "relativePopularity": 35 },
+            { "hour": 16, "relativePopularity": 57 },
+            { "hour": 17, "relativePopularity": 57 },
+            { "hour": 18, "relativePopularity": 42 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 50 },
+            { "hour": 22, "relativePopularity": 42 },
+            { "hour": 23, "relativePopularity": 42 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 64 },
+            { "hour": 13, "relativePopularity": 64 },
+            { "hour": 14, "relativePopularity": 64 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 57 },
+            { "hour": 17, "relativePopularity": 42 },
+            { "hour": 18, "relativePopularity": 71 },
+            { "hour": 19, "relativePopularity": 64 },
+            { "hour": 20, "relativePopularity": 85 },
+            { "hour": 21, "relativePopularity": 78 },
+            { "hour": 22, "relativePopularity": 71 },
+            { "hour": 23, "relativePopularity": 57 },
+            { "hour": 0, "relativePopularity": 50 },
+            { "hour": 1, "relativePopularity": 57 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 57 },
+            { "hour": 13, "relativePopularity": 57 },
+            { "hour": 14, "relativePopularity": 50 },
+            { "hour": 15, "relativePopularity": 28 },
+            { "hour": 16, "relativePopularity": 28 },
+            { "hour": 17, "relativePopularity": 35 },
+            { "hour": 18, "relativePopularity": 64 },
+            { "hour": 19, "relativePopularity": 71 },
+            { "hour": 20, "relativePopularity": 78 },
+            { "hour": 21, "relativePopularity": 57 },
+            { "hour": 22, "relativePopularity": 57 },
+            { "hour": 23, "relativePopularity": 71 },
+            { "hour": 0, "relativePopularity": 71 },
+            { "hour": 1, "relativePopularity": 100 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -152,7 +524,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
@@ -164,10 +536,146 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Beco-Figueiras-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 14 },
+            { "hour": 17, "relativePopularity": 14 },
+            { "hour": 18, "relativePopularity": 15 },
+            { "hour": 19, "relativePopularity": 18 },
+            { "hour": 20, "relativePopularity": 20 },
+            { "hour": 21, "relativePopularity": 21 },
+            { "hour": 22, "relativePopularity": 19 },
+            { "hour": 23, "relativePopularity": 15 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": []
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 7 },
+            { "hour": 19, "relativePopularity": 9 },
+            { "hour": 20, "relativePopularity": 11 },
+            { "hour": 21, "relativePopularity": 12 },
+            { "hour": 22, "relativePopularity": 11 },
+            { "hour": 23, "relativePopularity": 9 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 8 },
+            { "hour": 19, "relativePopularity": 13 },
+            { "hour": 20, "relativePopularity": 17 },
+            { "hour": 21, "relativePopularity": 19 },
+            { "hour": 22, "relativePopularity": 20 },
+            { "hour": 23, "relativePopularity": 18 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 10 },
+            { "hour": 19, "relativePopularity": 16 },
+            { "hour": 20, "relativePopularity": 25 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 51 },
+            { "hour": 23, "relativePopularity": 57 },
+            { "hour": 0, "relativePopularity": 46 },
+            { "hour": 1, "relativePopularity": 33 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 16 },
+            { "hour": 17, "relativePopularity": 17 },
+            { "hour": 18, "relativePopularity": 22 },
+            { "hour": 19, "relativePopularity": 36 },
+            { "hour": 20, "relativePopularity": 55 },
+            { "hour": 21, "relativePopularity": 80 },
+            { "hour": 22, "relativePopularity": 97 },
+            { "hour": 23, "relativePopularity": 100 },
+            { "hour": 0, "relativePopularity": 77 },
+            { "hour": 1, "relativePopularity": 52 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -231,7 +739,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários da ficha pública de funcionamento; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://botecosaobento.com.br/",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Boteco%20S%C3%A3o%20Bento%20Santo%20Andr%C3%A9%20R.%20das%20Bandeiras%2C%2016%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-780",
     "sources": [
@@ -246,10 +754,187 @@ const venues = [
       {
         "label": "Funcionamento",
         "url": "https://restaurantguru.com.br/Boteco-Sao-Bento-Santo-Andre-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Boteco%20S%C3%A3o%20Bento%20Santo%20Andr%C3%A9%20R.%20das%20Bandeiras%2C%2016%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-780"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Boteco%20S%C3%A3o%20Bento%20Santo%20Andr%C3%A9%20R.%20das%20Bandeiras%2C%2016%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-780",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 16 },
+            { "hour": 13, "relativePopularity": 26 },
+            { "hour": 14, "relativePopularity": 33 },
+            { "hour": 15, "relativePopularity": 34 },
+            { "hour": 16, "relativePopularity": 34 },
+            { "hour": 17, "relativePopularity": 32 },
+            { "hour": 18, "relativePopularity": 33 },
+            { "hour": 19, "relativePopularity": 34 },
+            { "hour": 20, "relativePopularity": 33 },
+            { "hour": 21, "relativePopularity": 28 },
+            { "hour": 22, "relativePopularity": 19 },
+            { "hour": 23, "relativePopularity": 11 },
+            { "hour": 0, "relativePopularity": 6 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 23 },
+            { "hour": 17, "relativePopularity": 24 },
+            { "hour": 18, "relativePopularity": 24 },
+            { "hour": 19, "relativePopularity": 25 },
+            { "hour": 20, "relativePopularity": 26 },
+            { "hour": 21, "relativePopularity": 26 },
+            { "hour": 22, "relativePopularity": 22 },
+            { "hour": 23, "relativePopularity": 15 },
+            { "hour": 0, "relativePopularity": 9 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 37 },
+            { "hour": 13, "relativePopularity": 47 },
+            { "hour": 14, "relativePopularity": 45 },
+            { "hour": 15, "relativePopularity": 43 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 41 },
+            { "hour": 18, "relativePopularity": 41 },
+            { "hour": 19, "relativePopularity": 40 },
+            { "hour": 20, "relativePopularity": 37 },
+            { "hour": 21, "relativePopularity": 34 },
+            { "hour": 22, "relativePopularity": 27 },
+            { "hour": 23, "relativePopularity": 19 },
+            { "hour": 0, "relativePopularity": 11 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 33 },
+            { "hour": 13, "relativePopularity": 42 },
+            { "hour": 14, "relativePopularity": 43 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 38 },
+            { "hour": 17, "relativePopularity": 36 },
+            { "hour": 18, "relativePopularity": 34 },
+            { "hour": 19, "relativePopularity": 34 },
+            { "hour": 20, "relativePopularity": 33 },
+            { "hour": 21, "relativePopularity": 33 },
+            { "hour": 22, "relativePopularity": 28 },
+            { "hour": 23, "relativePopularity": 22 },
+            { "hour": 0, "relativePopularity": 11 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 32 },
+            { "hour": 13, "relativePopularity": 39 },
+            { "hour": 14, "relativePopularity": 43 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 43 },
+            { "hour": 18, "relativePopularity": 50 },
+            { "hour": 19, "relativePopularity": 59 },
+            { "hour": 20, "relativePopularity": 73 },
+            { "hour": 21, "relativePopularity": 81 },
+            { "hour": 22, "relativePopularity": 82 },
+            { "hour": 23, "relativePopularity": 70 },
+            { "hour": 0, "relativePopularity": 48 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 30 },
+            { "hour": 13, "relativePopularity": 40 },
+            { "hour": 14, "relativePopularity": 40 },
+            { "hour": 15, "relativePopularity": 36 },
+            { "hour": 16, "relativePopularity": 31 },
+            { "hour": 17, "relativePopularity": 32 },
+            { "hour": 18, "relativePopularity": 41 },
+            { "hour": 19, "relativePopularity": 55 },
+            { "hour": 20, "relativePopularity": 72 },
+            { "hour": 21, "relativePopularity": 83 },
+            { "hour": 22, "relativePopularity": 84 },
+            { "hour": 23, "relativePopularity": 72 },
+            { "hour": 0, "relativePopularity": 49 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 27 },
+            { "hour": 13, "relativePopularity": 39 },
+            { "hour": 14, "relativePopularity": 50 },
+            { "hour": 15, "relativePopularity": 56 },
+            { "hour": 16, "relativePopularity": 53 },
+            { "hour": 17, "relativePopularity": 50 },
+            { "hour": 18, "relativePopularity": 52 },
+            { "hour": 19, "relativePopularity": 65 },
+            { "hour": 20, "relativePopularity": 82 },
+            { "hour": 21, "relativePopularity": 97 },
+            { "hour": 22, "relativePopularity": 100 },
+            { "hour": 23, "relativePopularity": 90 },
+            { "hour": 0, "relativePopularity": 63 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -319,7 +1004,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Há divergência nos horários de fechamento publicados. Confirme com a casa antes de ir.",
     "officialUrl": "https://barfigueiras.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Figueiras%20Rua%20das%20Figueiras%2C%20835%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
@@ -331,10 +1016,183 @@ const venues = [
       {
         "label": "Site da casa",
         "url": "https://barfigueiras.com.br/"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bar%20Figueiras%20Rua%20das%20Figueiras%2C%20835%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Figueiras%20Rua%20das%20Figueiras%2C%20835%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 26 },
+            { "hour": 13, "relativePopularity": 40 },
+            { "hour": 14, "relativePopularity": 47 },
+            { "hour": 15, "relativePopularity": 44 },
+            { "hour": 16, "relativePopularity": 38 },
+            { "hour": 17, "relativePopularity": 30 },
+            { "hour": 18, "relativePopularity": 28 },
+            { "hour": 19, "relativePopularity": 28 },
+            { "hour": 20, "relativePopularity": 30 },
+            { "hour": 21, "relativePopularity": 30 },
+            { "hour": 22, "relativePopularity": 25 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 19 },
+            { "hour": 13, "relativePopularity": 23 },
+            { "hour": 14, "relativePopularity": 21 },
+            { "hour": 15, "relativePopularity": 20 },
+            { "hour": 16, "relativePopularity": 19 },
+            { "hour": 17, "relativePopularity": 20 },
+            { "hour": 18, "relativePopularity": 23 },
+            { "hour": 19, "relativePopularity": 30 },
+            { "hour": 20, "relativePopularity": 34 },
+            { "hour": 21, "relativePopularity": 32 },
+            { "hour": 22, "relativePopularity": 24 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 20 },
+            { "hour": 13, "relativePopularity": 25 },
+            { "hour": 14, "relativePopularity": 25 },
+            { "hour": 15, "relativePopularity": 23 },
+            { "hour": 16, "relativePopularity": 21 },
+            { "hour": 17, "relativePopularity": 20 },
+            { "hour": 18, "relativePopularity": 22 },
+            { "hour": 19, "relativePopularity": 27 },
+            { "hour": 20, "relativePopularity": 32 },
+            { "hour": 21, "relativePopularity": 33 },
+            { "hour": 22, "relativePopularity": 27 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 19 },
+            { "hour": 13, "relativePopularity": 24 },
+            { "hour": 14, "relativePopularity": 22 },
+            { "hour": 15, "relativePopularity": 19 },
+            { "hour": 16, "relativePopularity": 18 },
+            { "hour": 17, "relativePopularity": 18 },
+            { "hour": 18, "relativePopularity": 21 },
+            { "hour": 19, "relativePopularity": 26 },
+            { "hour": 20, "relativePopularity": 30 },
+            { "hour": 21, "relativePopularity": 30 },
+            { "hour": 22, "relativePopularity": 25 },
+            { "hour": 23, "relativePopularity": 16 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 17 },
+            { "hour": 13, "relativePopularity": 19 },
+            { "hour": 14, "relativePopularity": 19 },
+            { "hour": 15, "relativePopularity": 19 },
+            { "hour": 16, "relativePopularity": 20 },
+            { "hour": 17, "relativePopularity": 21 },
+            { "hour": 18, "relativePopularity": 25 },
+            { "hour": 19, "relativePopularity": 30 },
+            { "hour": 20, "relativePopularity": 37 },
+            { "hour": 21, "relativePopularity": 41 },
+            { "hour": 22, "relativePopularity": 38 },
+            { "hour": 23, "relativePopularity": 29 },
+            { "hour": 0, "relativePopularity": 17 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 24 },
+            { "hour": 13, "relativePopularity": 28 },
+            { "hour": 14, "relativePopularity": 27 },
+            { "hour": 15, "relativePopularity": 23 },
+            { "hour": 16, "relativePopularity": 22 },
+            { "hour": 17, "relativePopularity": 26 },
+            { "hour": 18, "relativePopularity": 36 },
+            { "hour": 19, "relativePopularity": 52 },
+            { "hour": 20, "relativePopularity": 67 },
+            { "hour": 21, "relativePopularity": 77 },
+            { "hour": 22, "relativePopularity": 75 },
+            { "hour": 23, "relativePopularity": 62 },
+            { "hour": 0, "relativePopularity": 37 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 21 },
+            { "hour": 13, "relativePopularity": 31 },
+            { "hour": 14, "relativePopularity": 38 },
+            { "hour": 15, "relativePopularity": 40 },
+            { "hour": 16, "relativePopularity": 37 },
+            { "hour": 17, "relativePopularity": 35 },
+            { "hour": 18, "relativePopularity": 44 },
+            { "hour": 19, "relativePopularity": 62 },
+            { "hour": 20, "relativePopularity": 85 },
+            { "hour": 21, "relativePopularity": 100 },
+            { "hour": 22, "relativePopularity": 98 },
+            { "hour": 23, "relativePopularity": 80 },
+            { "hour": 0, "relativePopularity": 50 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -394,7 +1252,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://vedebar.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
@@ -406,10 +1264,146 @@ const venues = [
       {
         "label": "Site da casa",
         "url": "https://vedebar.com.br/"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 20 },
+            { "hour": 13, "relativePopularity": 31 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 48 },
+            { "hour": 16, "relativePopularity": 47 },
+            { "hour": 17, "relativePopularity": 40 },
+            { "hour": 18, "relativePopularity": 28 },
+            { "hour": 19, "relativePopularity": 20 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": []
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 7 },
+            { "hour": 19, "relativePopularity": 9 },
+            { "hour": 20, "relativePopularity": 12 },
+            { "hour": 21, "relativePopularity": 13 },
+            { "hour": 22, "relativePopularity": 11 },
+            { "hour": 23, "relativePopularity": 10 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 14 },
+            { "hour": 19, "relativePopularity": 21 },
+            { "hour": 20, "relativePopularity": 32 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 39 },
+            { "hour": 23, "relativePopularity": 36 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 25 },
+            { "hour": 19, "relativePopularity": 38 },
+            { "hour": 20, "relativePopularity": 53 },
+            { "hour": 21, "relativePopularity": 64 },
+            { "hour": 22, "relativePopularity": 70 },
+            { "hour": 23, "relativePopularity": 62 },
+            { "hour": 0, "relativePopularity": 41 },
+            { "hour": 1, "relativePopularity": 23 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 47 },
+            { "hour": 17, "relativePopularity": 53 },
+            { "hour": 18, "relativePopularity": 59 },
+            { "hour": 19, "relativePopularity": 77 },
+            { "hour": 20, "relativePopularity": 93 },
+            { "hour": 21, "relativePopularity": 100 },
+            { "hour": 22, "relativePopularity": 92 },
+            { "hour": 23, "relativePopularity": 74 },
+            { "hour": 0, "relativePopularity": 49 },
+            { "hour": 1, "relativePopularity": 27 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -474,7 +1468,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://charllu.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Charllu%20Bar%20Av.%20dos%20Estados%2C%206843%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP",
@@ -486,10 +1480,165 @@ const venues = [
       {
         "label": "Site da casa",
         "url": "https://charllu.com.br/"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Charllu%20Bar%20Av.%20dos%20Estados%2C%206843%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Charllu%20Bar%20Av.%20dos%20Estados%2C%206843%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 19 },
+            { "hour": 13, "relativePopularity": 35 },
+            { "hour": 14, "relativePopularity": 54 },
+            { "hour": 15, "relativePopularity": 68 },
+            { "hour": 16, "relativePopularity": 74 },
+            { "hour": 17, "relativePopularity": 71 },
+            { "hour": 18, "relativePopularity": 63 },
+            { "hour": 19, "relativePopularity": 50 },
+            { "hour": 20, "relativePopularity": 39 },
+            { "hour": 21, "relativePopularity": 28 },
+            { "hour": 22, "relativePopularity": 16 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 7 },
+            { "hour": 17, "relativePopularity": 10 },
+            { "hour": 18, "relativePopularity": 13 },
+            { "hour": 19, "relativePopularity": 17 },
+            { "hour": 20, "relativePopularity": 21 },
+            { "hour": 21, "relativePopularity": 22 },
+            { "hour": 22, "relativePopularity": 19 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 8 },
+            { "hour": 17, "relativePopularity": 9 },
+            { "hour": 18, "relativePopularity": 11 },
+            { "hour": 19, "relativePopularity": 16 },
+            { "hour": 20, "relativePopularity": 22 },
+            { "hour": 21, "relativePopularity": 25 },
+            { "hour": 22, "relativePopularity": 24 },
+            { "hour": 23, "relativePopularity": 18 },
+            { "hour": 0, "relativePopularity": 9 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 7 },
+            { "hour": 17, "relativePopularity": 11 },
+            { "hour": 18, "relativePopularity": 17 },
+            { "hour": 19, "relativePopularity": 29 },
+            { "hour": 20, "relativePopularity": 47 },
+            { "hour": 21, "relativePopularity": 60 },
+            { "hour": 22, "relativePopularity": 61 },
+            { "hour": 23, "relativePopularity": 50 },
+            { "hour": 0, "relativePopularity": 30 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 9 },
+            { "hour": 17, "relativePopularity": 15 },
+            { "hour": 18, "relativePopularity": 25 },
+            { "hour": 19, "relativePopularity": 45 },
+            { "hour": 20, "relativePopularity": 70 },
+            { "hour": 21, "relativePopularity": 89 },
+            { "hour": 22, "relativePopularity": 95 },
+            { "hour": 23, "relativePopularity": 85 },
+            { "hour": 0, "relativePopularity": 62 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 17 },
+            { "hour": 13, "relativePopularity": 36 },
+            { "hour": 14, "relativePopularity": 56 },
+            { "hour": 15, "relativePopularity": 74 },
+            { "hour": 16, "relativePopularity": 83 },
+            { "hour": 17, "relativePopularity": 85 },
+            { "hour": 18, "relativePopularity": 82 },
+            { "hour": 19, "relativePopularity": 84 },
+            { "hour": 20, "relativePopularity": 91 },
+            { "hour": 21, "relativePopularity": 99 },
+            { "hour": 22, "relativePopularity": 100 },
+            { "hour": 23, "relativePopularity": 88 },
+            { "hour": 0, "relativePopularity": 63 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -515,8 +1664,26 @@ const venues = [
       "longitude": -46.5576
     },
     "referenceDistanceKm": 3.184,
-    "weeklyHours": null,
-    "scheduleNote": "Funcionamento conforme a programação do organizador. Horários de eventos anteriores não representam a grade semanal.",
+    "weeklyHours": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        [
+          "22:00",
+          "05:00"
+        ]
+      ],
+      [
+        [
+          "22:00",
+          "05:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais. Confirme a programação e as condições de entrada de cada evento.",
     "officialUrl": "https://www.blacktag.com.br/organizadores/1288/supra-berno",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Supra%20Bern%C3%B4%20Rua%20Marli%2C%2026%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-390",
     "sources": [
@@ -527,10 +1694,95 @@ const venues = [
       {
         "label": "Fonte das coordenadas",
         "url": "https://restaurantguru.com.br/Supra-Bar-Berno-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Supra%20Bern%C3%B4%20Rua%20Marli%2C%2026%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-390"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Supra%20Bern%C3%B4%20Rua%20Marli%2C%2026%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-390",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": []
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": []
+        },
+        {
+          "day": 3,
+          "hours": []
+        },
+        {
+          "day": 4,
+          "hours": []
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 57 },
+            { "hour": 23, "relativePopularity": 83 },
+            { "hour": 0, "relativePopularity": 76 },
+            { "hour": 1, "relativePopularity": 73 },
+            { "hour": 2, "relativePopularity": 60 },
+            { "hour": 3, "relativePopularity": 47 },
+            { "hour": 4, "relativePopularity": 46 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 68 },
+            { "hour": 23, "relativePopularity": 100 },
+            { "hour": 0, "relativePopularity": 92 },
+            { "hour": 1, "relativePopularity": 88 },
+            { "hour": 2, "relativePopularity": 77 },
+            { "hour": 3, "relativePopularity": 67 },
+            { "hour": 4, "relativePopularity": 29 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -551,7 +1803,7 @@ const venues = [
     },
     "referenceDistanceKm": 2.434,
     "weeklyHours": null,
-    "scheduleNote": "Espaço para eventos privados. Horário das festas mediante contratação; grade comercial do diretório não foi usada como horário de eventos.",
+    "scheduleNote": "Atendimento e visitas ao buffet: segunda a sábado, 10h–18h. Festas seguem a programação de cada evento; esses horários não indicam uma festa aberta ao público.",
     "officialUrl": "https://www.oceandrive.com.br/index.html",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Buffet%20Ocean%20Drive%20Av.%20Padre%20Anchieta%2C%20208%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-710",
     "sources": [
@@ -562,6 +1814,10 @@ const venues = [
       {
         "label": "Fonte das coordenadas",
         "url": "https://www.locaisdobrasil.com.br/encontre/buffet/santo-andre-sp/buffet-ocean-drive/66dba2d258c8e2634b9939aa"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Buffet%20Ocean%20Drive%20Av.%20Padre%20Anchieta%2C%20208%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-710"
       }
     ],
     "checkedAt": "2026-10-05",
@@ -575,7 +1831,46 @@ const venues = [
     "imageRetrievedAt": "2026-10-05",
     "imageCard": "assets/venues/ocean-drive-card.webp",
     "imageWidth": 1179,
-    "imageHeight": 2096
+    "imageHeight": 2096,
+    "appointmentHours": [
+      [],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      [
+        [
+          "10:00",
+          "18:00"
+        ]
+      ]
+    ]
   },
   {
     "id": "frampe-bar",
@@ -635,7 +1930,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Frampe%20Bar%20Av.%20Min.%20Osvaldo%20Aranha%2C%20302%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-000",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Frampe%20Bar%20Av.%20Min.%20Osvaldo%20Aranha%2C%20302%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-000",
@@ -647,10 +1942,180 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Frampe-Bar-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Frampe%20Bar%20Av.%20Min.%20Osvaldo%20Aranha%2C%20302%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-000"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Frampe%20Bar%20Av.%20Min.%20Osvaldo%20Aranha%2C%20302%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-000",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 20 },
+            { "hour": 9, "relativePopularity": 31 },
+            { "hour": 10, "relativePopularity": 52 },
+            { "hour": 11, "relativePopularity": 71 },
+            { "hour": 12, "relativePopularity": 71 },
+            { "hour": 13, "relativePopularity": 65 },
+            { "hour": 14, "relativePopularity": 51 },
+            { "hour": 15, "relativePopularity": 52 },
+            { "hour": 16, "relativePopularity": 39 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 5, "relativePopularity": 0 },
+            { "hour": 6, "relativePopularity": 27 },
+            { "hour": 7, "relativePopularity": 29 },
+            { "hour": 8, "relativePopularity": 34 },
+            { "hour": 9, "relativePopularity": 42 },
+            { "hour": 10, "relativePopularity": 55 },
+            { "hour": 11, "relativePopularity": 76 },
+            { "hour": 12, "relativePopularity": 93 },
+            { "hour": 13, "relativePopularity": 81 },
+            { "hour": 14, "relativePopularity": 72 },
+            { "hour": 15, "relativePopularity": 54 },
+            { "hour": 16, "relativePopularity": 58 },
+            { "hour": 17, "relativePopularity": 57 },
+            { "hour": 18, "relativePopularity": 49 },
+            { "hour": 19, "relativePopularity": 46 },
+            { "hour": 20, "relativePopularity": 38 },
+            { "hour": 21, "relativePopularity": 31 },
+            { "hour": 22, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 5, "relativePopularity": 0 },
+            { "hour": 6, "relativePopularity": 35 },
+            { "hour": 7, "relativePopularity": 37 },
+            { "hour": 8, "relativePopularity": 32 },
+            { "hour": 9, "relativePopularity": 37 },
+            { "hour": 10, "relativePopularity": 43 },
+            { "hour": 11, "relativePopularity": 56 },
+            { "hour": 12, "relativePopularity": 64 },
+            { "hour": 13, "relativePopularity": 67 },
+            { "hour": 14, "relativePopularity": 61 },
+            { "hour": 15, "relativePopularity": 57 },
+            { "hour": 16, "relativePopularity": 56 },
+            { "hour": 17, "relativePopularity": 57 },
+            { "hour": 18, "relativePopularity": 54 },
+            { "hour": 19, "relativePopularity": 55 },
+            { "hour": 20, "relativePopularity": 49 },
+            { "hour": 21, "relativePopularity": 46 },
+            { "hour": 22, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 5, "relativePopularity": 0 },
+            { "hour": 6, "relativePopularity": 29 },
+            { "hour": 7, "relativePopularity": 39 },
+            { "hour": 8, "relativePopularity": 44 },
+            { "hour": 9, "relativePopularity": 45 },
+            { "hour": 10, "relativePopularity": 60 },
+            { "hour": 11, "relativePopularity": 76 },
+            { "hour": 12, "relativePopularity": 100 },
+            { "hour": 13, "relativePopularity": 87 },
+            { "hour": 14, "relativePopularity": 71 },
+            { "hour": 15, "relativePopularity": 56 },
+            { "hour": 16, "relativePopularity": 54 },
+            { "hour": 17, "relativePopularity": 66 },
+            { "hour": 18, "relativePopularity": 80 },
+            { "hour": 19, "relativePopularity": 73 },
+            { "hour": 20, "relativePopularity": 67 },
+            { "hour": 21, "relativePopularity": 55 },
+            { "hour": 22, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 5, "relativePopularity": 0 },
+            { "hour": 6, "relativePopularity": 31 },
+            { "hour": 7, "relativePopularity": 44 },
+            { "hour": 8, "relativePopularity": 47 },
+            { "hour": 9, "relativePopularity": 54 },
+            { "hour": 10, "relativePopularity": 56 },
+            { "hour": 11, "relativePopularity": 69 },
+            { "hour": 12, "relativePopularity": 81 },
+            { "hour": 13, "relativePopularity": 69 },
+            { "hour": 14, "relativePopularity": 60 },
+            { "hour": 15, "relativePopularity": 56 },
+            { "hour": 16, "relativePopularity": 60 },
+            { "hour": 17, "relativePopularity": 59 },
+            { "hour": 18, "relativePopularity": 56 },
+            { "hour": 19, "relativePopularity": 54 },
+            { "hour": 20, "relativePopularity": 60 },
+            { "hour": 21, "relativePopularity": 57 },
+            { "hour": 22, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 5, "relativePopularity": 0 },
+            { "hour": 6, "relativePopularity": 32 },
+            { "hour": 7, "relativePopularity": 32 },
+            { "hour": 8, "relativePopularity": 29 },
+            { "hour": 9, "relativePopularity": 26 },
+            { "hour": 10, "relativePopularity": 45 },
+            { "hour": 11, "relativePopularity": 69 },
+            { "hour": 12, "relativePopularity": 95 },
+            { "hour": 13, "relativePopularity": 89 },
+            { "hour": 14, "relativePopularity": 80 },
+            { "hour": 15, "relativePopularity": 68 },
+            { "hour": 16, "relativePopularity": 62 },
+            { "hour": 17, "relativePopularity": 73 },
+            { "hour": 18, "relativePopularity": 78 },
+            { "hour": 19, "relativePopularity": 88 },
+            { "hour": 20, "relativePopularity": 87 },
+            { "hour": 21, "relativePopularity": 79 },
+            { "hour": 22, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 40 },
+            { "hour": 8, "relativePopularity": 42 },
+            { "hour": 9, "relativePopularity": 40 },
+            { "hour": 10, "relativePopularity": 48 },
+            { "hour": 11, "relativePopularity": 61 },
+            { "hour": 12, "relativePopularity": 75 },
+            { "hour": 13, "relativePopularity": 77 },
+            { "hour": 14, "relativePopularity": 72 },
+            { "hour": 15, "relativePopularity": 60 },
+            { "hour": 16, "relativePopularity": 53 },
+            { "hour": 17, "relativePopularity": 58 },
+            { "hour": 18, "relativePopularity": 66 },
+            { "hour": 19, "relativePopularity": 64 },
+            { "hour": 20, "relativePopularity": 63 },
+            { "hour": 21, "relativePopularity": 49 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -704,7 +2169,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/casaveiaespetos",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000",
@@ -716,10 +2181,142 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/CasaVeia-Bebidas-e-Espetos-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": []
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 13 },
+            { "hour": 18, "relativePopularity": 20 },
+            { "hour": 19, "relativePopularity": 25 },
+            { "hour": 20, "relativePopularity": 28 },
+            { "hour": 21, "relativePopularity": 23 },
+            { "hour": 22, "relativePopularity": 18 },
+            { "hour": 23, "relativePopularity": 12 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 12 },
+            { "hour": 18, "relativePopularity": 18 },
+            { "hour": 19, "relativePopularity": 27 },
+            { "hour": 20, "relativePopularity": 32 },
+            { "hour": 21, "relativePopularity": 34 },
+            { "hour": 22, "relativePopularity": 29 },
+            { "hour": 23, "relativePopularity": 21 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 20 },
+            { "hour": 18, "relativePopularity": 29 },
+            { "hour": 19, "relativePopularity": 39 },
+            { "hour": 20, "relativePopularity": 51 },
+            { "hour": 21, "relativePopularity": 51 },
+            { "hour": 22, "relativePopularity": 42 },
+            { "hour": 23, "relativePopularity": 29 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 25 },
+            { "hour": 18, "relativePopularity": 50 },
+            { "hour": 19, "relativePopularity": 79 },
+            { "hour": 20, "relativePopularity": 100 },
+            { "hour": 21, "relativePopularity": 92 },
+            { "hour": 22, "relativePopularity": 71 },
+            { "hour": 23, "relativePopularity": 48 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 23 },
+            { "hour": 13, "relativePopularity": 33 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 43 },
+            { "hour": 16, "relativePopularity": 37 },
+            { "hour": 17, "relativePopularity": 33 },
+            { "hour": 18, "relativePopularity": 43 },
+            { "hour": 19, "relativePopularity": 61 },
+            { "hour": 20, "relativePopularity": 84 },
+            { "hour": 21, "relativePopularity": 89 },
+            { "hour": 22, "relativePopularity": 79 },
+            { "hour": 23, "relativePopularity": 58 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -739,46 +2336,8 @@ const venues = [
       "longitude": -46.546301299999996
     },
     "referenceDistanceKm": 0.833,
-    "weeklyHours": [
-      [],
-      [
-        [
-          "08:00",
-          "20:00"
-        ]
-      ],
-      [
-        [
-          "08:00",
-          "20:00"
-        ]
-      ],
-      [
-        [
-          "08:00",
-          "20:00"
-        ]
-      ],
-      [
-        [
-          "08:00",
-          "21:00"
-        ]
-      ],
-      [
-        [
-          "08:00",
-          "16:00"
-        ]
-      ],
-      [
-        [
-          "08:00",
-          "16:00"
-        ]
-      ]
-    ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "weeklyHours": null,
+    "scheduleNote": "Horários em revisão devido a informações divergentes. Confirme diretamente com a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Virtus%20Beer%20Bar%20e%20Restaurante%20R.%20Adolfo%20Laves%2C%20327%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-390",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Virtus%20Beer%20Bar%20e%20Restaurante%20R.%20Adolfo%20Laves%2C%20327%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-390",
@@ -790,6 +2349,10 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Virtus-Beer-Bar-e-Restaurante-Santo-Andre"
+      },
+      {
+        "label": "Google: ficha no endereço 327; grade completa não acessível e divergência com fonte anterior",
+        "url": "https://www.google.com/maps/search/?api=1&query=VIRTUS+BEER+Adolfo+Laves+327+Santo+Andre"
       }
     ],
     "checkedAt": "2026-10-05",
@@ -814,10 +2377,10 @@ const venues = [
     },
     "referenceDistanceKm": 2.91,
     "weeklyHours": [
-      [],
+      null,
       [
         [
-          "19:00",
+          "19:30",
           "23:00"
         ]
       ],
@@ -852,9 +2415,9 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
-    "officialUrl": "https://www.instagram.com/agrutarockbar/",
-    "channelLabel": "Ver Instagram",
+    "scheduleNote": "Domingo somente em eventos. Confirme a programação e o horário de abertura de segunda com a casa.",
+    "officialUrl": "https://agrutarockbar.com.br/",
+    "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260",
     "sources": [
       {
@@ -864,10 +2427,177 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/A-Gruta-Rock-Bar-Santo-Andre"
+      },
+      {
+        "label": "Grade semanal oficial; domingo condicionado a eventos",
+        "url": "https://agrutarockbar.com.br/"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": []
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 20 },
+            { "hour": 20, "relativePopularity": 24 },
+            { "hour": 21, "relativePopularity": 26 },
+            { "hour": 22, "relativePopularity": 19 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 12 },
+            { "hour": 20, "relativePopularity": 15 },
+            { "hour": 21, "relativePopularity": 21 },
+            { "hour": 22, "relativePopularity": 23 },
+            { "hour": 23, "relativePopularity": 22 },
+            { "hour": 0, "relativePopularity": 16 },
+            { "hour": 1, "relativePopularity": 10 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 14 },
+            { "hour": 20, "relativePopularity": 16 },
+            { "hour": 21, "relativePopularity": 19 },
+            { "hour": 22, "relativePopularity": 20 },
+            { "hour": 23, "relativePopularity": 21 },
+            { "hour": 0, "relativePopularity": 18 },
+            { "hour": 1, "relativePopularity": 15 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 11 },
+            { "hour": 20, "relativePopularity": 15 },
+            { "hour": 21, "relativePopularity": 19 },
+            { "hour": 22, "relativePopularity": 21 },
+            { "hour": 23, "relativePopularity": 21 },
+            { "hour": 0, "relativePopularity": 15 },
+            { "hour": 1, "relativePopularity": 11 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 17 },
+            { "hour": 20, "relativePopularity": 28 },
+            { "hour": 21, "relativePopularity": 46 },
+            { "hour": 22, "relativePopularity": 65 },
+            { "hour": 23, "relativePopularity": 75 },
+            { "hour": 0, "relativePopularity": 64 },
+            { "hour": 1, "relativePopularity": 48 },
+            { "hour": 2, "relativePopularity": 31 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 15 },
+            { "hour": 19, "relativePopularity": 26 },
+            { "hour": 20, "relativePopularity": 44 },
+            { "hour": 21, "relativePopularity": 72 },
+            { "hour": 22, "relativePopularity": 92 },
+            { "hour": 23, "relativePopularity": 100 },
+            { "hour": 0, "relativePopularity": 81 },
+            { "hour": 1, "relativePopularity": 62 },
+            { "hour": 2, "relativePopularity": 42 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -931,7 +2661,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/botequim_carioca_santo_andre/",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Botequim%20Carioca%20R.%20Santo%20Andr%C3%A9%2C%20524%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
@@ -943,10 +2673,180 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Botequim-Carioca-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Botequim%20Carioca%20R.%20Santo%20Andr%C3%A9%2C%20524%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Botequim%20Carioca%20R.%20Santo%20Andr%C3%A9%2C%20524%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 47 },
+            { "hour": 13, "relativePopularity": 67 },
+            { "hour": 14, "relativePopularity": 75 },
+            { "hour": 15, "relativePopularity": 69 },
+            { "hour": 16, "relativePopularity": 53 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 39 },
+            { "hour": 13, "relativePopularity": 44 },
+            { "hour": 14, "relativePopularity": 39 },
+            { "hour": 15, "relativePopularity": 31 },
+            { "hour": 16, "relativePopularity": 20 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 50 },
+            { "hour": 13, "relativePopularity": 55 },
+            { "hour": 14, "relativePopularity": 46 },
+            { "hour": 15, "relativePopularity": 35 },
+            { "hour": 16, "relativePopularity": 24 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 65 },
+            { "hour": 13, "relativePopularity": 74 },
+            { "hour": 14, "relativePopularity": 64 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 38 },
+            { "hour": 17, "relativePopularity": 31 },
+            { "hour": 18, "relativePopularity": 29 },
+            { "hour": 19, "relativePopularity": 32 },
+            { "hour": 20, "relativePopularity": 34 },
+            { "hour": 21, "relativePopularity": 35 },
+            { "hour": 22, "relativePopularity": 29 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 50 },
+            { "hour": 13, "relativePopularity": 58 },
+            { "hour": 14, "relativePopularity": 53 },
+            { "hour": 15, "relativePopularity": 44 },
+            { "hour": 16, "relativePopularity": 34 },
+            { "hour": 17, "relativePopularity": 30 },
+            { "hour": 18, "relativePopularity": 31 },
+            { "hour": 19, "relativePopularity": 41 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 52 },
+            { "hour": 22, "relativePopularity": 44 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 57 },
+            { "hour": 13, "relativePopularity": 67 },
+            { "hour": 14, "relativePopularity": 66 },
+            { "hour": 15, "relativePopularity": 55 },
+            { "hour": 16, "relativePopularity": 46 },
+            { "hour": 17, "relativePopularity": 41 },
+            { "hour": 18, "relativePopularity": 44 },
+            { "hour": 19, "relativePopularity": 54 },
+            { "hour": 20, "relativePopularity": 66 },
+            { "hour": 21, "relativePopularity": 71 },
+            { "hour": 22, "relativePopularity": 64 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 68 },
+            { "hour": 13, "relativePopularity": 89 },
+            { "hour": 14, "relativePopularity": 97 },
+            { "hour": 15, "relativePopularity": 92 },
+            { "hour": 16, "relativePopularity": 84 },
+            { "hour": 17, "relativePopularity": 80 },
+            { "hour": 18, "relativePopularity": 81 },
+            { "hour": 19, "relativePopularity": 91 },
+            { "hour": 20, "relativePopularity": 100 },
+            { "hour": 21, "relativePopularity": 98 },
+            { "hour": 22, "relativePopularity": 85 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1000,7 +2900,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/tothesea_br/",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340",
@@ -1012,10 +2912,142 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/TO-THE-SEA-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 10 },
+            { "hour": 18, "relativePopularity": 20 },
+            { "hour": 19, "relativePopularity": 38 },
+            { "hour": 20, "relativePopularity": 58 },
+            { "hour": 21, "relativePopularity": 69 },
+            { "hour": 22, "relativePopularity": 64 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": []
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 7 },
+            { "hour": 19, "relativePopularity": 10 },
+            { "hour": 20, "relativePopularity": 12 },
+            { "hour": 21, "relativePopularity": 13 },
+            { "hour": 22, "relativePopularity": 12 },
+            { "hour": 23, "relativePopularity": 8 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 13 },
+            { "hour": 19, "relativePopularity": 30 },
+            { "hour": 20, "relativePopularity": 55 },
+            { "hour": 21, "relativePopularity": 80 },
+            { "hour": 22, "relativePopularity": 90 },
+            { "hour": 23, "relativePopularity": 81 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 11 },
+            { "hour": 19, "relativePopularity": 19 },
+            { "hour": 20, "relativePopularity": 30 },
+            { "hour": 21, "relativePopularity": 41 },
+            { "hour": 22, "relativePopularity": 47 },
+            { "hour": 23, "relativePopularity": 43 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 12 },
+            { "hour": 18, "relativePopularity": 21 },
+            { "hour": 19, "relativePopularity": 39 },
+            { "hour": 20, "relativePopularity": 64 },
+            { "hour": 21, "relativePopularity": 88 },
+            { "hour": 22, "relativePopularity": 100 },
+            { "hour": 23, "relativePopularity": 91 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1074,7 +3106,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/barcasinha/",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=CASINHA%20BAR%20Melhor%20Caipirinha%20Do%20Brrasil%20R.%20Itobi%2C%20138%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-240",
@@ -1086,10 +3118,161 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/CASINHA-BAR-Melhor-Caipirinha-Do-Brrasil-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=CASINHA%20BAR%20Melhor%20Caipirinha%20Do%20Brrasil%20R.%20Itobi%2C%20138%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-240"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=CASINHA%20BAR%20Melhor%20Caipirinha%20Do%20Brrasil%20R.%20Itobi%2C%20138%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-240",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 37 },
+            { "hour": 12, "relativePopularity": 59 },
+            { "hour": 13, "relativePopularity": 89 },
+            { "hour": 14, "relativePopularity": 90 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 40 },
+            { "hour": 17, "relativePopularity": 57 },
+            { "hour": 18, "relativePopularity": 65 },
+            { "hour": 19, "relativePopularity": 59 },
+            { "hour": 20, "relativePopularity": 43 },
+            { "hour": 21, "relativePopularity": 34 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 24 },
+            { "hour": 17, "relativePopularity": 39 },
+            { "hour": 18, "relativePopularity": 49 },
+            { "hour": 19, "relativePopularity": 52 },
+            { "hour": 20, "relativePopularity": 43 },
+            { "hour": 21, "relativePopularity": 31 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 31 },
+            { "hour": 17, "relativePopularity": 51 },
+            { "hour": 18, "relativePopularity": 61 },
+            { "hour": 19, "relativePopularity": 63 },
+            { "hour": 20, "relativePopularity": 56 },
+            { "hour": 21, "relativePopularity": 39 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 41 },
+            { "hour": 17, "relativePopularity": 59 },
+            { "hour": 18, "relativePopularity": 80 },
+            { "hour": 19, "relativePopularity": 100 },
+            { "hour": 20, "relativePopularity": 95 },
+            { "hour": 21, "relativePopularity": 74 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 46 },
+            { "hour": 12, "relativePopularity": 67 },
+            { "hour": 13, "relativePopularity": 76 },
+            { "hour": 14, "relativePopularity": 78 },
+            { "hour": 15, "relativePopularity": 73 },
+            { "hour": 16, "relativePopularity": 72 },
+            { "hour": 17, "relativePopularity": 63 },
+            { "hour": 18, "relativePopularity": 48 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1153,7 +3336,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Rub%C3%A3o%20Av.%20Prestes%20Maia%2C%20158%20-%20Vila%20Guiomar%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-521",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Rub%C3%A3o%20Av.%20Prestes%20Maia%2C%20158%20-%20Vila%20Guiomar%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-521",
@@ -1165,10 +3348,180 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Bar-do-Rubao-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Rub%C3%A3o%20Av.%20Prestes%20Maia%2C%20158%20-%20Vila%20Guiomar%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-521"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Rub%C3%A3o%20Av.%20Prestes%20Maia%2C%20158%20-%20Vila%20Guiomar%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-521",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 30 },
+            { "hour": 10, "relativePopularity": 34 },
+            { "hour": 11, "relativePopularity": 38 },
+            { "hour": 12, "relativePopularity": 50 },
+            { "hour": 13, "relativePopularity": 61 },
+            { "hour": 14, "relativePopularity": 57 },
+            { "hour": 15, "relativePopularity": 53 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 34 },
+            { "hour": 18, "relativePopularity": 34 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 26 },
+            { "hour": 11, "relativePopularity": 34 },
+            { "hour": 12, "relativePopularity": 26 },
+            { "hour": 13, "relativePopularity": 38 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 57 },
+            { "hour": 17, "relativePopularity": 53 },
+            { "hour": 18, "relativePopularity": 53 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 34 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 19 },
+            { "hour": 11, "relativePopularity": 19 },
+            { "hour": 12, "relativePopularity": 23 },
+            { "hour": 13, "relativePopularity": 26 },
+            { "hour": 14, "relativePopularity": 26 },
+            { "hour": 15, "relativePopularity": 26 },
+            { "hour": 16, "relativePopularity": 38 },
+            { "hour": 17, "relativePopularity": 53 },
+            { "hour": 18, "relativePopularity": 61 },
+            { "hour": 19, "relativePopularity": 61 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 34 },
+            { "hour": 11, "relativePopularity": 34 },
+            { "hour": 12, "relativePopularity": 30 },
+            { "hour": 13, "relativePopularity": 23 },
+            { "hour": 14, "relativePopularity": 26 },
+            { "hour": 15, "relativePopularity": 38 },
+            { "hour": 16, "relativePopularity": 57 },
+            { "hour": 17, "relativePopularity": 73 },
+            { "hour": 18, "relativePopularity": 96 },
+            { "hour": 19, "relativePopularity": 80 },
+            { "hour": 20, "relativePopularity": 53 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 61 },
+            { "hour": 11, "relativePopularity": 65 },
+            { "hour": 12, "relativePopularity": 53 },
+            { "hour": 13, "relativePopularity": 50 },
+            { "hour": 14, "relativePopularity": 65 },
+            { "hour": 15, "relativePopularity": 65 },
+            { "hour": 16, "relativePopularity": 65 },
+            { "hour": 17, "relativePopularity": 80 },
+            { "hour": 18, "relativePopularity": 100 },
+            { "hour": 19, "relativePopularity": 96 },
+            { "hour": 20, "relativePopularity": 80 },
+            { "hour": 21, "relativePopularity": 50 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 73 },
+            { "hour": 11, "relativePopularity": 57 },
+            { "hour": 12, "relativePopularity": 61 },
+            { "hour": 13, "relativePopularity": 50 },
+            { "hour": 14, "relativePopularity": 42 },
+            { "hour": 15, "relativePopularity": 53 },
+            { "hour": 16, "relativePopularity": 61 },
+            { "hour": 17, "relativePopularity": 76 },
+            { "hour": 18, "relativePopularity": 69 },
+            { "hour": 19, "relativePopularity": 61 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 50 },
+            { "hour": 11, "relativePopularity": 65 },
+            { "hour": 12, "relativePopularity": 65 },
+            { "hour": 13, "relativePopularity": 53 },
+            { "hour": 14, "relativePopularity": 57 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 38 },
+            { "hour": 18, "relativePopularity": 50 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 38 },
+            { "hour": 21, "relativePopularity": 38 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1189,7 +3542,7 @@ const venues = [
     },
     "referenceDistanceKm": 2.991,
     "weeklyHours": null,
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários e funcionamento atual pendentes de confirmação. Consulte a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
@@ -1284,7 +3637,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Taberna%20adega%20bar%20Rua%20Pacaemb%C3%BA%2C%20353%20-%20Paulic%C3%A9ia%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009692-040",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Taberna%20adega%20bar%20Rua%20Pacaemb%C3%BA%2C%20353%20-%20Paulic%C3%A9ia%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009692-040",
@@ -1296,10 +3649,191 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Taberna-adega-bar-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Taberna%20adega%20bar%20Rua%20Pacaemb%C3%BA%2C%20353%20-%20Paulic%C3%A9ia%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009692-040"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Taberna%20adega%20bar%20Rua%20Pacaemb%C3%BA%2C%20353%20-%20Paulic%C3%A9ia%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009692-040",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 57 },
+            { "hour": 13, "relativePopularity": 50 },
+            { "hour": 14, "relativePopularity": 64 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 35 },
+            { "hour": 17, "relativePopularity": 21 },
+            { "hour": 18, "relativePopularity": 21 },
+            { "hour": 19, "relativePopularity": 28 },
+            { "hour": 20, "relativePopularity": 42 },
+            { "hour": 21, "relativePopularity": 42 },
+            { "hour": 22, "relativePopularity": 42 },
+            { "hour": 23, "relativePopularity": 42 },
+            { "hour": 0, "relativePopularity": 42 },
+            { "hour": 1, "relativePopularity": 42 },
+            { "hour": 2, "relativePopularity": 50 },
+            { "hour": 3, "relativePopularity": 64 },
+            { "hour": 4, "relativePopularity": 50 },
+            { "hour": 5, "relativePopularity": 57 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 71 },
+            { "hour": 16, "relativePopularity": 71 },
+            { "hour": 17, "relativePopularity": 71 },
+            { "hour": 18, "relativePopularity": 85 },
+            { "hour": 19, "relativePopularity": 64 },
+            { "hour": 20, "relativePopularity": 57 },
+            { "hour": 21, "relativePopularity": 57 },
+            { "hour": 22, "relativePopularity": 64 },
+            { "hour": 23, "relativePopularity": 78 },
+            { "hour": 0, "relativePopularity": 57 },
+            { "hour": 1, "relativePopularity": 50 },
+            { "hour": 2, "relativePopularity": 35 },
+            { "hour": 3, "relativePopularity": 50 },
+            { "hour": 4, "relativePopularity": 21 },
+            { "hour": 5, "relativePopularity": 28 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": []
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 64 },
+            { "hour": 16, "relativePopularity": 35 },
+            { "hour": 17, "relativePopularity": 35 },
+            { "hour": 18, "relativePopularity": 42 },
+            { "hour": 19, "relativePopularity": 50 },
+            { "hour": 20, "relativePopularity": 57 },
+            { "hour": 21, "relativePopularity": 57 },
+            { "hour": 22, "relativePopularity": 64 },
+            { "hour": 23, "relativePopularity": 64 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 57 },
+            { "hour": 16, "relativePopularity": 78 },
+            { "hour": 17, "relativePopularity": 78 },
+            { "hour": 18, "relativePopularity": 85 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 50 },
+            { "hour": 21, "relativePopularity": 50 },
+            { "hour": 22, "relativePopularity": 100 },
+            { "hour": 23, "relativePopularity": 100 },
+            { "hour": 0, "relativePopularity": 100 },
+            { "hour": 1, "relativePopularity": 71 },
+            { "hour": 2, "relativePopularity": 71 },
+            { "hour": 3, "relativePopularity": 57 },
+            { "hour": 4, "relativePopularity": 28 },
+            { "hour": 5, "relativePopularity": 42 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 42 },
+            { "hour": 17, "relativePopularity": 64 },
+            { "hour": 18, "relativePopularity": 64 },
+            { "hour": 19, "relativePopularity": 71 },
+            { "hour": 20, "relativePopularity": 78 },
+            { "hour": 21, "relativePopularity": 57 },
+            { "hour": 22, "relativePopularity": 42 },
+            { "hour": 23, "relativePopularity": 42 },
+            { "hour": 0, "relativePopularity": 57 },
+            { "hour": 1, "relativePopularity": 71 },
+            { "hour": 2, "relativePopularity": 42 },
+            { "hour": 3, "relativePopularity": 28 },
+            { "hour": 4, "relativePopularity": 57 },
+            { "hour": 5, "relativePopularity": 57 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 35 },
+            { "hour": 17, "relativePopularity": 35 },
+            { "hour": 18, "relativePopularity": 28 },
+            { "hour": 19, "relativePopularity": 35 },
+            { "hour": 20, "relativePopularity": 35 },
+            { "hour": 21, "relativePopularity": 28 },
+            { "hour": 22, "relativePopularity": 42 },
+            { "hour": 23, "relativePopularity": 28 },
+            { "hour": 0, "relativePopularity": 50 },
+            { "hour": 1, "relativePopularity": 57 },
+            { "hour": 2, "relativePopularity": 57 },
+            { "hour": 3, "relativePopularity": 42 },
+            { "hour": 4, "relativePopularity": 64 },
+            { "hour": 5, "relativePopularity": 35 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1363,7 +3897,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bararanha%20Pra%C3%A7a%20Assun%C3%A7%C3%A3o%2C%2004%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009030-527",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bararanha%20Pra%C3%A7a%20Assun%C3%A7%C3%A3o%2C%2004%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009030-527",
@@ -1375,10 +3909,180 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Bararanha-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bararanha%20Pra%C3%A7a%20Assun%C3%A7%C3%A3o%2C%2004%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009030-527"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bararanha%20Pra%C3%A7a%20Assun%C3%A7%C3%A3o%2C%2004%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009030-527",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 19 },
+            { "hour": 12, "relativePopularity": 25 },
+            { "hour": 13, "relativePopularity": 27 },
+            { "hour": 14, "relativePopularity": 27 },
+            { "hour": 15, "relativePopularity": 26 },
+            { "hour": 16, "relativePopularity": 23 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 7 },
+            { "hour": 9, "relativePopularity": 11 },
+            { "hour": 10, "relativePopularity": 16 },
+            { "hour": 11, "relativePopularity": 21 },
+            { "hour": 12, "relativePopularity": 26 },
+            { "hour": 13, "relativePopularity": 25 },
+            { "hour": 14, "relativePopularity": 23 },
+            { "hour": 15, "relativePopularity": 21 },
+            { "hour": 16, "relativePopularity": 21 },
+            { "hour": 17, "relativePopularity": 21 },
+            { "hour": 18, "relativePopularity": 19 },
+            { "hour": 19, "relativePopularity": 15 },
+            { "hour": 20, "relativePopularity": 12 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 7 },
+            { "hour": 9, "relativePopularity": 12 },
+            { "hour": 10, "relativePopularity": 17 },
+            { "hour": 11, "relativePopularity": 24 },
+            { "hour": 12, "relativePopularity": 28 },
+            { "hour": 13, "relativePopularity": 29 },
+            { "hour": 14, "relativePopularity": 27 },
+            { "hour": 15, "relativePopularity": 25 },
+            { "hour": 16, "relativePopularity": 25 },
+            { "hour": 17, "relativePopularity": 26 },
+            { "hour": 18, "relativePopularity": 27 },
+            { "hour": 19, "relativePopularity": 26 },
+            { "hour": 20, "relativePopularity": 21 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 7 },
+            { "hour": 9, "relativePopularity": 13 },
+            { "hour": 10, "relativePopularity": 19 },
+            { "hour": 11, "relativePopularity": 24 },
+            { "hour": 12, "relativePopularity": 29 },
+            { "hour": 13, "relativePopularity": 28 },
+            { "hour": 14, "relativePopularity": 27 },
+            { "hour": 15, "relativePopularity": 27 },
+            { "hour": 16, "relativePopularity": 30 },
+            { "hour": 17, "relativePopularity": 32 },
+            { "hour": 18, "relativePopularity": 33 },
+            { "hour": 19, "relativePopularity": 33 },
+            { "hour": 20, "relativePopularity": 29 },
+            { "hour": 21, "relativePopularity": 26 },
+            { "hour": 22, "relativePopularity": 21 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 8 },
+            { "hour": 9, "relativePopularity": 13 },
+            { "hour": 10, "relativePopularity": 19 },
+            { "hour": 11, "relativePopularity": 25 },
+            { "hour": 12, "relativePopularity": 29 },
+            { "hour": 13, "relativePopularity": 30 },
+            { "hour": 14, "relativePopularity": 28 },
+            { "hour": 15, "relativePopularity": 27 },
+            { "hour": 16, "relativePopularity": 28 },
+            { "hour": 17, "relativePopularity": 30 },
+            { "hour": 18, "relativePopularity": 31 },
+            { "hour": 19, "relativePopularity": 31 },
+            { "hour": 20, "relativePopularity": 27 },
+            { "hour": 21, "relativePopularity": 18 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 9 },
+            { "hour": 9, "relativePopularity": 12 },
+            { "hour": 10, "relativePopularity": 17 },
+            { "hour": 11, "relativePopularity": 21 },
+            { "hour": 12, "relativePopularity": 26 },
+            { "hour": 13, "relativePopularity": 28 },
+            { "hour": 14, "relativePopularity": 28 },
+            { "hour": 15, "relativePopularity": 29 },
+            { "hour": 16, "relativePopularity": 34 },
+            { "hour": 17, "relativePopularity": 42 },
+            { "hour": 18, "relativePopularity": 54 },
+            { "hour": 19, "relativePopularity": 67 },
+            { "hour": 20, "relativePopularity": 68 },
+            { "hour": 21, "relativePopularity": 59 },
+            { "hour": 22, "relativePopularity": 40 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 25 },
+            { "hour": 12, "relativePopularity": 39 },
+            { "hour": 13, "relativePopularity": 44 },
+            { "hour": 14, "relativePopularity": 47 },
+            { "hour": 15, "relativePopularity": 52 },
+            { "hour": 16, "relativePopularity": 69 },
+            { "hour": 17, "relativePopularity": 90 },
+            { "hour": 18, "relativePopularity": 100 },
+            { "hour": 19, "relativePopularity": 95 },
+            { "hour": 20, "relativePopularity": 78 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1442,7 +4146,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Carlinhos%20R.%20Est%C3%A9r%2C%20437%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-290",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Carlinhos%20R.%20Est%C3%A9r%2C%20437%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-290",
@@ -1454,10 +4158,192 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/Bar-do-Carlinhos-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Carlinhos%20R.%20Est%C3%A9r%2C%20437%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-290"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Carlinhos%20R.%20Est%C3%A9r%2C%20437%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-290",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 19 },
+            { "hour": 9, "relativePopularity": 39 },
+            { "hour": 10, "relativePopularity": 65 },
+            { "hour": 11, "relativePopularity": 89 },
+            { "hour": 12, "relativePopularity": 100 },
+            { "hour": 13, "relativePopularity": 87 },
+            { "hour": 14, "relativePopularity": 66 },
+            { "hour": 15, "relativePopularity": 50 },
+            { "hour": 16, "relativePopularity": 34 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 17 },
+            { "hour": 12, "relativePopularity": 28 },
+            { "hour": 13, "relativePopularity": 34 },
+            { "hour": 14, "relativePopularity": 37 },
+            { "hour": 15, "relativePopularity": 35 },
+            { "hour": 16, "relativePopularity": 36 },
+            { "hour": 17, "relativePopularity": 41 },
+            { "hour": 18, "relativePopularity": 48 },
+            { "hour": 19, "relativePopularity": 48 },
+            { "hour": 20, "relativePopularity": 41 },
+            { "hour": 21, "relativePopularity": 35 },
+            { "hour": 22, "relativePopularity": 27 },
+            { "hour": 23, "relativePopularity": 21 },
+            { "hour": 0, "relativePopularity": 14 },
+            { "hour": 1, "relativePopularity": 10 }
+          ]
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 22 },
+            { "hour": 12, "relativePopularity": 34 },
+            { "hour": 13, "relativePopularity": 38 },
+            { "hour": 14, "relativePopularity": 38 },
+            { "hour": 15, "relativePopularity": 33 },
+            { "hour": 16, "relativePopularity": 35 },
+            { "hour": 17, "relativePopularity": 41 },
+            { "hour": 18, "relativePopularity": 45 },
+            { "hour": 19, "relativePopularity": 42 },
+            { "hour": 20, "relativePopularity": 33 },
+            { "hour": 21, "relativePopularity": 27 },
+            { "hour": 22, "relativePopularity": 20 },
+            { "hour": 23, "relativePopularity": 14 },
+            { "hour": 0, "relativePopularity": 7 },
+            { "hour": 1, "relativePopularity": 3 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 22 },
+            { "hour": 12, "relativePopularity": 32 },
+            { "hour": 13, "relativePopularity": 37 },
+            { "hour": 14, "relativePopularity": 41 },
+            { "hour": 15, "relativePopularity": 42 },
+            { "hour": 16, "relativePopularity": 49 },
+            { "hour": 17, "relativePopularity": 50 },
+            { "hour": 18, "relativePopularity": 53 },
+            { "hour": 19, "relativePopularity": 47 },
+            { "hour": 20, "relativePopularity": 41 },
+            { "hour": 21, "relativePopularity": 32 },
+            { "hour": 22, "relativePopularity": 25 },
+            { "hour": 23, "relativePopularity": 14 },
+            { "hour": 0, "relativePopularity": 8 },
+            { "hour": 1, "relativePopularity": 3 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 18 },
+            { "hour": 12, "relativePopularity": 28 },
+            { "hour": 13, "relativePopularity": 32 },
+            { "hour": 14, "relativePopularity": 34 },
+            { "hour": 15, "relativePopularity": 32 },
+            { "hour": 16, "relativePopularity": 38 },
+            { "hour": 17, "relativePopularity": 45 },
+            { "hour": 18, "relativePopularity": 54 },
+            { "hour": 19, "relativePopularity": 59 },
+            { "hour": 20, "relativePopularity": 63 },
+            { "hour": 21, "relativePopularity": 60 },
+            { "hour": 22, "relativePopularity": 53 },
+            { "hour": 23, "relativePopularity": 40 },
+            { "hour": 0, "relativePopularity": 26 },
+            { "hour": 1, "relativePopularity": 13 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 24 },
+            { "hour": 12, "relativePopularity": 33 },
+            { "hour": 13, "relativePopularity": 34 },
+            { "hour": 14, "relativePopularity": 34 },
+            { "hour": 15, "relativePopularity": 33 },
+            { "hour": 16, "relativePopularity": 40 },
+            { "hour": 17, "relativePopularity": 47 },
+            { "hour": 18, "relativePopularity": 57 },
+            { "hour": 19, "relativePopularity": 52 },
+            { "hour": 20, "relativePopularity": 46 },
+            { "hour": 21, "relativePopularity": 43 },
+            { "hour": 22, "relativePopularity": 41 },
+            { "hour": 23, "relativePopularity": 35 },
+            { "hour": 0, "relativePopularity": 24 },
+            { "hour": 1, "relativePopularity": 14 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 20 },
+            { "hour": 12, "relativePopularity": 35 },
+            { "hour": 13, "relativePopularity": 43 },
+            { "hour": 14, "relativePopularity": 46 },
+            { "hour": 15, "relativePopularity": 45 },
+            { "hour": 16, "relativePopularity": 46 },
+            { "hour": 17, "relativePopularity": 49 },
+            { "hour": 18, "relativePopularity": 48 },
+            { "hour": 19, "relativePopularity": 50 },
+            { "hour": 20, "relativePopularity": 48 },
+            { "hour": 21, "relativePopularity": 43 },
+            { "hour": 22, "relativePopularity": 31 },
+            { "hour": 23, "relativePopularity": 21 },
+            { "hour": 0, "relativePopularity": 11 },
+            { "hour": 1, "relativePopularity": 7 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1516,7 +4402,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários publicados; podem mudar em feriados e eventos especiais.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.bardodjack.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Djack%20Av.%20Dom%20Pedro%20II%2C%20566",
@@ -1528,10 +4414,161 @@ const venues = [
       {
         "label": "Site da casa",
         "url": "https://www.bardodjack.com.br/"
+      },
+      {
+        "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Djack%20Av.%20Dom%20Pedro%20II%2C%20566"
       }
     ],
     "checkedAt": "2026-10-05",
-    "popularTimes": null,
+    "popularTimes": {
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Djack%20Av.%20Dom%20Pedro%20II%2C%20566",
+      "checkedAt": "2026-10-05",
+      "days": [
+        {
+          "day": 0,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 42 },
+            { "hour": 13, "relativePopularity": 65 },
+            { "hour": 14, "relativePopularity": 71 },
+            { "hour": 15, "relativePopularity": 59 },
+            { "hour": 16, "relativePopularity": 39 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 0 },
+            { "hour": 19, "relativePopularity": 0 },
+            { "hour": 20, "relativePopularity": 0 },
+            { "hour": 21, "relativePopularity": 0 },
+            { "hour": 22, "relativePopularity": 0 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 1,
+          "hours": []
+        },
+        {
+          "day": 2,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 15 },
+            { "hour": 19, "relativePopularity": 20 },
+            { "hour": 20, "relativePopularity": 21 },
+            { "hour": 21, "relativePopularity": 19 },
+            { "hour": 22, "relativePopularity": 14 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 3,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 37 },
+            { "hour": 19, "relativePopularity": 51 },
+            { "hour": 20, "relativePopularity": 54 },
+            { "hour": 21, "relativePopularity": 44 },
+            { "hour": 22, "relativePopularity": 29 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 4,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 27 },
+            { "hour": 19, "relativePopularity": 34 },
+            { "hour": 20, "relativePopularity": 38 },
+            { "hour": 21, "relativePopularity": 30 },
+            { "hour": 22, "relativePopularity": 21 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 5,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 0 },
+            { "hour": 13, "relativePopularity": 0 },
+            { "hour": 14, "relativePopularity": 0 },
+            { "hour": 15, "relativePopularity": 0 },
+            { "hour": 16, "relativePopularity": 0 },
+            { "hour": 17, "relativePopularity": 0 },
+            { "hour": 18, "relativePopularity": 30 },
+            { "hour": 19, "relativePopularity": 47 },
+            { "hour": 20, "relativePopularity": 58 },
+            { "hour": 21, "relativePopularity": 55 },
+            { "hour": 22, "relativePopularity": 47 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        },
+        {
+          "day": 6,
+          "hours": [
+            { "hour": 6, "relativePopularity": 0 },
+            { "hour": 7, "relativePopularity": 0 },
+            { "hour": 8, "relativePopularity": 0 },
+            { "hour": 9, "relativePopularity": 0 },
+            { "hour": 10, "relativePopularity": 0 },
+            { "hour": 11, "relativePopularity": 0 },
+            { "hour": 12, "relativePopularity": 27 },
+            { "hour": 13, "relativePopularity": 40 },
+            { "hour": 14, "relativePopularity": 48 },
+            { "hour": 15, "relativePopularity": 44 },
+            { "hour": 16, "relativePopularity": 34 },
+            { "hour": 17, "relativePopularity": 34 },
+            { "hour": 18, "relativePopularity": 49 },
+            { "hour": 19, "relativePopularity": 75 },
+            { "hour": 20, "relativePopularity": 98 },
+            { "hour": 21, "relativePopularity": 100 },
+            { "hour": 22, "relativePopularity": 78 },
+            { "hour": 23, "relativePopularity": 0 }
+          ]
+        }
+      ]
+    },
     "liveOccupancy": null,
     "price": null,
     "occupancy": null,
@@ -1542,6 +4579,762 @@ const venues = [
     "imageCard": "assets/venues/djack-card.webp",
     "imageWidth": 1200,
     "imageHeight": 768
+  },
+  {
+    "id": "bar-do-cissao",
+    "kind": "venue",
+    "name": "Bar do Cissão",
+    "venue": "Bar do Cissão",
+    "category": "Bares",
+    "district": "Vila Príncipe de Gales",
+    "city": "Santo André",
+    "address": "Vila Príncipe de Gales, Santo André - SP, 09615-085",
+    "coordinates": {
+      "latitude": -23.663213,
+      "longitude": -46.5552267
+    },
+    "referenceDistanceKm": 0.231,
+    "weeklyHours": [
+      [],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "12:00",
+          "18:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/bar-do-cissao/660d1b4ea3f2688d6da69118"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Bar-Do-Cissao-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "rota-music-bar",
+    "kind": "venue",
+    "name": "Rota Music Bar",
+    "venue": "Rota Music Bar",
+    "category": "Bares",
+    "district": "Rudge Ramos",
+    "city": "São Bernardo do Campo",
+    "address": "R. Piagentini, 34 - Rudge Ramos, São Bernardo do Campo - SP, 09626-130",
+    "coordinates": {
+      "latitude": -23.656136099999998,
+      "longitude": -46.570954099999994
+    },
+    "referenceDistanceKm": 1.823,
+    "weeklyHours": [
+      [
+        [
+          "16:00",
+          "00:00"
+        ]
+      ],
+      [],
+      [
+        [
+          "16:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "16:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "16:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "03:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "03:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/rota-music-bar/660cee31a3f2688d6da683a9"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Rota-do-Acai-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "botequim-do-orestes",
+    "kind": "venue",
+    "name": "Botequim Do Orestes",
+    "venue": "Botequim Do Orestes",
+    "category": "Bares",
+    "district": "Vila Gilda",
+    "city": "Santo André",
+    "address": "R. Caminho do Pilar, 1930 - Vila Gilda, Santo André - SP, 09190-000",
+    "coordinates": {
+      "latitude": -23.6773906,
+      "longitude": -46.5441643
+    },
+    "referenceDistanceKm": 2.037,
+    "weeklyHours": [
+      [
+        [
+          "11:00",
+          "15:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "11:00",
+          "00:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=Botequim%20Do%20Orestes%20R.%20Caminho%20do%20Pilar%2C%201930%20-%20Vila%20Gilda%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-000",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Botequim%20Do%20Orestes%20R.%20Caminho%20do%20Pilar%2C%201930%20-%20Vila%20Gilda%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-000",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/botequim-do-orestes/660d1b52a3f2688d6da69119"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Botequim-do-Orestes-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Botequim%20Do%20Orestes%20R.%20Caminho%20do%20Pilar%2C%201930%20-%20Vila%20Gilda%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-000"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "errejota-bangalo-bar",
+    "kind": "venue",
+    "name": "Errejota Bangalô Bar",
+    "venue": "Errejota Bangalô Bar",
+    "category": "Bares",
+    "district": "Jardim",
+    "city": "Santo André",
+    "address": "Alameda São Caetano, 366 - Jardim, Santo André - SP, 09070-210",
+    "coordinates": {
+      "latitude": -23.645692,
+      "longitude": -46.5422292
+    },
+    "referenceDistanceKm": 2.124,
+    "weeklyHours": [
+      [
+        [
+          "14:00",
+          "00:00"
+        ]
+      ],
+      [],
+      [],
+      [
+        [
+          "17:00",
+          "01:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "01:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "12:00",
+          "02:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.instagram.com/errejotabangalobar/",
+    "channelLabel": "Ver canal da casa",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Errejota%20Bangal%C3%B4%20Bar%20Alameda%20S%C3%A3o%20Caetano%2C%20366%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009070-210",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/errejota-bangalo-bar/660d1abfa3f2688d6da690ef"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Errejota-Bangalo-Bar-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Errejota%20Bangal%C3%B4%20Bar%20Alameda%20S%C3%A3o%20Caetano%2C%20366%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009070-210"
+      },
+      {
+        "label": "Canal da própria casa",
+        "url": "https://www.instagram.com/errejotabangalobar/"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "52-s-rock-bar",
+    "kind": "venue",
+    "name": "52’s Rock Bar",
+    "venue": "52’s Rock Bar",
+    "category": "Bares",
+    "district": "Vila Dayse",
+    "city": "São Bernardo do Campo",
+    "address": "R. Olegário Herculano, 192 - Vila Dayse, São Bernardo do Campo - SP, 09732-570",
+    "coordinates": {
+      "latitude": -23.6823889,
+      "longitude": -46.5579995
+    },
+    "referenceDistanceKm": 2.363,
+    "weeklyHours": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        [
+          "18:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "02:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/52-s-rock-bar/660be73ad622f2b541167f98"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://www.findglocal.com/BR/S%C3%A3o-Bernardo-do-Campo/1779091045685097/52%27s-Rock-Bar"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "mocergo",
+    "kind": "venue",
+    "name": "Mocergo",
+    "venue": "Mocergo",
+    "category": "Bares",
+    "district": "Vila Assunção",
+    "city": "Santo André",
+    "address": "R. Siqueira Campos, 1039 - Vila Assunção, Santo André - SP, 09020-240",
+    "coordinates": {
+      "latitude": -23.6635697,
+      "longitude": -46.5283778
+    },
+    "referenceDistanceKm": 2.622,
+    "weeklyHours": [
+      [
+        [
+          "17:00",
+          "23:00"
+        ]
+      ],
+      [],
+      [],
+      [],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "19:00",
+          "01:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "01:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.instagram.com/mocergo_",
+    "channelLabel": "Ver canal da casa",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mocergo%20R.%20Siqueira%20Campos%2C%201039%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-240",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/mocergo/636e4602b46ef06da8425c91"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Mocergo-Santo-Andre"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mocergo%20R.%20Siqueira%20Campos%2C%201039%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-240"
+      },
+      {
+        "label": "Canal da própria casa",
+        "url": "https://www.instagram.com/mocergo_"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "jim-jones-pub",
+    "kind": "venue",
+    "name": "Jim Jones Pub",
+    "venue": "Jim Jones Pub",
+    "category": "Bares",
+    "district": "Vila Assunção",
+    "city": "Santo André",
+    "address": "R. Santo André, 157 - Vila Assunção, Santo André - SP, 09020-230",
+    "coordinates": {
+      "latitude": -23.663435399999997,
+      "longitude": -46.528063
+    },
+    "referenceDistanceKm": 2.653,
+    "weeklyHours": [
+      [
+        [
+          "15:00",
+          "00:00"
+        ]
+      ],
+      [],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:30"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "01:00"
+        ]
+      ],
+      [
+        [
+          "16:00",
+          "01:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/jim-jones-pub/660d1abca3f2688d6da690ee"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://www3.santoandre.sp.gov.br/turismosantoandre/bares-e-cervejarias/"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "lajje-beer",
+    "kind": "venue",
+    "name": "Lajje Beer",
+    "venue": "Lajje Beer",
+    "category": "Bares",
+    "district": "Jardim do Mar",
+    "city": "São Bernardo do Campo",
+    "address": "R. Continental, 59 - Jardim do Mar, São Bernardo do Campo - SP, 09750-060",
+    "coordinates": {
+      "latitude": -23.6855178,
+      "longitude": -46.555526
+    },
+    "referenceDistanceKm": 2.681,
+    "weeklyHours": [
+      [
+        [
+          "16:00",
+          "22:00"
+        ]
+      ],
+      [],
+      [],
+      [
+        [
+          "17:00",
+          "23:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "23:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "00:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.facebook.com/4x4lajjebeer/",
+    "channelLabel": "Ver canal da casa",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Lajje%20Beer%20R.%20Continental%2C%2059%20-%20Sobreloja%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-060",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/lajje-beer/66c7a83df99178ff5747437e"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/Lajje-Beer-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Lajje%20Beer%20R.%20Continental%2C%2059%20-%20Sobreloja%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009750-060"
+      },
+      {
+        "label": "Canal da própria casa",
+        "url": "https://www.facebook.com/4x4lajjebeer/"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "flag-the-bar",
+    "kind": "venue",
+    "name": "Flag The Bar",
+    "venue": "Flag The Bar",
+    "category": "Bares",
+    "district": "Vila Marli",
+    "city": "São Bernardo do Campo",
+    "address": "Av. Kennedy, 304 - Vila Marli, São Bernardo do Campo - SP, 09726-251",
+    "coordinates": {
+      "latitude": -23.686526699999998,
+      "longitude": -46.559231
+    },
+    "referenceDistanceKm": 2.838,
+    "weeklyHours": [
+      [
+        [
+          "12:00",
+          "02:00"
+        ]
+      ],
+      [],
+      [
+        [
+          "17:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "17:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "15:00",
+          "03:00"
+        ]
+      ],
+      [
+        [
+          "12:00",
+          "03:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "officialUrl": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251",
+    "channelLabel": "Ver no Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/flag-the-bar/660bbd45d622f2b541167108"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://flagthebar.com.br/"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
+  },
+  {
+    "id": "leandrini-rock-bar",
+    "kind": "venue",
+    "name": "Leandrini Rock Bar",
+    "venue": "Leandrini Rock Bar",
+    "category": "Bares",
+    "district": "Santa Paula",
+    "city": "São Caetano do Sul",
+    "address": "Rua Oswaldo Cruz, 1411 - Santa Paula, São Caetano do Sul - SP, 09540-280",
+    "coordinates": {
+      "latitude": -23.629298900000002,
+      "longitude": -46.5675424
+    },
+    "referenceDistanceKm": 3.831,
+    "weeklyHours": [
+      [
+        [
+          "12:00",
+          "21:00"
+        ]
+      ],
+      [],
+      [],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "00:00"
+        ]
+      ],
+      [
+        [
+          "18:00",
+          "02:00"
+        ]
+      ],
+      [
+        [
+          "13:00",
+          "02:00"
+        ]
+      ]
+    ],
+    "scheduleNote": "Horários divergem entre os canais da casa. Confirme a abertura e a programação antes de ir.",
+    "officialUrl": "https://leandrinirockbar.com/",
+    "channelLabel": "Visitar site da casa",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=LEANDRINI%20ROCK%20BAR%20Rua%20Oswaldo%20Cruz%2C%201411%20-%20Santa%20Paula%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009540-280",
+    "sources": [
+      {
+        "label": "Cadastro da lista original; coordenadas da pesquisa em raio de 5 km",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-caetano-do-sul-sp/leandrini-rock-bar/660f6f97a451b0ad1fb9c3dc"
+      },
+      {
+        "label": "Perfil para rolê corroborado na curadoria",
+        "url": "https://restaurantguru.com.br/LEANDRINI-ROCK-BAR-Sao-Caetano-do-Sul"
+      },
+      {
+        "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
+        "url": "https://www.google.com/maps/search/?api=1&query=LEANDRINI%20ROCK%20BAR%20Rua%20Oswaldo%20Cruz%2C%201411%20-%20Santa%20Paula%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009540-280"
+      },
+      {
+        "label": "Canal da própria casa",
+        "url": "https://leandrinirockbar.com/"
+      }
+    ],
+    "checkedAt": "2026-10-05",
+    "popularTimes": null,
+    "liveOccupancy": null,
+    "price": null,
+    "occupancy": null,
+    "tickets": false
   }
 ];
 const events = venues;
