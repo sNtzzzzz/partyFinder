@@ -1,0 +1,6 @@
+Options -Indexes -MultiViews
+DirectoryIndex router.php
+RewriteEngine On
+# All requests pass through the same public whitelist used in local development.
+RewriteRule ^router\.php$ - [END]
+RewriteRule ^ router.php [END]
