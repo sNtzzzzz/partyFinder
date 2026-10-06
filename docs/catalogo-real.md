@@ -1,5 +1,7 @@
 # Catálogo real — curadoria para rolês
 
+Revisão mais recente em 06/10/2026: os seis campos dos 32 locais foram examinados, com 31 coordenadas correspondentes às fontes cadastradas, três grades corrigidas por perfis próprios, ajustes de nome/endereço e conflitos documentados. Consulte [revisao-catalogo-2026-10-06.md](revisao-catalogo-2026-10-06.md) para resultados e lacunas; os registros abaixo continuam como histórico das etapas anteriores. Google de 05/10 não foi reconsultado nesta revisão.
+
 Atualização da navegação em 05/10/2026: a lista de duas linhas e Exibir mais foi substituída por carrossel horizontal de uma linha, com setas laterais e toque. Contador visível retirado; filtros/busca preservados. Verificados 16 testes Node e navegador em desktop/tablet/celular. Catálogo permanece local; busca regional e paginação por API são etapas futuras. Descrição de duas linhas abaixo registra a implementação anterior.
 
 Atualizado em 05/10/2026. **32 lugares publicados, 29 com grade habitual, 19 com gráficos semanais de pico e 6 com fotos reais.** Fontes e datas são metadados internos: a interface não mostra seção de referências. A lista central tem 539 registros (533 originais e 6 complementares); não representa só locais aprovados para publicação. Última ampliação: [ampliacao-catalogo-2026-10-05.md](ampliacao-catalogo-2026-10-05.md).

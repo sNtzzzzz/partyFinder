@@ -51,7 +51,7 @@ function PeakTimes(place) {
 function movementAt(place, now = new Date()) {
   const peaks = place.popularTimes;
   if (!peaks?.sourceUrl || !peaks.checkedAt || !Array.isArray(peaks.days)) return null;
-  if (openingState(place, now) === false) return 0;
+  if (openingState(place, now) === false) return null;
   const {day, minute} = localClock(now);
   const hour = Math.floor(minute / 60);
   // Barras após a virada pertencem ao dia da saída, como no gráfico do Google.
@@ -65,16 +65,17 @@ function MovementBars(place, now = new Date()) {
   const value = movementAt(place, now);
   const level = value === null || value === 0 ? 0 : Math.ceil(value / 25);
   const label = value === null ? 'Movimento: -' : ['Vazio', 'Pouca gente', 'Normal', 'Movimentado', 'Lotado'][level];
-  const description = value === null ? 'Sem estimativa de movimento para este horário.' : openingState(place, now) === false ? 'Fechado pelo horário cadastrado.' : `${level} de 4 barras: movimento habitual neste horário, baseado no Google. Não é uma leitura em tempo real nem percentual de lotação.`;
+  const description = openingState(place, now) === false ? 'Fechado pelo horário cadastrado.' : value === null ? 'Sem estimativa de movimento para este horário.' : `${level} de 4 barras: movimento habitual neste horário, baseado no Google. Não é uma leitura em tempo real nem percentual de lotação.`;
   return `<span class="movement-indicator${value === null ? ' movement-unknown' : ''}" title="${escapeHtml(description)}"><span class="movement-bars" role="img" aria-label="${escapeHtml(description)}">${[1,2,3,4].map(n => `<i${n <= level ? ' class="is-filled"' : ''}></i>`).join('')}</span><span>${label}</span></span>`;
 }
 function PlaceCard(e) {
   const status = placeStatus(e);
   const statusClass = status === 'ABERTO' ? 'status-open' : status === 'FECHADO' ? 'status-closed' : 'status-unknown';
-  return `<article class="event-card place-card"><button class="card-image place-art ${e.image ? 'has-place-photo' : ''}" data-event="${escapeHtml(e.id)}" aria-label="Ver ${escapeHtml(e.name)}"><span class="place-symbol" aria-hidden="true">${icon('pin')}</span>${e.image ? `<img data-place-photo src="${escapeHtml(e.imageCard || e.image)}" alt="Foto de ${escapeHtml(e.name)}" loading="lazy" decoding="async">` : ''}<span class="badge ${statusClass}">${escapeHtml(status)}</span><span class="image-category">${escapeHtml(e.category)}</span></button><div class="card-body"><div class="venue-line">${escapeHtml(e.city)}<span>${distanceLabel(e)}</span></div><h3><button data-event="${escapeHtml(e.id)}">${escapeHtml(e.name)}</button></h3><p class="card-location">${escapeHtml(e.district)}</p><div class="card-time">${icon('clock')} ${escapeHtml(hoursForDay(e))}</div><p class="place-address">${escapeHtml(e.address)}</p><div class="card-bottom">${MovementBars(e)}</div><button class="card-action" data-event="${escapeHtml(e.id)}">Ver estabelecimento ${icon('arrow')}</button></div></article>`;
+  return `<article class="event-card place-card" data-event="${escapeHtml(e.id)}"><button class="card-image place-art ${e.image ? 'has-place-photo' : ''}" data-event="${escapeHtml(e.id)}" aria-label="Ver ${escapeHtml(e.name)}"><span class="place-symbol" aria-hidden="true">${icon('pin')}</span>${e.image ? `<img data-place-photo src="${escapeHtml(e.imageCard || e.image)}" alt="Foto de ${escapeHtml(e.name)}" loading="lazy" decoding="async">` : ''}<span class="badge ${statusClass}">${escapeHtml(status)}</span><span class="image-category">${escapeHtml(e.category)}</span></button><div class="card-body"><div class="venue-line">${escapeHtml(e.city)}<span>${distanceLabel(e)}</span></div><h3><button data-event="${escapeHtml(e.id)}">${escapeHtml(e.name)}</button></h3><p class="card-location">${escapeHtml(e.district)}</p><div class="card-time">${icon('clock')} ${escapeHtml(hoursForDay(e))}</div><p class="place-address">${escapeHtml(e.address)}</p><div class="card-bottom">${MovementBars(e)}</div><button class="card-action" data-event="${escapeHtml(e.id)}">Ver estabelecimento ${icon('arrow')}</button></div></article>`;
 }
 function PlaceDetail(e) {
   const schedule = e.appointmentHours ? {...e, weeklyHours:e.appointmentHours} : e;
-  const weekly = weekDays.map((name,day) => `<tr><th scope="row">${name}</th><td>${escapeHtml(hoursForDay(schedule, day))}</td></tr>`).join('');
+  const today = localClock().day;
+  const weekly = weekDays.map((name,day) => `<tr${day === today ? ' class="hours-today" aria-current="date"' : ''}><th scope="row">${name}</th><td>${escapeHtml(hoursForDay(schedule, day))}</td></tr>`).join('');
   return `${e.image ? `<img class="detail-cover" decoding="async" data-place-photo src="${escapeHtml(e.image)}" alt="Foto de ${escapeHtml(e.name)}">` : ''}<div class="detail-content place-detail"><span class="eyebrow">${escapeHtml(e.category)} / ${escapeHtml(placeStatus(e))}</span><h2 id="detail-title">${escapeHtml(e.name)}</h2><p>${escapeHtml(e.district)} · ${escapeHtml(e.city)}</p><div class="detail-columns"><section><h3>${e.appointmentHours ? 'Atendimento e visitas' : 'Funcionamento habitual'}</h3><table class="hours-table"><tbody>${weekly}</tbody></table><p>${escapeHtml(e.scheduleNote)}</p><h3>Movimento</h3>${PeakTimes(e)}</section><section><h3>Endereço</h3><p>${escapeHtml(e.address)}</p><p>${Number.isFinite(e.referenceDistanceKm) ? e.referenceDistanceKm.toLocaleString('pt-BR',{maximumFractionDigits:1}) + ' km da Fundação Santo André, em linha reta.' : ''}</p><a class="map-placeholder" href="${safeUrl(e.mapsUrl)}" target="_blank" rel="noopener noreferrer">${icon('pin')}<strong>Abrir no Google Maps</strong><span>Ver localização e informações da casa</span></a></section></div><div class="detail-booking"><a class="primary" href="${safeUrl(e.officialUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(e.channelLabel || (e.id === 'supra-berno' ? 'Consultar programação' : 'Visitar site da casa'))} ${icon('arrow')}</a></div></div>`;
 }

@@ -524,7 +524,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários e bairro divergem entre os cadastros públicos. Confirme com a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
@@ -540,9 +540,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/beco-figueiras/660d1ad7a3f2688d6da690f6"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Beco%20Figueiras%20R.%20das%20Figueiras%2C%201380%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
       "checkedAt": "2026-10-05",
@@ -1252,7 +1256,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários do site da casa; há divergências com outros cadastros. Confirme em feriados e eventos especiais.",
     "officialUrl": "https://vedebar.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
@@ -1268,9 +1272,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://vedebar.com.br/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Ved%C3%AA%20Bar%20Rua%20das%20Figueiras%2C%201206%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009080-300",
       "checkedAt": "2026-10-05",
@@ -1423,7 +1431,7 @@ const venues = [
     "category": "Bares",
     "district": "Centro",
     "city": "Santo André",
-    "address": "Av. dos Estados, 6843 - Centro, Santo André - SP",
+    "address": "Av. dos Estados, 6843 - Centro, Santo André - SP, 09290-520",
     "coordinates": {
       "latitude": -23.6516094,
       "longitude": -46.512933
@@ -1484,9 +1492,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=Charllu%20Bar%20Av.%20dos%20Estados%2C%206843%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP"
+      },
+      {
+        "label": "Revisão de address em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://charllu.com.br/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Charllu%20Bar%20Av.%20dos%20Estados%2C%206843%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP",
       "checkedAt": "2026-10-05",
@@ -2169,7 +2181,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários corroborados no perfil da casa; outros cadastros divergem. Confirme em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/casaveiaespetos",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000",
@@ -2185,9 +2197,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/casaveiaespetos"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=CasaV%C3%A9ia%20Bebidas%20e%20Espetos%20Av.%20Atl%C3%A2ntica%2C%20497%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-000",
       "checkedAt": "2026-10-05",
@@ -2415,7 +2431,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Domingo somente em eventos. Confirme a programação e o horário de abertura de segunda com a casa.",
+    "scheduleNote": "Horários do site da casa; domingo somente conforme eventos. Outros cadastros divergem na segunda e no domingo. Consulte a programação antes de ir.",
     "officialUrl": "https://agrutarockbar.com.br/",
     "channelLabel": "Visitar site da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260",
@@ -2435,9 +2451,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://agrutarockbar.com.br/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=A%20Gruta%20Rock%20Bar%20R.%20Cel.%20Ab%C3%ADlio%20Soares%2C%20426%20-%20Vila%20Assun%C3%A7%C3%A3o%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-260",
       "checkedAt": "2026-10-05",
@@ -2869,8 +2889,8 @@ const venues = [
     "weeklyHours": [
       [
         [
-          "17:00",
-          "23:00"
+          "18:00",
+          "00:00"
         ]
       ],
       [],
@@ -2884,23 +2904,23 @@ const venues = [
       [
         [
           "18:00",
-          "00:00"
+          "01:00"
         ]
       ],
       [
         [
           "18:00",
-          "00:00"
+          "02:00"
         ]
       ],
       [
         [
-          "17:00",
-          "00:00"
+          "18:00",
+          "02:00"
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários do perfil da casa, revisados em 06/10/2026; outros cadastros divergem. Confirme em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/tothesea_br/",
     "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340",
@@ -2916,9 +2936,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340"
+      },
+      {
+        "label": "Revisão de weeklyHours, scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/tothesea_br/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=TO%20THE%20SEA%20Rua%20Haddock%20Lobo%2C%20351%20-%20Vila%20Bastos%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009040-340",
       "checkedAt": "2026-10-05",
@@ -3056,8 +3080,8 @@ const venues = [
   {
     "id": "casinha-bar-melhor-caipirinha-do-brrasil",
     "kind": "venue",
-    "name": "CASINHA BAR Melhor Caipirinha Do Brrasil",
-    "venue": "CASINHA BAR Melhor Caipirinha Do Brrasil",
+    "name": "Casinha Bar",
+    "venue": "Casinha Bar",
     "category": "Bares",
     "district": "Vila Alpina",
     "city": "Santo André",
@@ -3122,9 +3146,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=CASINHA%20BAR%20Melhor%20Caipirinha%20Do%20Brrasil%20R.%20Itobi%2C%20138%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-240"
+      },
+      {
+        "label": "Revisão de name, venue em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/barcasinha/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=CASINHA%20BAR%20Melhor%20Caipirinha%20Do%20Brrasil%20R.%20Itobi%2C%20138%20-%20Vila%20Alpina%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009090-240",
       "checkedAt": "2026-10-05",
@@ -3542,7 +3570,7 @@ const venues = [
     },
     "referenceDistanceKm": 2.991,
     "weeklyHours": null,
-    "scheduleNote": "Horários e funcionamento atual pendentes de confirmação. Consulte a casa antes de ir.",
+    "scheduleNote": "Identidade e funcionamento atual em revisão: cadastros exibem nomes diferentes neste endereço. Horários não confirmados.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
@@ -3554,9 +3582,13 @@ const venues = [
       {
         "label": "Ficha pública com informações de funcionamento",
         "url": "https://restaurantguru.com.br/After-Bar-Barzinho-em-SBC-Sao-Bernardo-do-Campo"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/after-bar-barzinho-em-sbc/660cedd9a3f2688d6da68390"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -4357,7 +4389,7 @@ const venues = [
     "category": "Bares",
     "district": "",
     "city": "Santo André",
-    "address": "Av. Dom Pedro II, 566",
+    "address": "Av. Dom Pedro II, 566 - Jardim, Santo André - SP, 09080-000",
     "coordinates": {
       "latitude": -23.6505205,
       "longitude": -46.5347674
@@ -4418,9 +4450,13 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Djack%20Av.%20Dom%20Pedro%20II%2C%20566"
+      },
+      {
+        "label": "Revisão de address em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.bardodjack.com.br/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Djack%20Av.%20Dom%20Pedro%20II%2C%20566",
       "checkedAt": "2026-10-05",
@@ -4633,7 +4669,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Endereço sem rua e número confirmados; cadastros divergem na localização. Confirme o ponto de acesso antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
@@ -4649,9 +4685,13 @@ const venues = [
       {
         "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
         "url": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/bar-do-cissao/660d1b4ea3f2688d6da69118"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -4711,7 +4751,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Há divergências nos horários de sexta e sábado entre os cadastros. Confirme a programação antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130",
@@ -4727,9 +4767,13 @@ const venues = [
       {
         "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
         "url": "https://www.google.com/maps/search/?api=1&query=Rota%20Music%20Bar%20R.%20Piagentini%2C%2034%20-%20Rudge%20Ramos%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009626-130"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/rota-music-bar/660cee31a3f2688d6da683a9"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -4867,7 +4911,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários corroborados no perfil da casa; outros cadastros divergem. Confirme em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/errejotabangalobar/",
     "channelLabel": "Ver canal da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Errejota%20Bangal%C3%B4%20Bar%20Alameda%20S%C3%A3o%20Caetano%2C%20366%20-%20Jardim%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009070-210",
@@ -4887,9 +4931,13 @@ const venues = [
       {
         "label": "Canal da própria casa",
         "url": "https://www.instagram.com/errejotabangalobar/"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/errejotabangalobar/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -4918,20 +4966,20 @@ const venues = [
       [],
       [
         [
-          "18:00",
+          "19:00",
           "02:00"
         ]
       ],
       [
         [
-          "18:00",
+          "19:00",
           "02:00"
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
-    "officialUrl": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570",
-    "channelLabel": "Ver no Google Maps",
+    "scheduleNote": "Horários do perfil da casa, revisados em 06/10/2026; outros cadastros indicam abertura às 18h. Confirme a programação antes de ir.",
+    "officialUrl": "https://www.instagram.com/52srockbar/",
+    "channelLabel": "Ver Instagram",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570",
     "sources": [
       {
@@ -4945,9 +4993,13 @@ const venues = [
       {
         "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
         "url": "https://www.google.com/maps/search/?api=1&query=52''%20s%20Rock%20Bar%20R.%20Oleg%C3%A1rio%20Herculano%2C%20192%20-%20Vila%20Dayse%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009732-570"
+      },
+      {
+        "label": "Revisão de weeklyHours, scheduleNote, officialUrl em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/52srockbar/"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -4972,7 +5024,7 @@ const venues = [
       [
         [
           "17:00",
-          "23:00"
+          "22:00"
         ]
       ],
       [],
@@ -4981,7 +5033,7 @@ const venues = [
       [
         [
           "18:00",
-          "00:00"
+          "01:00"
         ]
       ],
       [
@@ -4997,7 +5049,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários do perfil da casa, revisados em 06/10/2026; outros cadastros divergem. Confirme em feriados e eventos especiais.",
     "officialUrl": "https://www.instagram.com/mocergo_",
     "channelLabel": "Ver canal da casa",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mocergo%20R.%20Siqueira%20Campos%2C%201039%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-240",
@@ -5017,9 +5069,13 @@ const venues = [
       {
         "label": "Canal da própria casa",
         "url": "https://www.instagram.com/mocergo_"
+      },
+      {
+        "label": "Revisão de weeklyHours, scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.instagram.com/mocergo_"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -5079,7 +5135,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários e bairro divergem entre os cadastros públicos. Confirme com a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230",
@@ -5095,9 +5151,13 @@ const venues = [
       {
         "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
         "url": "https://www.google.com/maps/search/?api=1&query=Jim%20Jones%20Pub%20R.%20Santo%20Andr%C3%A9%2C%20157%20-%20Centro%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009020-230"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/santo-andre-sp/jim-jones-pub/660d1abca3f2688d6da690ee"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -5112,7 +5172,7 @@ const venues = [
     "category": "Bares",
     "district": "Jardim do Mar",
     "city": "São Bernardo do Campo",
-    "address": "R. Continental, 59 - Jardim do Mar, São Bernardo do Campo - SP, 09750-060",
+    "address": "R. Continental, 59 - Sobreloja - Jardim do Mar, São Bernardo do Campo - SP, 09750-060",
     "coordinates": {
       "latitude": -23.6855178,
       "longitude": -46.555526
@@ -5172,9 +5232,13 @@ const venues = [
       {
         "label": "Canal da própria casa",
         "url": "https://www.facebook.com/4x4lajjebeer/"
+      },
+      {
+        "label": "Revisão de address em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/lajje-beer/66c7a83df99178ff5747437e"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -5234,7 +5298,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
+    "scheduleNote": "Horários divergem entre os cadastros, inclusive na segunda-feira. Confirme com a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251",
@@ -5250,9 +5314,13 @@ const venues = [
       {
         "label": "Google Maps: nome, endereço e grade semanal consultados em 05/10/2026; gráfico não acessível na visualização recebida",
         "url": "https://www.google.com/maps/search/?api=1&query=Flag%20The%20Bar%20Av.%20Kennedy%2C%20304%20-%20Vila%20Marli%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-251"
+      },
+      {
+        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
+        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/flag-the-bar/660bbd45d622f2b541167108"
       }
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,

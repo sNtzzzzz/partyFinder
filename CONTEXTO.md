@@ -1,6 +1,6 @@
 # Contexto do NightOut
 
-Atualizado em 05/10/2026 na reorganização documental. Resumo do código e dos registros disponíveis; disponibilidade do servidor e estado do banco precisam ser conferidos em cada sessão.
+Atualizado em 06/10/2026 após revisão dos 32 locais publicados. Resumo do código e dos registros disponíveis; disponibilidade do servidor e estado do banco precisam ser conferidos em cada sessão.
 
 ## Objetivo e arquitetura
 
@@ -31,6 +31,7 @@ Lista central `docs/locais-5km.csv` e curadoria JSON: último registro de 539 ca
 - Mais Adega Point Bar: Av. Príncipe de Gales, 466.
 - Virtus e After Bar: horários pendentes. Ocean Drive: atendimento separado das festas.
 - Leandrini: divergência de horários documentada; aplicada grade detalhada do Maps com aviso.
+- Revisão dos seis campos dos 32 em 06/10: [docs/revisao-catalogo-2026-10-06.md](docs/revisao-catalogo-2026-10-06.md)/.json. Três grades corrigidas por bios públicas próprias (TO THE SEA, Mocergo e 52’s Rock Bar), nome de exibição Casinha Bar corrigido sem mudar ID, endereço do Djack completado, CEP oficial do Charllu e Sobreloja do Lajje acrescentados. Outros conflitos recebem avisos. As 31 coordenadas existentes correspondem às fontes cadastradas, sem certificação da entrada física; Mais Adega continua sem ponto. Cissão continua com rua/número e município pendentes. Virtus e After têm respostas conflitantes de identidade nas fontes secundárias; nenhuma grade de outra operação foi importada. Google de 05/10 não reconsultado: Maps inacessível e nenhum navegador disponível nesta sessão. Bios públicas/cadastros não certificam operação presencial atual.
 - Tatu Bola Kennedy 1250 excluído por evidências de fechamento/substituição; Espaço Aberto aguarda reabertura; Muquiranas conflita com Casa Areal; Adega 99 permanece candidata sem publicação.
 
 Referências atuais: `docs/curadoria-role-5km.md/.json`, `docs/locais-role-prioritarios.csv`, `docs/ampliacao-catalogo-2026-10-05.md/.json`, `docs/revisao-horarios-2026-10-05.md/.json`. Preservar dados originais da pesquisa e registrar conflitos.
@@ -53,6 +54,14 @@ O histórico registra PHP 8.2.12 e três migrations aplicadas em um ambiente ant
 
 ## Verificações
 
+Em 06/10/2026, nesta máquina, na revisão do catálogo: consultas web e HTTP público a fontes oficiais/perfis e diretórios dos 32 locais; extração de JSON-LD/links de rota, com correspondência dos 31 pontos cadastrados. Capturas em `backend/storage/catalog-review-2026-10-06/`, ignoradas pelo Git. Executados 19 testes Node de conta/localização, todos aprovados; sintaxe de `js/data.js` aprovada; conferência pontual dos 32 IDs/fichas, 31 pontos, preservação de fotos/preços/movimento/coordenadas e dos limites de abertura/fechamento/madrugada das três grades alteradas aprovada. CSV central mantém 539 registros e as 11 colunas originais, com atualização apenas dos campos atuais dos 32; CSV publicado regenerado para refletir o catálogo atual. `git diff --check` aprovado. Não houve teste de navegador, celular físico, suíte PHP ou consulta ao banco; falhas de acesso externo e diferenças entre conteúdo indexado/HTTP foram documentadas.
+
+Em 06/10/2026, nesta máquina: a tabela de funcionamento no modal destaca o dia atual pelo fuso `America/Sao_Paulo`, com classe `hours-today` e `aria-current="date"`. Dia e horário em branco/negrito, sem alterar fonte ou espaçamento. Executados os 13 testes de `tests/location.cjs`, aprovados, e conferência pontual em Node simulando os sete dias para garantir uma única linha destacada correspondente, aprovada. `git diff --check` aprovado. Sem verificação visual no navegador ou acesso ao banco nesta alteração.
+
+Em 06/10/2026, nesta máquina: o card inteiro passou a abrir o modal via `data-event` no artigo de `PlaceCard`, com cursor de clique. Botões existentes preservados para acesso pelo teclado. Os 13 testes de `tests/location.cjs` passaram; conferência pontual em Node validou a abertura única do modal pelo artigo e a presença do botão existente. As tentativas iniciais dessa conferência tiveram erros no harness por ausência de `URL` e `document.body`, corrigidos antes da execução aprovada. `git diff --check` aprovado. Sem navegador ou banco nesta alteração.
+
+Em 06/10/2026, nesta máquina: ajustado `js/places.js` para locais fechados exibirem `Movimento: -`, com quatro barras sem preenchimento e descrição de fechado. Zero de popularidade continua como `Vazio` quando aberto; os dados permanecem estimativas históricas. Executados os 13 testes de `tests/location.cjs`, todos aprovados, e conferência pontual em Node dos estados fechado/aberto com popularidade zero, aprovada. As tentativas iniciais dessa conferência falharam por aspas e codificação na chamada PowerShell; a execução via stdin com asserções sem acentos passou. Sem teste de navegador ou banco nesta alteração.
+
 Resultados anteriores registrados, não reexecutados nesta reorganização:
 
 - Última ampliação: 19 testes Node (13 catálogo/localização e 6 conta), validador de curadoria (539 únicos, 32 publicados, 54 prioritários) e Edge em 1280/768/390px aprovados, conforme registro anterior.
@@ -72,10 +81,11 @@ Nunca executar `tests/auth.php` diretamente. Runner PHP usa banco temporário id
 
 ## Próximos passos
 
-1. Definir com o usuário a próxima evolução: ampliar/revisar catálogo, melhorar experiência ou implementar administração e API de catálogo.
-2. Revisar manualmente os 54 prioritários e conflitos de operação/horários, sem publicar candidatos automaticamente nem inventar dados/fotos.
-3. Se necessário transferir contas entre PCs, conferir os bancos e planejar backup/importação preservando os dados existentes, seguindo `docs/ambiente-local.md`.
-4. Antes de publicar: envio real de e-mails, HTTPS, origem e credenciais de produção, revisão dos limites, backups/restauração e política de privacidade.
+Prioridade acordada em 06/10/2026: **completar os 32 lugares e conferir no celular → criar o painel administrativo e a API do catálogo → preparar a publicação**. Finalizar essa sequência antes de antecipar a agenda, que pode entrar depois conforme houver eventos confirmados. Plano e critérios de conclusão em [docs/prioridades-projeto.md](docs/prioridades-projeto.md).
+
+Projeto retomado em 06/10/2026. Primeiro item da etapa 1 concluído como revisão dos 32, com lacunas documentadas, sem declarar todos os campos confirmados. Próxima frente: resolver identidade/operação/horários de Virtus e After, coordenadas da Mais Adega e endereço/entrada do Cissão; depois continuar os demais itens da etapa 1. Não antecipar administração/publicação nem agenda antes da sequência acordada.
+
+Revisão dos 54 candidatos permanece no backlog, sem importação automática. Se necessário transferir contas entre PCs, seguir `docs/ambiente-local.md`, preservando dados existentes. Google Places, movimento ao vivo, pagamentos, ingressos e reservas continuam adiados.
 
 ## Troca de computador e histórico
 
