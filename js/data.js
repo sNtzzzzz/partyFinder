@@ -11,6 +11,11 @@ const venues = [
     "district": "Jardim do Mar",
     "city": "São Bernardo do Campo",
     "address": "R. Java, 299 - Jardim do Mar, São Bernardo do Campo - SP, 09750-650",
+    "image": "assets/venues/supra-direito-fachada.webp",
+    "imageCard": "assets/venues/supra-direito-fachada-card.webp",
+    "imageSource": "https://suprabar.com.br/wp-content/uploads/2023/05/b5a3c22c-74c7-4a14-8f7d-8e4044e7020e.jpg",
+    "imageWidth": 680,
+    "imageHeight": 454,
     "coordinates": {
       "latitude": -23.689908400000004,
       "longitude": -46.557497999999995
@@ -235,8 +240,8 @@ const venues = [
     "district": "Vila Príncipe de Gales",
     "city": "Santo André",
     "address": "Av. Príncipe de Gales, 466 - Vila Príncipe de Gales, Santo André - SP, 09060-650",
-    "coordinates": null,
-    "referenceDistanceKm": null,
+    "coordinates": {"latitude":-23.6605639,"longitude":-46.5512843},
+    "referenceDistanceKm": 0.296,
     "weeklyHours": [
       [
         [
@@ -297,9 +302,10 @@ const venues = [
       {
         "label": "Google Maps: horários e/ou barras históricas de movimento consultados diretamente em 05/10/2026",
         "url": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre"
-      }
+      },
+      {"label":"Google Maps: coordenadas do destino da rota e grade habitual conferidas em 06/10/2026","url":"https://www.google.com/maps/dir//Mais+adega+Point+bar+-+Av.+Pr%C3%ADncipe+de+Gales,+466+-+Vila+Pr%C3%ADncipe+de+Gales,+Santo+Andr%C3%A9+-+SP,+09060-650/@-23.6605639,-46.5512843,17z/data=!4m16!1m7!3m6!1s0x94ce43e247d0438f:0xb4841ba7623f055d!2sMais+adega+Point+bar!8m2!3d-23.6605639!4d-46.5512843!16s%2Fg%2F11xs9yln7c!4m7!1m0!1m5!1m1!1s0x94ce43e247d0438f:0xb4841ba7623f055d!2m2!1d-46.5512843!2d-23.6605639?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"}
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": {
       "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Mais+Adega+Point+Bar+Principe+de+Gales+466+Santo+Andre",
       "checkedAt": "2026-10-05",
@@ -2352,8 +2358,8 @@ const venues = [
       "longitude": -46.546301299999996
     },
     "referenceDistanceKm": 0.833,
-    "weeklyHours": null,
-    "scheduleNote": "Horários em revisão devido a informações divergentes. Confirme diretamente com a casa antes de ir.",
+    "weeklyHours": [[],[["11:00","14:00"]],[["11:00","14:00"]],[["11:00","14:00"]],[["11:00","14:00"]],[["11:00","22:00"]],[["11:00","22:00"]]],
+    "scheduleNote": "Grade principal da ficha VIRTUS BEER na Adolfo Laves, 327, consultada no Google em 06/10/2026. Entrega e almoço têm horários próprios. Cadastros antigos divergem; confirme com a casa antes de ir.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Virtus%20Beer%20Bar%20e%20Restaurante%20R.%20Adolfo%20Laves%2C%20327%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-390",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Virtus%20Beer%20Bar%20e%20Restaurante%20R.%20Adolfo%20Laves%2C%20327%20-%20Vila%20Valparaiso%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009060-390",
@@ -2369,9 +2375,10 @@ const venues = [
       {
         "label": "Google: ficha no endereço 327; grade completa não acessível e divergência com fonte anterior",
         "url": "https://www.google.com/maps/search/?api=1&query=VIRTUS+BEER+Adolfo+Laves+327+Santo+Andre"
-      }
+      },
+      {"label":"Google Maps: grade principal em Outros horários, ficha da Adolfo Laves, 327; entrega/almoço não usados","url":"https://www.google.com/maps/search/?api=1&query=Virtus+Beer+Adolfo+Laves+327+Santo+Andre"}
     ],
-    "checkedAt": "2026-10-05",
+    "checkedAt": "2026-10-06",
     "popularTimes": null,
     "liveOccupancy": null,
     "price": null,
@@ -3556,46 +3563,6 @@ const venues = [
     "tickets": false
   },
   {
-    "id": "after-bar-barzinho-em-sbc",
-    "kind": "venue",
-    "name": "After Bar - Barzinho em SBC",
-    "venue": "After Bar - Barzinho em SBC",
-    "category": "Bares",
-    "district": "Jardim do Mar",
-    "city": "São Bernardo do Campo",
-    "address": "Av. Kennedy, 137 - Jardim do Mar, São Bernardo do Campo - SP, 09726-250",
-    "coordinates": {
-      "latitude": -23.6877688,
-      "longitude": -46.5600702
-    },
-    "referenceDistanceKm": 2.991,
-    "weeklyHours": null,
-    "scheduleNote": "Identidade e funcionamento atual em revisão: cadastros exibem nomes diferentes neste endereço. Horários não confirmados.",
-    "officialUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
-    "channelLabel": "Ver no Google Maps",
-    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=After%20Bar%20-%20Barzinho%20em%20SBC%20Av.%20Kennedy%2C%20137%20-%20Jardim%20do%20Mar%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP%2C%2009726-250",
-    "sources": [
-      {
-        "label": "Cadastro e coordenadas",
-        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/after-bar-barzinho-em-sbc/660cedd9a3f2688d6da68390"
-      },
-      {
-        "label": "Ficha pública com informações de funcionamento",
-        "url": "https://restaurantguru.com.br/After-Bar-Barzinho-em-SBC-Sao-Bernardo-do-Campo"
-      },
-      {
-        "label": "Revisão de scheduleNote em 06/10/2026; conflitos e limites em docs/revisao-catalogo-2026-10-06.md",
-        "url": "https://www.locaisdobrasil.com.br/encontre/bares/sao-bernardo-do-campo-sp/after-bar-barzinho-em-sbc/660cedd9a3f2688d6da68390"
-      }
-    ],
-    "checkedAt": "2026-10-06",
-    "popularTimes": null,
-    "liveOccupancy": null,
-    "price": null,
-    "occupancy": null,
-    "tickets": false
-  },
-  {
     "id": "taberna-adega-bar",
     "kind": "venue",
     "name": "Taberna adega bar",
@@ -4624,7 +4591,9 @@ const venues = [
     "category": "Bares",
     "district": "Vila Príncipe de Gales",
     "city": "Santo André",
-    "address": "Vila Príncipe de Gales, Santo André - SP, 09615-085",
+    "address": "Av. Lauro Gomes, 893 — fundos do Estacionamento Centro Universitário FSA, Santo André - SP",
+    "accessNote": "Entre pelo estacionamento do Centro Universitário FSA e siga à esquerda para chegar ao bar.",
+    "addressProvenance": {"type": "user-provided", "checkedAt": "2026-10-06", "note": "Endereço de acesso e orientação fornecidos pelo usuário com captura de satélite; o número 893 corresponde ao estacionamento, não ao bar. Coordenadas existentes do bar preservadas."},
     "coordinates": {
       "latitude": -23.663213,
       "longitude": -46.5552267
@@ -4669,7 +4638,7 @@ const venues = [
         ]
       ]
     ],
-    "scheduleNote": "Endereço sem rua e número confirmados; cadastros divergem na localização. Confirme o ponto de acesso antes de ir.",
+    "scheduleNote": "Horários habituais. Podem variar em feriados e eventos especiais.",
     "officialUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
     "channelLabel": "Ver no Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar%20Do%20Ciss%C3%A3o%20Vila%20Principe%20de%20Gales%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009615-085",
@@ -5336,6 +5305,11 @@ const venues = [
     "district": "Santa Paula",
     "city": "São Caetano do Sul",
     "address": "Rua Oswaldo Cruz, 1411 - Santa Paula, São Caetano do Sul - SP, 09540-280",
+    "image": "assets/venues/leandrini-rock-bar.webp",
+    "imageCard": "assets/venues/leandrini-rock-bar-card.webp",
+    "imageSource": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,fit=crop/ygjQ3fcJpcRquZ4f/img_1086-Z5uYnnaozhWNMrD5.jpg",
+    "imageWidth": 1200,
+    "imageHeight": 675,
     "coordinates": {
       "latitude": -23.629298900000002,
       "longitude": -46.5675424

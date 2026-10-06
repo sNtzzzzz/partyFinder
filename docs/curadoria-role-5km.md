@@ -1,3 +1,5 @@
+**Estado atual após decisão do usuário em 06/10:** 31 publicados; After retirado por falta de confirmação de identidade/operação, sem afirmar fechamento. Lista central preserva 539 pesquisados e 54 prioritários. Dados anteriores abaixo registram suas respectivas etapas.
+
 # Lista e curadoria de locais — FSA e complementares
 
 Atualizada em **05/10/2026** após revisão dos horários, gráficos e inclusão de novos lugares. Lista central: [locais-5km.csv](locais-5km.csv). Agora reúne **539 registros**: os **533 candidatos originais** da pesquisa em raio de 5 km, mais **5 cadastros complementares já publicados** e **Adega 99 pendente**. Os complementares sem coordenadas confirmadas não devem ser contados como geograficamente validados no raio. As primeiras 11 colunas e os primeiros 533 registros preservam a pesquisa original; as novas colunas mostram endereço/horários/pico/ID/fontes e pendências atuais do catálogo.

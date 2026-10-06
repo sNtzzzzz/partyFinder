@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/request-context.php';
 
 final class AuthError extends RuntimeException
 {
@@ -16,7 +17,7 @@ function respond(array $body, int $status = 200): never
 
 function authLimit(PDO $db, string $action, int $maximum = 15, ?string $identity = null): void
 {
-    $bucket = hash('sha256', $action . '|' . ($identity ?? ($_SERVER['REMOTE_ADDR'] ?? 'unknown')));
+    $bucket = hash('sha256', $action . '|' . ($identity ?? requestClientIp()));
     $now = time();
     $db->prepare('DELETE FROM auth_limits WHERE expires_at <= ?')->execute([$now]);
     $db->prepare('INSERT INTO auth_limits (bucket, attempts, expires_at) VALUES (?, 1, ?)
@@ -85,7 +86,7 @@ function startAuthSession(): void
     ini_set('session.gc_maxlifetime', '7200');
     session_name($run ? 'nightout_test_session' : 'nightout_session');
     session_set_cookie_params(['lifetime' => 0, 'path' => '/', 'httponly' => true,
-        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off', 'samesite' => 'Lax']);
+        'secure' => secureRequest(), 'samesite' => 'Lax']);
     if (!session_start()) throw new RuntimeException('Session could not be started.');
     if (isset($_SESSION['expires']) && $_SESSION['expires'] <= time()) clearIdentity();
     $_SESSION['csrf'] ??= bin2hex(random_bytes(32));

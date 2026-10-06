@@ -2,7 +2,11 @@
 
 API PHP conectada ao banco `nightout`, com cadastro, login e logout. A migration cria `users` e `auth_limits`, sem apagar registros existentes.
 
-## Executar
+## HTTPS local (preferido neste notebook)
+
+Com MySQL ligado, execute `powershell -ExecutionPolicy Bypass -File .\backend\start-https.ps1` na pasta partyFinder. O script imprime o endereço HTTPS da rede e permanece em segundo plano. Certificado de confiança no Android, instalação em outro PC e comando para encerrar: [guia HTTPS local](../docs/https-local.md). Não iniciar o servidor HTTP abaixo simultaneamente.
+
+## Executar por HTTP (alternativa)
 
 1. Inicie MySQL no XAMPP e mantenha o banco `nightout` criado.
    Na primeira instalação, execute `C:\xampp\php\php.exe backend/database/migrate.php` na pasta `partyFinder`. A aplicação das migrations precisa ser conferida em cada computador. Para transferir usuários de outro PC, consulte [o guia de ambiente local](../docs/ambiente-local.md).
@@ -16,7 +20,7 @@ C:\xampp\php\php.exe -S 0.0.0.0:8000 -t .\backend\public .\backend\public\router
 
 A resposta esperada contém `"status": "ok"` e `"database": "connected"`. Mantenha o terminal aberto; `Ctrl+C` encerra a API.
 
-Este servidor usa o PHP instalado pelo XAMPP e seu MySQL/MariaDB. Não precisa mover o projeto para `htdocs` nem alterar o Apache. O servidor PHP é exclusivo para desenvolvimento local. O router serve a interface e a API na mesma origem, sem CORS. Somente o HTML e os arquivos JS/CSS públicos são permitidos; banco, configuração, testes e Git não são expostos. Use a mesma origem durante cada fluxo de conta, pois cookies são separados por host. O script `backend/start.ps1` usa apenas `127.0.0.1` e serve como alternativa para acesso restrito ao próprio computador. HTTP pelo IP da rede não permite geolocalização; para celular, HTTPS confiável permanece pendente.
+Este servidor usa o PHP instalado pelo XAMPP e seu MySQL/MariaDB. Não precisa mover o projeto para `htdocs` nem alterar o Apache. O servidor PHP é exclusivo para desenvolvimento local. O router serve a interface e a API na mesma origem, sem CORS. Somente o HTML e os arquivos JS/CSS públicos são permitidos; banco, configuração, testes e Git não são expostos. Use a mesma origem durante cada fluxo de conta, pois cookies são separados por host. O script `backend/start.ps1` usa apenas `127.0.0.1` e serve como alternativa para acesso restrito ao próprio computador. HTTP pelo IP da rede não permite geolocalização; para celular, use o HTTPS confiável descrito acima.
 
 Se o servidor já estava aberto antes da atualização do router, encerre com `Ctrl+C` e execute novamente o comando.
 
@@ -99,3 +103,7 @@ C:\xampp\php\php.exe tests/run-auth.php --browser
 Esse comando roda também a suíte de API. Screenshots e downloads de contas fictícias ficam em backend/storage/browser-<identificador>. Consulte [o relatório](../docs/relatorio-autenticacao.md) para cobertura e pendências operacionais.
 
 A caixa local mostra apenas links ativos no banco, com data e tipo. Links usados, expirados ou substituídos ficam ocultos. Use `C:\xampp\php\php.exe backend/mailbox.php --verification` para confirmações e `--recovery` para recuperação.
+
+## Catálogo e administração
+
+Catálogo ativo no banco; API pública GET /api/v1/venues. Painel /admin.html exige administrador com e-mail confirmado. Guia de instalação, importação inicial, promoção explícita da conta e transporte de fotos: [painel-administrativo.md](../docs/painel-administrativo.md). Execute migrate.php e import-catalog.php em uma primeira instalação; não reimporte para sincronizar edições entre PCs. A suíte run-auth.php --browser agora inclui testes do painel; --catalog-browser roda API completa e somente o navegador do catálogo. Upload requer extensão GD.

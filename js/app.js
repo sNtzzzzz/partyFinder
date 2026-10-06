@@ -51,11 +51,21 @@ function render() {
   document.querySelector('#categories').innerHTML=['Todos','Bares','Adegas','Casas de festas','Espaços para festas'].map(c=>`<button class="category ${state.category===c?'selected':''}" data-category="${c}" aria-pressed="${state.category===c}">${c}</button>`).join('');
   const filters={date:'all',distance:'all',price:'all',occupancy:'all',artist:'all',...Object.fromEntries(new FormData(panel))};
   const result=filterEvents(filters);
+  renderNearby(result);
   const filterKey=JSON.stringify([state.quick,state.category,state.query,filters]);
   const previousPosition = state.filterKey === filterKey ? catalogGrid.scrollLeft || 0 : 0;
   state.filterKey=filterKey;
   if(state.quick==='near') result.sort((a,b)=>distanceToEvent(a)-distanceToEvent(b));
   catalogGrid.innerHTML=result.length?result.map(EventCard).join(''):`<div class="empty-state">${icon('search')}<h3>Nenhum rolê por aqui. Ainda.</h3><p>Tente outro nome, região ou uma combinação diferente de filtros.</p><button class="primary" id="clear-all">Limpar busca e filtros</button></div>`;
+  if (typeof catalogReady !== 'undefined' && !catalogReady) {
+    catalogGrid.innerHTML = `<div class="empty-state" role="status"><h3>${catalogError ? 'Não foi possível carregar os lugares' : 'Carregando lugares…'}</h3>${catalogError ? `<p>${escapeHtml(catalogError)}</p><button class="primary" data-catalog-retry>Tentar novamente</button>` : ''}</div>`;
+    if (locationAccess.status === 'granted') document.querySelector('#nearby-grid').innerHTML = catalogGrid.innerHTML;
+  }
+  document.querySelector('#catalog-status')?.remove?.();
+  if (typeof catalogReady !== 'undefined' && catalogReady && catalogError) {
+    const notice = document.createElement('p'); notice.id='catalog-status'; notice.className='catalog-note'; notice.setAttribute('role','status'); notice.textContent=catalogError;
+    catalogGrid.after(notice);
+  }
   catalogGrid.scrollLeft=previousPosition;
   updateCatalogNavigation();
   document.querySelector('#results-message').textContent=`${result.length} estabelecimentos encontrados`;

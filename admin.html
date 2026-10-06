@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrar lugares — NightOut</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles/styles.css"><link rel="stylesheet" href="/styles/admin.css">
+  <script defer src="/js/admin.js"></script>
+</head>
+<body>
+  <main class="container admin-page">
+    <a href="/" class="admin-back">← Voltar para explorar</a>
+    <div class="admin-heading"><div><span class="eyebrow">NIGHTOUT / ADMINISTRAÇÃO</span><h1>Lugares.</h1><p>Atualize o catálogo e escolha o que aparece no site.</p></div><button type="button" id="new-place" class="primary" hidden>Adicionar lugar</button></div>
+    <p id="admin-message" role="status" aria-live="polite">Verificando acesso…</p>
+    <div id="admin-access" hidden><a href="/conta.html">Entrar ou confirmar meu e-mail</a><button type="button" id="retry-access">Verificar novamente</button></div>
+    <div id="admin-workspace" class="admin-layout" hidden>
+      <aside class="admin-sidebar"><label>Buscar lugar<input type="search" id="admin-search" placeholder="Nome, cidade ou endereço"></label><p id="admin-count"></p><div id="admin-list"></div></aside>
+      <section class="admin-editor" aria-labelledby="editor-title">
+        <h2 id="editor-title">Selecione um lugar</h2>
+        <form id="place-form" hidden>
+          <div class="admin-fields">
+            <label>Nome<input name="name" maxlength="150" required></label>
+            <label>Categoria<select name="category"><option>Bares</option><option>Adegas</option><option>Casas de festas</option><option>Espaços para festas</option></select></label>
+            <label class="wide">Endereço<input name="address" maxlength="350" required></label>
+            <label>Bairro<input name="district" maxlength="120"></label><label>Cidade<input name="city" maxlength="120" required></label>
+            <label class="wide">Orientação de acesso<input name="accessNote" maxlength="500" placeholder="Ex.: fundos do estacionamento, à esquerda"></label>
+            <label>Latitude<input name="latitude" type="number" min="-90" max="90" step="any"></label><label>Longitude<input name="longitude" type="number" min="-180" max="180" step="any"></label>
+            <label class="wide">Link do Google Maps<input name="mapsUrl" type="url" maxlength="2000" placeholder="https://…"></label>
+            <label class="wide">Site ou rede social da casa<input name="officialUrl" type="url" maxlength="2000" placeholder="https://…"></label>
+            <label class="wide">Texto do link<input name="channelLabel" maxlength="80" placeholder="Visitar site da casa"></label>
+          </div>
+          <fieldset><legend>Funcionamento semanal</legend><p class="admin-help">Use 18:00–02:00 para horários que atravessam a madrugada. Você pode adicionar intervalos separados no mesmo dia.</p>
+            <label class="admin-check"><input type="checkbox" name="appointmentOnly"> São horários de atendimento/visitas, não da festa</label>
+            <div id="hours-editor"></div>
+            <label>Observação dos horários<textarea name="scheduleNote" maxlength="700" rows="3"></textarea></label>
+          </fieldset>
+          <fieldset><legend>Foto do lugar</legend><img id="photo-preview" alt="Foto atual do lugar" hidden><label>Enviar foto (JPG, PNG ou WebP, até 5 MB)<input name="photo" type="file" accept="image/jpeg,image/png,image/webp"></label>
+            <label>Origem da foto<input name="imageSource" maxlength="500" placeholder="Link da publicação ou indicação da origem"></label>
+            <label class="admin-check"><input type="checkbox" name="removePhoto"> Remover a foto atual</label>
+          </fieldset>
+          <label class="admin-check admin-publish"><input type="checkbox" name="published"> Publicar este lugar no site</label>
+          <p class="admin-help">Desmarque para ocultar um lugar fechado ou ainda não confirmado. O registro permanece no painel.</p>
+          <p id="save-message" role="status" aria-live="polite"></p>
+          <div class="admin-actions"><button class="primary" type="submit" id="save-place">Salvar lugar</button><button type="button" id="reload-place">Descartar alterações e recarregar</button></div>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

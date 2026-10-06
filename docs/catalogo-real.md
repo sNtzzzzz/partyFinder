@@ -1,10 +1,14 @@
+**Estado atual após decisão do usuário em 06/10:** 31 publicados; After retirado por falta de confirmação de identidade/operação, sem afirmar fechamento. Lista central preserva 539 pesquisados e 54 prioritários. Dados anteriores abaixo registram suas respectivas etapas.
+
+**Atualização de 06/10 no notebook:** Virtus agora tem grade principal confirmada no Maps, Mais Adega tem ponto da rota; duas novas fotos oficiais. Estado atual: 32 lugares/32 coordenadas/30 grades/19 gráficos/8 fotos. [Relatório](continuidade-etapa-1-2026-10-06.md). Trechos históricos abaixo preservam seus respectivos resultados.
+
 # Catálogo real — curadoria para rolês
 
 Revisão mais recente em 06/10/2026: os seis campos dos 32 locais foram examinados, com 31 coordenadas correspondentes às fontes cadastradas, três grades corrigidas por perfis próprios, ajustes de nome/endereço e conflitos documentados. Consulte [revisao-catalogo-2026-10-06.md](revisao-catalogo-2026-10-06.md) para resultados e lacunas; os registros abaixo continuam como histórico das etapas anteriores. Google de 05/10 não foi reconsultado nesta revisão.
 
 Atualização da navegação em 05/10/2026: a lista de duas linhas e Exibir mais foi substituída por carrossel horizontal de uma linha, com setas laterais e toque. Contador visível retirado; filtros/busca preservados. Verificados 16 testes Node e navegador em desktop/tablet/celular. Catálogo permanece local; busca regional e paginação por API são etapas futuras. Descrição de duas linhas abaixo registra a implementação anterior.
 
-Atualizado em 05/10/2026. **32 lugares publicados, 29 com grade habitual, 19 com gráficos semanais de pico e 6 com fotos reais.** Fontes e datas são metadados internos: a interface não mostra seção de referências. A lista central tem 539 registros (533 originais e 6 complementares); não representa só locais aprovados para publicação. Última ampliação: [ampliacao-catalogo-2026-10-05.md](ampliacao-catalogo-2026-10-05.md).
+Atualizado em 05/10/2026. **32 lugares publicados, 30 com grade habitual, 19 com gráficos semanais de pico e 8 com fotos reais.** Fontes e datas são metadados internos: a interface não mostra seção de referências. A lista central tem 539 registros (533 originais e 6 complementares); não representa só locais aprovados para publicação. Última ampliação: [ampliacao-catalogo-2026-10-05.md](ampliacao-catalogo-2026-10-05.md).
 
 Revisão atual de funcionamento e pico: [revisao-horarios-2026-10-05.md](revisao-horarios-2026-10-05.md). As seções históricas abaixo não substituem as pendências e critérios dessa revisão.
 

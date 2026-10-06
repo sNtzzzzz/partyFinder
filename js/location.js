@@ -80,6 +80,17 @@ function distanceLabel(event) {
   return distance === null ? '' : `${distance.toLocaleString('pt-BR', { maximumFractionDigits: 1 })} km`;
 }
 
+function renderNearby(results) {
+  if (locationAccess.status !== 'granted') return;
+  const nearby = results.filter(e => {
+    const distance = distanceToEvent(e);
+    return distance !== null && distance <= 5 && e.day !== 'past';
+  }).sort((a, b) => distanceToEvent(a) - distanceToEvent(b)).slice(0, 3);
+  document.querySelector('#nearby-grid').innerHTML = nearby.length
+    ? nearby.map(NearbyCard).join('')
+    : `<div class="location-state" role="status">${icon('pin')}<div><h3>Localização permitida</h3><p>Nenhum lugar a até 5 km corresponde à busca e aos filtros atuais. Tente ajustar os filtros.</p></div></div>`;
+}
+
 function renderLocation() {
   const status = locationAccess.status;
   const granted = status === 'granted';
@@ -94,14 +105,8 @@ function renderLocation() {
     granted: ['Localização permitida', 'Nenhum local do catálogo foi encontrado a até 5 km da sua posição. Explore os estabelecimentos pela busca.']
   };
   const [title, description] = messages[status];
-  const nearby = granted ? events.filter(e => {
-    const distance = distanceToEvent(e);
-    return distance !== null && distance <= 5 && e.day !== 'past';
-  }).sort((a, b) => distanceToEvent(a) - distanceToEvent(b)).slice(0, 3) : [];
   const retry = !['granted', 'insecure', 'unsupported'].includes(status);
-  document.querySelector('#nearby-grid').innerHTML = nearby.length
-    ? nearby.map(NearbyCard).join('')
-    : `<div class="location-state" role="status">${icon(granted ? 'pin' : 'pinOff')}<div><h3>${title}</h3><p>${description}</p></div>${retry ? `<button class="primary" data-location-request ${status === 'loading' ? 'disabled' : ''}>${status === 'loading' ? 'Aguardando permissão…' : ['timeout', 'unavailable'].includes(status) ? 'Tentar novamente' : 'Permitir acesso'}</button>` : ''}</div>`;
+  if (!granted) document.querySelector('#nearby-grid').innerHTML = `<div class="location-state" role="status">${icon('pinOff')}<div><h3>${title}</h3><p>${description}</p></div>${retry ? `<button class="primary" data-location-request ${status === 'loading' ? 'disabled' : ''}>${status === 'loading' ? 'Aguardando permissão…' : ['timeout', 'unavailable'].includes(status) ? 'Tentar novamente' : 'Permitir acesso'}</button>` : ''}</div>`;
   document.querySelector('.location-note').textContent = granted
     ? 'Distâncias aproximadas em linha reta a partir da sua localização nesta sessão.'
     : 'Sua localização é opcional. Continue explorando pela busca.';

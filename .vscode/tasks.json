@@ -2,6 +2,22 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "NightOut: iniciar HTTPS na rede",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/backend/start-https.ps1"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "NightOut: encerrar HTTPS",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/backend/start-https.ps1", "-Stop"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
       "label": "NightOut: iniciar site local",
       "type": "process",
       "command": "powershell.exe",

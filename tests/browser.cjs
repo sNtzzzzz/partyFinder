@@ -36,6 +36,7 @@ function mailLink(email, kind) {
       async function settings(view) {
         if (!page.url().includes('/conta.html')) {
           await page.locator('#account-dialog').evaluate(el=>el.close());
+          await page.waitForFunction(() => !document.body.classList.contains('dialog-open'));
           await page.locator('[data-account]').click();
           assert(await page.locator('#account-dropdown').isVisible());
           await page.mouse.move(0, 0);

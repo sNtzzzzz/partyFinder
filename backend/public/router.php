@@ -9,9 +9,19 @@ if (str_starts_with($path, '/api/')) {
 header('Referrer-Policy: no-referrer');
 header('Cache-Control: no-store');
 $root = dirname(__DIR__, 2);
-$allowed = ['/conta.html' => 'conta.html', '/' => 'index.html', '/index.html' => 'index.html', '/assets/favicon.svg' => 'assets/favicon.svg'];
+$allowed = ['/admin.html' => 'admin.html', '/conta.html' => 'conta.html', '/' => 'index.html', '/index.html' => 'index.html', '/assets/favicon.svg' => 'assets/favicon.svg'];
+if (preg_match('#^/media/venues/([a-f0-9]{32}(?:-card)?\.webp)$#D', $path, $match)) {
+    if (!in_array($_SERVER['REQUEST_METHOD'], ['GET','HEAD'], true)) { header('Allow: GET, HEAD'); http_response_code(405); exit; }
+    require_once dirname(__DIR__) . '/src/catalog.php';
+    $image = catalogImageDirectory() . '/' . $match[1];
+    if (!is_file($image)) { http_response_code(404); exit; }
+    header('Content-Type: image/webp'); header('X-Content-Type-Options: nosniff');
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') readfile($image);
+    exit;
+}
 foreach (['js' => 'js', 'styles' => 'css'] as $directory => $extension) {
     foreach (glob($root . '/' . $directory . '/*.' . $extension) as $file) {
+        if ($directory === 'js' && basename($file) === 'data.js') continue; // Historical import snapshot, not the live catalog.
         $allowed['/' . $directory . '/' . basename($file)] = $directory . '/' . basename($file);
     }
 }

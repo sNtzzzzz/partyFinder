@@ -590,12 +590,12 @@ h2{
 .badge.wine{
     background:var(--wine-dark)
 }
-.badge.status-open{
+.badge.status-open,.nearby-status.status-open{
     background:#243a2f;
     border-color:#415b4b;
     color:#c4d4c9
 }
-.badge.status-closed{
+.badge.status-closed,.nearby-status.status-closed{
     background:#402a30;
     border-color:#60414a;
     color:#ddc5cb
@@ -787,7 +787,13 @@ h2{
 }
 .nearby-top small{
     font-size:8px;
-    color:#c3919a
+    color:var(--muted)
+}
+.nearby-status{
+    padding:4px 7px;
+    border:1px solid #ffffff19;
+    border-radius:4px;
+    background:#242424
 }
 .nearby-content strong{
     font:700 13px var(--heading);

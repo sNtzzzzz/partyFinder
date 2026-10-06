@@ -13,6 +13,8 @@ header('X-Content-Type-Options: nosniff');
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 require dirname(__DIR__) . '/src/auth.php';
 $routes = [
+    '/api/v1/venues' => 'GET', '/api/v1/admin/venues' => ['GET','POST'],
+    '/api/v1/admin/venues/photo' => 'POST',
     '/api/v1/auth/forgot-password' => 'POST', '/api/v1/auth/reset-password' => 'POST',
     '/api/v1/auth/verify-email' => 'POST', '/api/v1/auth/resend-verification' => 'POST',
     '/api/v1/auth/update-profile' => 'POST', '/api/v1/auth/change-email' => 'POST',
@@ -28,9 +30,9 @@ if (!isset($routes[$path])) {
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== $routes[$path]) {
+if (!in_array($_SERVER['REQUEST_METHOD'], (array)$routes[$path], true)) {
     http_response_code(405);
-    header('Allow: ' . $routes[$path]);
+    header('Allow: ' . implode(', ', (array)$routes[$path]));
     echo json_encode(['status' => 'error', 'message' => 'Método não permitido.'], JSON_UNESCAPED_UNICODE);
     exit;
 }
@@ -39,6 +41,10 @@ require dirname(__DIR__) . '/src/database.php';
 
 try {
     $database = connectDatabase();
+    if ($path === '/api/v1/venues' || str_starts_with($path, '/api/v1/admin/venues')) {
+        require dirname(__DIR__) . '/src/catalog.php';
+        handleCatalog($database, $path);
+    }
     if (str_starts_with($path, '/api/v1/auth/')) handleAuth($database, basename($path));
     $database->query('SELECT 1')->fetchColumn();
     echo json_encode([

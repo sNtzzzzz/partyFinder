@@ -111,6 +111,25 @@ test('real coordinates produce nearby places at the Fundação without storing t
   assert.doesNotMatch(app.node('#event-grid').innerHTML, /Vintage Culture|Subsolo Club/);
 });
 
+test('nearby applies filters before selecting the three closest places', () => {
+  const app = setup();
+  app.pending[0].success({coords:{latitude:-23.66145,longitude:-46.55402}});
+  app.run(`events.splice(0, events.length, ...Array.from({length:6}, (_,i)=>({...venues[0],id:'fixture-'+i,name:'Fixture '+i,
+    category:i===5?'Adegas':'Bares',coordinates:{latitude:-23.66145+i*0.001,longitude:-46.55402},
+    weeklyHours:i<3?[[],[],[],[],[],[],[]]:Array.from({length:7},()=>[['00:00','23:59']])})));
+    localClock=()=>({day:2,minute:720}); state.quick='open'; render();`);
+  const html = app.node('#nearby-grid').innerHTML;
+  assert.doesNotMatch(html, /Fixture [012]/);
+  for (const i of [3,4,5]) assert.match(html, new RegExp('Fixture '+i));
+  app.run("state.category='Adegas'; render()");
+  assert.match(app.node('#nearby-grid').innerHTML, /Fixture 5/);
+  assert.doesNotMatch(app.node('#nearby-grid').innerHTML, /Fixture [34]/);
+  app.run("state.query='missing'; render()");
+  assert.match(app.node('#nearby-grid').innerHTML, /filtros atuais/);
+  app.run('clearAll()');
+  assert.match(app.node('#nearby-grid').innerHTML, /Fixture 0/);
+});
+
 test('schedule uses São Paulo time, overnight intervals and exclusive closing boundaries', () => {
   const app = setup();
   assert.equal(app.run("openingState(venues.find(v=>v.id==='vede'), new Date('2026-10-11T04:30:00Z'))"), true);
