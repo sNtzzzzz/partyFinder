@@ -43,7 +43,6 @@ function handleAuth(PDO $db, string $action): void
                 ->execute([$name, $email, password_hash($password, PASSWORD_DEFAULT)]);
             $id = (int)$db->lastInsertId();
             $version = 0;
-            $mailFile = issueVerification($db, $id, $email);
         } else {
             // Manter senha e versão consistentes em relação a uma troca concorrente.
             $query = $db->prepare('SELECT id, password_hash, auth_version FROM users WHERE email=? FOR UPDATE');
@@ -67,6 +66,6 @@ function handleAuth(PDO $db, string $action): void
         throw $error;
     }
     beginIdentity($id, $version);
-    respond(sessionPayload($db, $action === 'register' ? 'Conta criada. Confirme seu e-mail pelo link enviado.' : ''),
+    respond(sessionPayload($db, $action === 'register' ? 'Conta criada. Clique em confirmar e-mail para receber o link de confirmação.' : ''),
         $action === 'register' ? 201 : 200);
 }

@@ -2,3 +2,5 @@ backend/config/local.php
 backend/storage/
 .env
 node_modules/
+backend/config/mail.local.php
+backend/config/mail.local.php.*.tmp

@@ -35,7 +35,10 @@ function handleRecovery(PDO $db, string $action, array $input): void
             } catch (Throwable $error) {
                 if ($db->inTransaction()) $db->rollBack();
                 if ($file !== null && is_file($file)) unlink($file);
-                throw $error;
+                if ($error instanceof MailDeliveryError) {
+                    // Provider failures must not reveal whether the requested account exists.
+                    error_log('NightOut recovery delivery failed: ' . $error->getMessage());
+                } else { throw $error; }
             }
         }
         respond(['message' => 'Se este e-mail estiver cadastrado, você receberá um link para redefinir sua senha.']);

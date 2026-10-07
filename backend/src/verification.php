@@ -10,7 +10,7 @@ function issueVerification(PDO $db, int $id, string $email, string $purpose = 'v
         VALUES (?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE token_hash=VALUES(token_hash), email=VALUES(email),
         purpose=VALUES(purpose), expires_at=VALUES(expires_at)')
         ->execute([$id, hash('sha256', $token), $email, $purpose, time() + 86400]);
-    return storeMail($id, $email, 'Confirme seu e-mail no NightOut',
+    return storeMail($id, $email, $purpose === 'change' ? 'Confirme seu novo e-mail no NightOut' : 'Confirme seu e-mail no NightOut',
         'Confirme este endereço em até 24 horas. Se não reconhece o pedido, ignore esta mensagem.',
         appUrl() . '/#verify-email=' . $token, 'verification');
 }

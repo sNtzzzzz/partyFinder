@@ -35,6 +35,16 @@ function verificationTokenFor(PDO $db, int $id): string
     }
     throw new RuntimeException('No verification mail');
 }
+$q=$db->prepare('SELECT COUNT(*) FROM email_verification_tokens WHERE user_id=?');
+$q->execute([$id]);
+check((int)$q->fetchColumn()===0,'registration does not issue a verification token');
+$registrationMail=false;
+foreach (glob(mailOutbox().'/*.json') as $file) {
+    $mail=json_decode(file_get_contents($file),true);
+    if ((int)($mail['userId']??0)===$id) $registrationMail=true;
+}
+check(!$registrationMail,'registration does not send email');
+check(request('/api/v1/auth/resend-verification','POST',[],$csrf)[0]===200,'explicit confirmation request sends email');
 $token = verificationTokenFor($db,$id);
 check(strlen($token)===64,'verification token hashed in database');
 check(mailboxHasToken($db,$token),'mailbox shows fresh verification link');

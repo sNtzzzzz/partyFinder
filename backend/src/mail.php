@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+require_once __DIR__ . '/brevo.php';
 
 function mailOutbox(): string
 {
@@ -10,10 +11,12 @@ function mailOutbox(): string
 
 function appUrl(): string
 {
-    $url = rtrim(getenv('NIGHTOUT_APP_URL') ?: 'http://127.0.0.1:8000', '/');
+    $config = mailConfiguration();
+    $url = rtrim(getenv('NIGHTOUT_APP_URL') ?: ($config['appUrl'] ?? 'http://127.0.0.1:8000'), '/');
     $parts = parse_url($url);
     if (!$parts || !in_array($parts['scheme'] ?? '', ['http', 'https'], true)
-        || empty($parts['host']) || isset($parts['user']) || isset($parts['query']) || isset($parts['fragment'])) {
+        || empty($parts['host']) || isset($parts['user']) || isset($parts['pass']) || isset($parts['query']) || isset($parts['fragment'])
+        || (($config['environment'] === 'production' || ($config['transport'] ?? '') === 'brevo') && $parts['scheme'] !== 'https')) {
         throw new RuntimeException('Invalid application URL.');
     }
     return $url;
@@ -21,8 +24,12 @@ function appUrl(): string
 
 function storeMail(int $userId, string $email, string $subject, string $message, string $url, string $kind): string
 {
-    // Transporte local deliberado: não enviar mensagens reais implicitamente.
-    if (getenv('NIGHTOUT_ENV') === 'production') {
+    $config = mailConfiguration();
+    if ($config['transport'] === 'brevo') {
+        sendBrevoMail($config, $email, $subject, $message, $url);
+        return ''; // No token-bearing local outbox in production.
+    }
+    if ($config['transport'] !== 'local' || $config['environment'] === 'production' || getenv('NIGHTOUT_ENV') === 'production') {
         throw new RuntimeException('Configure a real mail transport before enabling production.');
     }
     $directory = mailOutbox();
